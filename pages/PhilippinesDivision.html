@@ -1,172 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Philippines Division - Lim-Kawano & Company Inc.</title>
-    <meta name="description" content="Discover the Philippines' potential with our Shopping Agent Services and Real Estate Monetization Consulting. Connect with the world through seamless product sourcing and property investment solutions." />
-    <meta name="keywords" content="Philippines business, shopping agent services, real estate Philippines, product sourcing, live commerce, property monetization" />
+    <meta name="description"
+        content="Discover the Philippines' potential with our Shopping Agent Services and Real Estate Monetization Consulting. Connect with the world through seamless product sourcing and property investment solutions." />
+    <meta name="keywords"
+        content="Philippines business, shopping agent services, real estate Philippines, product sourcing, live commerce, property monetization" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Philippines Division - Lim-Kawano & Company Inc." />
-    <meta property="og:description" content="Discover the Philippines' potential with our Shopping Agent Services and Real Estate Monetization Consulting." />
-    
-    <link rel="stylesheet" href="../css/main.css" />
+    <meta property="og:description"
+        content="Discover the Philippines' potential with our Shopping Agent Services and Real Estate Monetization Consulting." />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-gold': '#e2c089',
+                        'brand-dark': '#1a1a1a',
+                        'brand-gray': '#f8f9fa',
+                        'philippines-blue': '#0038a8',
+                        'philippines-red': '#ce1126',
+                        'tropical-turquoise': '#40e0d0',
+                        'island-green': '#228b22',
+                        'sunset-orange': '#ff6347'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body class="bg-white text-gray-800 font-sans">
     <main>
         <!-- Hero Section -->
-        <section class="hero-section philippines">
-            <div class="hero-content">
-                <header class="header">
-                    <h1 class="logo">Lim-Kawano & Company Inc.</h1>
-                    <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
-                    <nav class="nav-menu" role="navigation">
-                        <ul>
-                            <li><a href="../index.html" role="menuitem">Home</a></li>
-                            <li><a href="#contact" role="menuitem">Contact</a></li>
-                            <li class="language-selector">
-                                <img src="../assets/images/img_language_icon.png" alt="Language selector" class="language-icon" />
-                                <span class="language-text">EN</span>
+        <section
+            class="relative bg-gradient-to-br from-blue-600 via-teal-500 to-green-500 min-h-screen flex items-center">
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+            <div class="relative z-10 w-full">
+                <header class="flex justify-between items-center px-6 lg:px-12 py-6">
+                    <h1 class="text-2xl lg:text-3xl font-bold text-white">Lim-Kawano & Company Inc.</h1>
+                    <button class="hamburger lg:hidden text-white text-2xl"
+                        aria-label="Toggle navigation menu">☰</button>
+                    <nav class="nav-menu hidden lg:flex items-center space-x-8" role="navigation">
+                        <ul class="flex items-center space-x-8">
+                            <li><a href="../index.html" class="text-white hover:text-brand-gold transition-colors"
+                                    role="menuitem">Home</a></li>
+                            <li><a href="#contact" class="text-white hover:text-brand-gold transition-colors"
+                                    role="menuitem">Contact</a></li>
+                            <li class="flex items-center space-x-2">
+                                <img src="../assets/images/img_language_icon.png" alt="Language selector"
+                                    class="w-5 h-5" />
+                                <span class="text-white">EN</span>
                             </li>
                         </ul>
                     </nav>
                 </header>
-                <div class="hero-text-content division">
-                    <h2 class="hero-title">Philippines Division</h2>
-                    <p class="hero-description">Connect with the Philippines' vibrant market through our innovative shopping solutions and real estate expertise. Experience seamless product sourcing and unlock property investment opportunities.</p>
-                    <a href="#contact" class="cta-button">Get in Touch</a>
+
+                <div class="px-6 lg:px-12 mt-16 lg:mt-24 max-w-4xl">
+                    <h2 class="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">Philippines Division</h2>
+                    <p class="text-xl lg:text-2xl text-gray-200 mb-8 max-w-3xl leading-relaxed">Connect with the
+                        Philippines' vibrant market through our innovative shopping solutions and real estate expertise.
+                        Experience seamless product sourcing and unlock property investment opportunities.</p>
+                    <a href="#contact"
+                        class="inline-block bg-tropical-turquoise hover:bg-cyan-400 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Get
+                        in Touch</a>
                 </div>
             </div>
         </section>
 
         <!-- Shopping Agent Services Section -->
-        <section class="service-section" id="services">
-            <div class="service-container">
-                <div class="service-content">
-                    <img src="../assets/images/img_rectangle_138_288x222.png" alt="Stylish sneakers display showcasing product variety" class="service-image" />
-                    <div class="service-text">
-                        <div class="service-badge">Shopping Agent Services</div>
-                        <h2 class="service-title">Revolutionize Your Shopping Experience</h2>
-                        <p class="service-description">Revolutionize your shopping experience in the Philippines, connecting with the world in real-time. Our seamless product sourcing and live shopping experiences ensure you have what you want, when you want it, instantly.</p>
-                        <ul class="service-features">
-                            <li><span class="checkmark">✓</span>Premium product sourcing and delivery services</li>
-                            <li><span class="checkmark">✓</span>Pre-order system bringing you what can only be found here</li>
-                            <li><span class="checkmark">✓</span>Interactive Live Commerce experience, enabling real-time purchases</li>
+        <section class="py-20 lg:py-32 bg-brand-gray" id="services">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    <div class="order-2 lg:order-1">
+                        <img src="../assets/images/img_rectangle_138_288x222.png"
+                            alt="Stylish sneakers display showcasing product variety"
+                            class="w-full rounded-2xl shadow-2xl" />
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div
+                            class="inline-flex items-center bg-cyan-100 text-tropical-turquoise px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                            <span class="mr-2">🛒</span>
+                            Shopping Agent Services
+                        </div>
+                        <h2 class="text-3xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">Revolutionize Your
+                            Shopping Experience</h2>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">Revolutionize your shopping experience in
+                            the Philippines, connecting with the world in real-time. Our seamless product sourcing and
+                            live shopping experiences ensure you have what you want, when you want it, instantly.</p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Premium product sourcing and delivery services</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Pre-order system bringing you what can only be found
+                                    here</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Interactive Live Commerce experience, enabling real-time
+                                    purchases</span>
+                            </li>
                         </ul>
-                        <a href="#contact" class="service-cta">GET IN TOUCH</a>
+                        <a href="#contact"
+                            class="inline-block bg-tropical-turquoise hover:bg-cyan-400 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105">GET
+                            IN TOUCH</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Real Estate Monetization Consulting Section -->
-        <section class="service-section">
-            <div class="service-container">
-                <div class="service-content">
-                    <img src="../assets/images/img_rectangle_138_2.png" alt="Modern building with palm tree foreground" class="service-image" />
-                    <div class="service-text">
-                        <div class="service-badge">Real Estate Monetization Consulting</div>
-                        <h2 class="service-title">Unleash Property Potential</h2>
-                        <p class="service-description">Unleash the untapped potential of the Philippine real estate market, turning dormant properties into powerful revenue-generating assets. Our expert knowledge and vast network deliver comprehensive solutions for property monetization.</p>
-                        <ul class="service-features">
-                            <li><span class="checkmark">✓</span>Forward-looking business strategy development and execution support</li>
-                            <li><span class="checkmark">✓</span>Global perspective on funding and investment consulting</li>
-                            <li><span class="checkmark">✓</span>Cutting-edge renovation technologies and efficient project management</li>
+        <section class="py-20 lg:py-32 bg-white">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    <div>
+                        <img src="../assets/images/img_rectangle_138_2.png"
+                            alt="Modern building with palm tree foreground" class="w-full rounded-2xl shadow-2xl" />
+                    </div>
+                    <div>
+                        <div
+                            class="inline-flex items-center bg-green-100 text-island-green px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                            <span class="mr-2">🏢</span>
+                            Real Estate Monetization Consulting
+                        </div>
+                        <h2 class="text-3xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">Unleash Property
+                            Potential</h2>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">Unleash the untapped potential of the
+                            Philippine real estate market, turning dormant properties into powerful revenue-generating
+                            assets. Our expert knowledge and vast network deliver comprehensive solutions for property
+                            monetization.</p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Forward-looking business strategy development and execution
+                                    support</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Global perspective on funding and investment
+                                    consulting</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Cutting-edge renovation technologies and efficient project
+                                    management</span>
+                            </li>
                         </ul>
-                        <a href="#contact" class="service-cta">GET IN TOUCH</a>
+                        <a href="#contact"
+                            class="inline-block bg-island-green hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105">GET
+                            IN TOUCH</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Success Stories Section -->
-        <section class="success-section">
-            <h2 class="section-title">Success Stories</h2>
-            <div class="stories-grid">
-                <div class="story-card">
-                    <p class="story-quote">"The Philippines Division transformed our product sourcing strategy. Their live commerce platform revolutionized how we connect with customers globally."</p>
-                    <div class="story-author">Maria Santos</div>
-                    <div class="story-company">Global Retail Solutions</div>
-                </div>
-                <div class="story-card">
-                    <p class="story-quote">"Their real estate consulting helped us unlock the hidden value in our properties. The ROI exceeded our expectations significantly."</p>
-                    <div class="story-author">James Rodriguez</div>
-                    <div class="story-company">Property Investment Group</div>
-                </div>
-                <div class="story-card">
-                    <p class="story-quote">"Working with Lim-Kawano's Philippines Division opened doors to new markets and opportunities we never thought possible."</p>
-                    <div class="story-author">Ana Dela Cruz</div>
-                    <div class="story-company">Southeast Asian Ventures</div>
+        <section class="py-20 lg:py-32 bg-gradient-to-br from-cyan-50 via-teal-50 to-blue-50">
+            <div class="container mx-auto px-6 lg:px-12">
+                <h2 class="text-3xl lg:text-5xl font-bold text-center text-gray-900 mb-16">Success Stories</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-t-4 border-tropical-turquoise">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-2">🛒</span>
+                            <span class="text-sm font-semibold text-tropical-turquoise">Shopping Services</span>
+                        </div>
+                        <p class="text-lg text-gray-700 mb-6 italic leading-relaxed">"The Philippines Division
+                            transformed our product sourcing strategy. Their live commerce platform revolutionized how
+                            we connect with customers globally."</p>
+                        <div class="border-t pt-4">
+                            <div class="font-semibold text-gray-900">Maria Santos</div>
+                            <div class="text-gray-600 text-sm">Global Retail Solutions</div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-t-4 border-island-green">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-2">🏢</span>
+                            <span class="text-sm font-semibold text-island-green">Real Estate</span>
+                        </div>
+                        <p class="text-lg text-gray-700 mb-6 italic leading-relaxed">"Their real estate consulting
+                            helped us unlock the hidden value in our properties. The ROI exceeded our expectations
+                            significantly."</p>
+                        <div class="border-t pt-4">
+                            <div class="font-semibold text-gray-900">James Rodriguez</div>
+                            <div class="text-gray-600 text-sm">Property Investment Group</div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-t-4 border-philippines-blue md:col-span-2 lg:col-span-1">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-2">🌟</span>
+                            <span class="text-sm font-semibold text-philippines-blue">Business Growth</span>
+                        </div>
+                        <p class="text-lg text-gray-700 mb-6 italic leading-relaxed">"Working with Lim-Kawano's
+                            Philippines Division opened doors to new markets and opportunities we never thought
+                            possible."</p>
+                        <div class="border-t pt-4">
+                            <div class="font-semibold text-gray-900">Ana Dela Cruz</div>
+                            <div class="text-gray-600 text-sm">Southeast Asian Ventures</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section class="contact-section" id="contact">
-            <div class="contact-container">
-                <div class="contact-header">
-                    <h2 class="contact-main-title">Get in Touch</h2>
-                    <p class="contact-main-subtitle">Ready to connect with the Philippines? Let's discuss how we can help.</p>
+        <section class="py-20 lg:py-32 bg-gradient-to-br from-blue-600 via-teal-500 to-green-500" id="contact">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl lg:text-5xl font-bold text-white mb-6">Get in Touch</h2>
+                    <p class="text-xl text-gray-200 max-w-2xl mx-auto">Ready to connect with the Philippines? Let's
+                        discuss how we can help.</p>
                 </div>
-                
-                <div class="contact-content">
-                    <div class="contact-info-section">
-                        <h3>Contact Information</h3>
-                        
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon">✉</div>
-                            <div class="contact-info-text">
-                                <div class="contact-info-label">Email</div>
-                                <div class="contact-info-value">philippines@limkawano.com</div>
+
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold text-white mb-8">Contact Information</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="text-brand-gold text-2xl">✉</div>
+                                <div>
+                                    <div class="text-gray-200 text-sm">Email</div>
+                                    <div class="text-white font-semibold">philippines@limkawano.com</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="text-brand-gold text-2xl">📞</div>
+                                <div>
+                                    <div class="text-gray-200 text-sm">Phone</div>
+                                    <div class="text-white font-semibold">+63 (2) 1234-5678</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="text-brand-gold text-2xl">📍</div>
+                                <div>
+                                    <div class="text-gray-200 text-sm">Philippines Office</div>
+                                    <div class="text-white font-semibold">Manila, Philippines</div>
+                                </div>
                             </div>
                         </div>
-                        
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon">📞</div>
-                            <div class="contact-info-text">
-                                <div class="contact-info-label">Phone</div>
-                                <div class="contact-info-value">+63 (2) 1234-5678</div>
+
+                        <div class="mt-10 p-6 bg-black bg-opacity-20 rounded-xl">
+                            <h4 class="text-lg font-semibold text-white mb-3 flex items-center">
+                                <span class="mr-2">🇵🇭</span>
+                                Philippine Presence
+                            </h4>
+                            <p class="text-gray-200">With offices in Manila, Cebu, and Davao, we're positioned to serve
+                                your Philippine business needs across the archipelago.</p>
+                            <div class="flex space-x-4 mt-4">
+                                <span
+                                    class="inline-flex items-center px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm text-white">
+                                    🏙️ Manila
+                                </span>
+                                <span
+                                    class="inline-flex items-center px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm text-white">
+                                    🏝️ Cebu
+                                </span>
+                                <span
+                                    class="inline-flex items-center px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm text-white">
+                                    🌺 Davao
+                                </span>
                             </div>
-                        </div>
-                        
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon">📍</div>
-                            <div class="contact-info-text">
-                                <div class="contact-info-label">Philippines Office</div>
-                                <div class="contact-info-value">Manila, Philippines</div>
-                            </div>
-                        </div>
-                        
-                        <div class="global-offices">
-                            <h4>Philippine Presence</h4>
-                            <p>With offices in Manila, Cebu, and Davao, we're positioned to serve your Philippine business needs across the archipelago.</p>
                         </div>
                     </div>
-                    
-                    <div class="contact-form-section">
-                        <form class="contact-form" action="#" method="POST">
-                            <div class="form-group">
-                                <label class="form-label">Name <span class="required">*</span></label>
-                                <input type="text" class="form-input" placeholder="John Doe" required />
+
+                    <div class="bg-white rounded-2xl p-8 shadow-2xl">
+                        <form class="contact-form space-y-6" action="#" method="POST">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Name <span
+                                        class="text-red-500">*</span></label>
+                                <input type="text"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tropical-turquoise focus:border-transparent transition-all"
+                                    placeholder="John Doe" required />
                             </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Email <span class="required">*</span></label>
-                                <input type="email" class="form-input" placeholder="john@example.com" required />
+
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Email <span
+                                        class="text-red-500">*</span></label>
+                                <input type="email"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tropical-turquoise focus:border-transparent transition-all"
+                                    placeholder="john@example.com" required />
                             </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Company</label>
-                                <input type="text" class="form-input" placeholder="Your Company" />
+
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Company</label>
+                                <input type="text"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tropical-turquoise focus:border-transparent transition-all"
+                                    placeholder="Your Company" />
                             </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Message <span class="required">*</span></label>
-                                <textarea class="form-textarea" placeholder="Tell us about your Philippine project..." required></textarea>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Message <span
+                                        class="text-red-500">*</span></label>
+                                <textarea
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tropical-turquoise focus:border-transparent transition-all h-32 resize-none"
+                                    placeholder="Tell us about your Philippine project..." required></textarea>
                             </div>
-                            
-                            <button type="submit" class="submit-button">Send Message</button>
+
+                            <button type="submit"
+                                class="w-full bg-tropical-turquoise hover:bg-cyan-400 text-white font-semibold py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Send
+                                Message</button>
                         </form>
                     </div>
                 </div>
@@ -174,67 +322,97 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-divider"></div>
-            
-            <div class="footer-main">
-                <div class="footer-brand">
-                    <div class="footer-logo">Lim-Kawano & Company Inc.</div>
-                    <p class="footer-tagline">Connecting businesses worldwide through innovation and excellence.</p>
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="border-t border-gray-800 mb-12"></div>
+
+            <div class="grid lg:grid-cols-4 gap-12 mb-12">
+                <div class="lg:col-span-2">
+                    <div class="text-2xl font-bold mb-4">Lim-Kawano & Company Inc.</div>
+                    <p class="text-gray-400 max-w-md">Connecting businesses worldwide through innovation and excellence.
+                    </p>
                 </div>
-                
-                <div class="footer-links-grid">
-                    <div class="footer-links-section">
-                        <h4>Services</h4>
-                        <nav class="footer-links">
-                            <a href="AfricaDivision.html">Africa Division</a>
-                            <a href="PhilippinesDivision.html">Philippines Division</a>
-                            <a href="LanguageServicesDivision.html">Language Services</a>
-                            <a href="ITServicesDivision.html">IT Solutions</a>
-                        </nav>
-                    </div>
-                    
-                    <div class="footer-links-section">
-                        <h4>Company</h4>
-                        <nav class="footer-links">
-                            <a href="../index.html#team">About Us</a>
-                            <a href="../index.html#contact">Careers</a>
-                            <a href="../index.html#services">Partners</a>
-                            <a href="../index.html#services">News</a>
-                        </nav>
-                    </div>
-                    
-                    <div class="footer-links-section">
-                        <h4>Connect</h4>
-                        <div class="footer-social">
-                            <div class="footer-social-icons">
-                                <a href="#" class="footer-social-icon" aria-label="LinkedIn">💼</a>
-                                <a href="#" class="footer-social-icon" aria-label="Instagram">📷</a>
-                                <a href="#" class="footer-social-icon" aria-label="Twitter">🐦</a>
-                                <a href="#" class="footer-social-icon" aria-label="Facebook">📘</a>
-                            </div>
-                            <p class="footer-newsletter">Subscribe to our newsletter for updates</p>
-                        </div>
-                    </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <nav class="space-y-2">
+                        <a href="AfricaDivision.html"
+                            class="block text-gray-400 hover:text-tropical-turquoise transition-colors">Africa
+                            Division</a>
+                        <a href="PhilippinesDivision.html"
+                            class="block text-gray-400 hover:text-tropical-turquoise transition-colors">Philippines
+                            Division</a>
+                        <a href="LanguageServicesDivision.html"
+                            class="block text-gray-400 hover:text-tropical-turquoise transition-colors">Language
+                            Services</a>
+                        <a href="ITServicesDivision.html"
+                            class="block text-gray-400 hover:text-tropical-turquoise transition-colors">IT Solutions</a>
+                    </nav>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <nav class="space-y-2">
+                        <a href="../index.html#team"
+                            class="block text-gray-400 hover:text-tropical-turquoise transition-colors">About Us</a>
+                        <a href="../index.html#contact"
+                            class="block text-gray-400 hover:text-tropical-turquoise transition-colors">Careers</a>
+                        <a href="../index.html#services"
+                            class="block text-gray-400 hover:text-tropical-turquoise transition-colors">Partners</a>
+                        <a href="../index.html#services"
+                            class="block text-gray-400 hover:text-tropical-turquoise transition-colors">News</a>
+                    </nav>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <div class="footer-copyright">© 2025 Lim-Kawano & Company Inc. All rights reserved.</div>
-                <div class="footer-legal">
-                    <a href="#privacy">Privacy Policy</a>
-                    <a href="#terms">Terms of Service</a>
+
+            <div class="flex flex-col lg:flex-row justify-between items-center py-8 border-t border-gray-800">
+                <div class="text-gray-400 mb-4 lg:mb-0">© 2025 Lim-Kawano & Company Inc. All rights reserved.</div>
+                <div class="flex space-x-6">
+                    <a href="#privacy" class="text-gray-400 hover:text-tropical-turquoise transition-colors">Privacy
+                        Policy</a>
+                    <a href="#terms" class="text-gray-400 hover:text-tropical-turquoise transition-colors">Terms of
+                        Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav fixed inset-0 bg-gray-900 bg-opacity-95 z-50 hidden lg:hidden">
+        <div class="flex justify-between items-center p-6">
+            <h1 class="text-xl font-bold text-white">Menu</h1>
+            <button class="close-mobile-nav text-white text-2xl">×</button>
+        </div>
+        <nav class="px-6">
+            <ul class="space-y-6">
+                <li><a href="../index.html"
+                        class="block text-white text-xl hover:text-tropical-turquoise transition-colors">Home</a></li>
+                <li><a href="#contact"
+                        class="block text-white text-xl hover:text-tropical-turquoise transition-colors">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
     <script>
         // Mobile menu toggle
-        document.querySelector('.hamburger').addEventListener('click', function() {
-            const navMenu = document.querySelector('.nav-menu');
-            navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const closeMobileNav = document.querySelector('.close-mobile-nav');
+
+        hamburger.addEventListener('click', function () {
+            mobileNav.classList.remove('hidden');
+        });
+
+        closeMobileNav.addEventListener('click', function () {
+            mobileNav.classList.add('hidden');
+        });
+
+        // Close mobile nav when clicking on links
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', function () {
+                mobileNav.classList.add('hidden');
+            });
         });
 
         // Smooth scrolling for anchor links
@@ -252,17 +430,19 @@
         });
 
         // Form validation
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+        document.querySelector('.contact-form').addEventListener('submit', function (e) {
             e.preventDefault();
             const requiredFields = this.querySelectorAll('[required]');
             let isValid = true;
 
             requiredFields.forEach(field => {
                 if (!field.value.trim()) {
-                    field.style.borderColor = '#ef4444';
+                    field.classList.add('border-red-500');
+                    field.classList.remove('border-gray-300');
                     isValid = false;
                 } else {
-                    field.style.borderColor = '#e2c089cc';
+                    field.classList.remove('border-red-500');
+                    field.classList.add('border-gray-300');
                 }
             });
 
@@ -273,6 +453,44 @@
                 alert('Please fill in all required fields.');
             }
         });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.story-card, .service-image').forEach(el => {
+            observer.observe(el);
+        });
     </script>
+
+    <style>
+        .animate-fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </body>
+
 </html>

@@ -1,172 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Language Services Division - Lim-Kawano & Company Inc.</title>
-    <meta name="description" content="Break language barriers with our French Coaching Services and Multilingual Research Assistance. Unlock global opportunities through world-class language training and market intelligence." />
-    <meta name="keywords" content="French coaching, language services, multilingual research, language training, business French, market research, global communication" />
+    <meta name="description"
+        content="Break language barriers with our French Coaching Services and Multilingual Research Assistance. Unlock global opportunities through world-class language training and market intelligence." />
+    <meta name="keywords"
+        content="French coaching, language services, multilingual research, language training, business French, market research, global communication" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Language Services Division - Lim-Kawano & Company Inc." />
-    <meta property="og:description" content="Break language barriers with our French Coaching Services and Multilingual Research Assistance." />
-    
-    <link rel="stylesheet" href="../css/main.css" />
+    <meta property="og:description"
+        content="Break language barriers with our French Coaching Services and Multilingual Research Assistance." />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-gold': '#e2c089',
+                        'brand-dark': '#1a1a1a',
+                        'brand-gray': '#f8f9fa',
+                        'french-blue': '#0055a4',
+                        'french-red': '#ef4444',
+                        'language-purple': '#8b5cf6',
+                        'language-teal': '#14b8a6'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body class="bg-white text-gray-800 font-sans">
     <main>
         <!-- Hero Section -->
-        <section class="hero-section language">
-            <div class="hero-content">
-                <header class="header">
-                    <h1 class="logo">Lim-Kawano & Company Inc.</h1>
-                    <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
-                    <nav class="nav-menu" role="navigation">
-                        <ul>
-                            <li><a href="../index.html" role="menuitem">Home</a></li>
-                            <li><a href="#contact" role="menuitem">Contact</a></li>
-                            <li class="language-selector">
-                                <img src="../assets/images/img_language_icon.png" alt="Language selector" class="language-icon" />
-                                <span class="language-text">EN</span>
+        <section
+            class="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen flex items-center">
+            <div class="absolute inset-0 bg-black opacity-40"></div>
+            <div class="relative z-10 w-full">
+                <header class="flex justify-between items-center px-6 lg:px-12 py-6">
+                    <h1 class="text-2xl lg:text-3xl font-bold text-white">Lim-Kawano & Company Inc.</h1>
+                    <button class="hamburger lg:hidden text-white text-2xl"
+                        aria-label="Toggle navigation menu">☰</button>
+                    <nav class="nav-menu hidden lg:flex items-center space-x-8" role="navigation">
+                        <ul class="flex items-center space-x-8">
+                            <li><a href="../index.html" class="text-white hover:text-brand-gold transition-colors"
+                                    role="menuitem">Home</a></li>
+                            <li><a href="#contact" class="text-white hover:text-brand-gold transition-colors"
+                                    role="menuitem">Contact</a></li>
+                            <li class="flex items-center space-x-2">
+                                <img src="../assets/images/img_language_icon.png" alt="Language selector"
+                                    class="w-5 h-5" />
+                                <span class="text-white">EN</span>
                             </li>
                         </ul>
                     </nav>
                 </header>
-                <div class="hero-text-content division">
-                    <h2 class="hero-title">Language Services Division</h2>
-                    <p class="hero-description">Break language barriers and unlock infinite potential in business, education, and self-expression. Experience world-class language training and multilingual research that opens doors to global opportunities.</p>
-                    <a href="#contact" class="cta-button">Get in Touch</a>
+
+                <div class="px-6 lg:px-12 mt-16 lg:mt-24 max-w-4xl">
+                    <h2 class="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">Language Services Division
+                    </h2>
+                    <p class="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl leading-relaxed">Break language barriers
+                        and unlock infinite potential in business, education, and self-expression. Experience
+                        world-class language training and multilingual research that opens doors to global
+                        opportunities.</p>
+                    <a href="#contact"
+                        class="inline-block bg-language-purple hover:bg-purple-500 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Get
+                        in Touch</a>
                 </div>
             </div>
         </section>
 
         <!-- French Coaching Services Section -->
-        <section class="service-section" id="services">
-            <div class="service-container">
-                <div class="service-content">
-                    <img src="../assets/images/img_rectangle_138_1.png" alt="Professional woman working on laptop with pen" class="service-image" />
-                    <div class="service-text">
-                        <div class="service-badge">French Coaching Services</div>
-                        <h2 class="service-title">Surpass Language Barriers</h2>
-                        <p class="service-description">Surpass language barriers and unlock infinite potential in business, education, and self-expression. Leveraging world-class language acquisition methods, we offer French training tailored to all purposes, preparing you to open doors to a global future.</p>
-                        <ul class="service-features">
-                            <li><span class="checkmark">✓</span>Accelerated language learning through elite programs</li>
-                            <li><span class="checkmark">✓</span>Curriculum designed to create overwhelming competitive advantage in business settings</li>
-                            <li><span class="checkmark">✓</span>Industry-leading test preparation services</li>
+        <section class="py-20 lg:py-32 bg-brand-gray" id="services">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    <div class="order-2 lg:order-1">
+                        <img src="../assets/images/img_rectangle_138_1.png"
+                            alt="Professional woman working on laptop with pen" class="w-full rounded-2xl shadow-2xl" />
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div
+                            class="inline-flex items-center bg-blue-100 text-french-blue px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                            <span class="mr-2">🇫🇷</span>
+                            French Coaching Services
+                        </div>
+                        <h2 class="text-3xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">Surpass Language
+                            Barriers</h2>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">Surpass language barriers and unlock
+                            infinite potential in business, education, and self-expression. Leveraging world-class
+                            language acquisition methods, we offer French training tailored to all purposes, preparing
+                            you to open doors to a global future.</p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Accelerated language learning through elite programs</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Curriculum designed to create overwhelming competitive
+                                    advantage in business settings</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Industry-leading test preparation services</span>
+                            </li>
                         </ul>
-                        <a href="#contact" class="service-cta">GET IN TOUCH</a>
+                        <a href="#contact"
+                            class="inline-block bg-french-blue hover:bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105">GET
+                            IN TOUCH</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Multilingual Research Assistance Section -->
-        <section class="service-section">
-            <div class="service-container">
-                <div class="service-content">
-                    <img src="../assets/images/img_rectangle_138_2.png" alt="Person writing on notepad with laptop and pen holder" class="service-image" />
-                    <div class="service-text">
-                        <div class="service-badge">Multilingual Research Assistance</div>
-                        <h2 class="service-title">Next-Generation Market Strategies</h2>
-                        <p class="service-description">Experts in multilingual research design next-generation market strategies. Our global research expands competitive intelligence and provides refined insights that elevate your market position.</p>
-                        <ul class="service-features">
-                            <li><span class="checkmark">✓</span>Multilingual research projects supporting global expansion</li>
-                            <li><span class="checkmark">✓</span>Market analysis to build worldwide competitive advantage</li>
-                            <li><span class="checkmark">✓</span>Data-driven insights accelerating business success</li>
+        <section class="py-20 lg:py-32 bg-white">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    <div>
+                        <img src="../assets/images/img_rectangle_138_2.png"
+                            alt="Person writing on notepad with laptop and pen holder"
+                            class="w-full rounded-2xl shadow-2xl" />
+                    </div>
+                    <div>
+                        <div
+                            class="inline-flex items-center bg-teal-100 text-language-teal px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                            <span class="mr-2">🌍</span>
+                            Multilingual Research Assistance
+                        </div>
+                        <h2 class="text-3xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">Next-Generation
+                            Market Strategies</h2>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">Experts in multilingual research design
+                            next-generation market strategies. Our global research expands competitive intelligence and
+                            provides refined insights that elevate your market position.</p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Multilingual research projects supporting global
+                                    expansion</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Market analysis to build worldwide competitive
+                                    advantage</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Data-driven insights accelerating business success</span>
+                            </li>
                         </ul>
-                        <a href="#contact" class="service-cta">GET IN TOUCH</a>
+                        <a href="#contact"
+                            class="inline-block bg-language-teal hover:bg-teal-500 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105">GET
+                            IN TOUCH</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Success Stories Section -->
-        <section class="success-section">
-            <h2 class="section-title">Success Stories</h2>
-            <div class="stories-grid">
-                <div class="story-card">
-                    <p class="story-quote">"The French coaching program transformed my business communication skills. I now confidently negotiate with international partners in French."</p>
-                    <div class="story-author">Pierre Dubois</div>
-                    <div class="story-company">International Trading Co.</div>
-                </div>
-                <div class="story-card">
-                    <p class="story-quote">"Their multilingual research gave us the competitive edge we needed to enter new markets successfully. The insights were invaluable."</p>
-                    <div class="story-author">Sarah Johnson</div>
-                    <div class="story-company">Global Market Research</div>
-                </div>
-                <div class="story-card">
-                    <p class="story-quote">"Working with Lim-Kawano's Language Services Division opened doors to opportunities I never thought possible."</p>
-                    <div class="story-author">Maria Rodriguez</div>
-                    <div class="story-company">European Business Ventures</div>
+        <section class="py-20 lg:py-32 bg-gradient-to-br from-purple-50 to-pink-50">
+            <div class="container mx-auto px-6 lg:px-12">
+                <h2 class="text-3xl lg:text-5xl font-bold text-center text-gray-900 mb-16">Success Stories</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-t-4 border-french-blue">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-2">🇫🇷</span>
+                            <span class="text-sm font-semibold text-french-blue">French Coaching</span>
+                        </div>
+                        <p class="text-lg text-gray-700 mb-6 italic leading-relaxed">"The French coaching program
+                            transformed my business communication skills. I now confidently negotiate with international
+                            partners in French."</p>
+                        <div class="border-t pt-4">
+                            <div class="font-semibold text-gray-900">Pierre Dubois</div>
+                            <div class="text-gray-600 text-sm">International Trading Co.</div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-t-4 border-language-teal">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-2">🌍</span>
+                            <span class="text-sm font-semibold text-language-teal">Research Services</span>
+                        </div>
+                        <p class="text-lg text-gray-700 mb-6 italic leading-relaxed">"Their multilingual research gave
+                            us the competitive edge we needed to enter new markets successfully. The insights were
+                            invaluable."</p>
+                        <div class="border-t pt-4">
+                            <div class="font-semibold text-gray-900">Sarah Johnson</div>
+                            <div class="text-gray-600 text-sm">Global Market Research</div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-t-4 border-language-purple md:col-span-2 lg:col-span-1">
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl mr-2">🚀</span>
+                            <span class="text-sm font-semibold text-language-purple">Global Opportunities</span>
+                        </div>
+                        <p class="text-lg text-gray-700 mb-6 italic leading-relaxed">"Working with Lim-Kawano's Language
+                            Services Division opened doors to opportunities I never thought possible."</p>
+                        <div class="border-t pt-4">
+                            <div class="font-semibold text-gray-900">Maria Rodriguez</div>
+                            <div class="text-gray-600 text-sm">European Business Ventures</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section class="contact-section" id="contact">
-            <div class="contact-container">
-                <div class="contact-header">
-                    <h2 class="contact-main-title">Get in Touch</h2>
-                    <p class="contact-main-subtitle">Ready to break language barriers? Let's discuss how we can help.</p>
+        <section class="py-20 lg:py-32 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900" id="contact">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl lg:text-5xl font-bold text-white mb-6">Get in Touch</h2>
+                    <p class="text-xl text-gray-300 max-w-2xl mx-auto">Ready to break language barriers? Let's discuss
+                        how we can help.</p>
                 </div>
-                
-                <div class="contact-content">
-                    <div class="contact-info-section">
-                        <h3>Contact Information</h3>
-                        
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon">✉</div>
-                            <div class="contact-info-text">
-                                <div class="contact-info-label">Email</div>
-                                <div class="contact-info-value">language@limkawano.com</div>
+
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold text-white mb-8">Contact Information</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="text-brand-gold text-2xl">✉</div>
+                                <div>
+                                    <div class="text-gray-300 text-sm">Email</div>
+                                    <div class="text-white font-semibold">language@limkawano.com</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="text-brand-gold text-2xl">📞</div>
+                                <div>
+                                    <div class="text-gray-300 text-sm">Phone</div>
+                                    <div class="text-white font-semibold">+33 (1) 1234-5678</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="text-brand-gold text-2xl">📍</div>
+                                <div>
+                                    <div class="text-gray-300 text-sm">Language Office</div>
+                                    <div class="text-white font-semibold">Paris, France</div>
+                                </div>
                             </div>
                         </div>
-                        
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon">📞</div>
-                            <div class="contact-info-text">
-                                <div class="contact-info-label">Phone</div>
-                                <div class="contact-info-value">+33 (1) 1234-5678</div>
+
+                        <div class="mt-10 p-6 bg-black bg-opacity-20 rounded-xl">
+                            <h4 class="text-lg font-semibold text-white mb-3 flex items-center">
+                                <span class="mr-2">🌐</span>
+                                Global Language Centers
+                            </h4>
+                            <p class="text-gray-300">With offices in Paris, Tokyo, and New York, we're positioned to
+                                serve your language learning and research needs worldwide.</p>
+                            <div class="flex space-x-4 mt-4">
+                                <span
+                                    class="inline-flex items-center px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm text-white">
+                                    🇫🇷 Paris
+                                </span>
+                                <span
+                                    class="inline-flex items-center px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm text-white">
+                                    🇯🇵 Tokyo
+                                </span>
+                                <span
+                                    class="inline-flex items-center px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm text-white">
+                                    🇺🇸 New York
+                                </span>
                             </div>
-                        </div>
-                        
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon">📍</div>
-                            <div class="contact-info-text">
-                                <div class="contact-info-label">Language Office</div>
-                                <div class="contact-info-value">Paris, France</div>
-                            </div>
-                        </div>
-                        
-                        <div class="global-offices">
-                            <h4>Global Language Centers</h4>
-                            <p>With offices in Paris, Tokyo, and New York, we're positioned to serve your language learning and research needs worldwide.</p>
                         </div>
                     </div>
-                    
-                    <div class="contact-form-section">
-                        <form class="contact-form" action="#" method="POST">
-                            <div class="form-group">
-                                <label class="form-label">Name <span class="required">*</span></label>
-                                <input type="text" class="form-input" placeholder="John Doe" required />
+
+                    <div class="bg-white rounded-2xl p-8 shadow-2xl">
+                        <form class="contact-form space-y-6" action="#" method="POST">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Name <span
+                                        class="text-red-500">*</span></label>
+                                <input type="text"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-language-purple focus:border-transparent transition-all"
+                                    placeholder="John Doe" required />
                             </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Email <span class="required">*</span></label>
-                                <input type="email" class="form-input" placeholder="john@example.com" required />
+
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Email <span
+                                        class="text-red-500">*</span></label>
+                                <input type="email"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-language-purple focus:border-transparent transition-all"
+                                    placeholder="john@example.com" required />
                             </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Company</label>
-                                <input type="text" class="form-input" placeholder="Your Company" />
+
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Company</label>
+                                <input type="text"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-language-purple focus:border-transparent transition-all"
+                                    placeholder="Your Company" />
                             </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Message <span class="required">*</span></label>
-                                <textarea class="form-textarea" placeholder="Tell us about your language project..." required></textarea>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Message <span
+                                        class="text-red-500">*</span></label>
+                                <textarea
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-language-purple focus:border-transparent transition-all h-32 resize-none"
+                                    placeholder="Tell us about your language project..." required></textarea>
                             </div>
-                            
-                            <button type="submit" class="submit-button">Send Message</button>
+
+                            <button type="submit"
+                                class="w-full bg-language-purple hover:bg-purple-500 text-white font-semibold py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Send
+                                Message</button>
                         </form>
                     </div>
                 </div>
@@ -174,67 +320,95 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-divider"></div>
-            
-            <div class="footer-main">
-                <div class="footer-brand">
-                    <div class="footer-logo">Lim-Kawano & Company Inc.</div>
-                    <p class="footer-tagline">Connecting businesses worldwide through innovation and excellence.</p>
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="border-t border-gray-800 mb-12"></div>
+
+            <div class="grid lg:grid-cols-4 gap-12 mb-12">
+                <div class="lg:col-span-2">
+                    <div class="text-2xl font-bold mb-4">Lim-Kawano & Company Inc.</div>
+                    <p class="text-gray-400 max-w-md">Connecting businesses worldwide through innovation and excellence.
+                    </p>
                 </div>
-                
-                <div class="footer-links-grid">
-                    <div class="footer-links-section">
-                        <h4>Services</h4>
-                        <nav class="footer-links">
-                            <a href="AfricaDivision.html">Africa Division</a>
-                            <a href="PhilippinesDivision.html">Philippines Division</a>
-                            <a href="LanguageServicesDivision.html">Language Services</a>
-                            <a href="ITServicesDivision.html">IT Solutions</a>
-                        </nav>
-                    </div>
-                    
-                    <div class="footer-links-section">
-                        <h4>Company</h4>
-                        <nav class="footer-links">
-                            <a href="../index.html#team">About Us</a>
-                            <a href="../index.html#contact">Careers</a>
-                            <a href="../index.html#services">Partners</a>
-                            <a href="../index.html#services">News</a>
-                        </nav>
-                    </div>
-                    
-                    <div class="footer-links-section">
-                        <h4>Connect</h4>
-                        <div class="footer-social">
-                            <div class="footer-social-icons">
-                                <a href="#" class="footer-social-icon" aria-label="LinkedIn">💼</a>
-                                <a href="#" class="footer-social-icon" aria-label="Instagram">📷</a>
-                                <a href="#" class="footer-social-icon" aria-label="Twitter">🐦</a>
-                                <a href="#" class="footer-social-icon" aria-label="Facebook">📘</a>
-                            </div>
-                            <p class="footer-newsletter">Subscribe to our newsletter for updates</p>
-                        </div>
-                    </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <nav class="space-y-2">
+                        <a href="AfricaDivision.html"
+                            class="block text-gray-400 hover:text-language-purple transition-colors">Africa Division</a>
+                        <a href="PhilippinesDivision.html"
+                            class="block text-gray-400 hover:text-language-purple transition-colors">Philippines
+                            Division</a>
+                        <a href="LanguageServicesDivision.html"
+                            class="block text-gray-400 hover:text-language-purple transition-colors">Language
+                            Services</a>
+                        <a href="ITServicesDivision.html"
+                            class="block text-gray-400 hover:text-language-purple transition-colors">IT Solutions</a>
+                    </nav>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <nav class="space-y-2">
+                        <a href="../index.html#team"
+                            class="block text-gray-400 hover:text-language-purple transition-colors">About Us</a>
+                        <a href="../index.html#contact"
+                            class="block text-gray-400 hover:text-language-purple transition-colors">Careers</a>
+                        <a href="../index.html#services"
+                            class="block text-gray-400 hover:text-language-purple transition-colors">Partners</a>
+                        <a href="../index.html#services"
+                            class="block text-gray-400 hover:text-language-purple transition-colors">News</a>
+                    </nav>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <div class="footer-copyright">© 2025 Lim-Kawano & Company Inc. All rights reserved.</div>
-                <div class="footer-legal">
-                    <a href="#privacy">Privacy Policy</a>
-                    <a href="#terms">Terms of Service</a>
+
+            <div class="flex flex-col lg:flex-row justify-between items-center py-8 border-t border-gray-800">
+                <div class="text-gray-400 mb-4 lg:mb-0">© 2025 Lim-Kawano & Company Inc. All rights reserved.</div>
+                <div class="flex space-x-6">
+                    <a href="#privacy" class="text-gray-400 hover:text-language-purple transition-colors">Privacy
+                        Policy</a>
+                    <a href="#terms" class="text-gray-400 hover:text-language-purple transition-colors">Terms of
+                        Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav fixed inset-0 bg-gray-900 bg-opacity-95 z-50 hidden lg:hidden">
+        <div class="flex justify-between items-center p-6">
+            <h1 class="text-xl font-bold text-white">Menu</h1>
+            <button class="close-mobile-nav text-white text-2xl">×</button>
+        </div>
+        <nav class="px-6">
+            <ul class="space-y-6">
+                <li><a href="../index.html"
+                        class="block text-white text-xl hover:text-language-purple transition-colors">Home</a></li>
+                <li><a href="#contact"
+                        class="block text-white text-xl hover:text-language-purple transition-colors">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <script>
         // Mobile menu toggle
-        document.querySelector('.hamburger').addEventListener('click', function() {
-            const navMenu = document.querySelector('.nav-menu');
-            navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const closeMobileNav = document.querySelector('.close-mobile-nav');
+
+        hamburger.addEventListener('click', function () {
+            mobileNav.classList.remove('hidden');
+        });
+
+        closeMobileNav.addEventListener('click', function () {
+            mobileNav.classList.add('hidden');
+        });
+
+        // Close mobile nav when clicking on links
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', function () {
+                mobileNav.classList.add('hidden');
+            });
         });
 
         // Smooth scrolling for anchor links
@@ -252,17 +426,19 @@
         });
 
         // Form validation
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+        document.querySelector('.contact-form').addEventListener('submit', function (e) {
             e.preventDefault();
             const requiredFields = this.querySelectorAll('[required]');
             let isValid = true;
 
             requiredFields.forEach(field => {
                 if (!field.value.trim()) {
-                    field.style.borderColor = '#ef4444';
+                    field.classList.add('border-red-500');
+                    field.classList.remove('border-gray-300');
                     isValid = false;
                 } else {
-                    field.style.borderColor = '#e2c089cc';
+                    field.classList.remove('border-red-500');
+                    field.classList.add('border-gray-300');
                 }
             });
 
@@ -273,6 +449,44 @@
                 alert('Please fill in all required fields.');
             }
         });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.story-card, .service-image').forEach(el => {
+            observer.observe(el);
+        });
     </script>
+
+    <style>
+        .animate-fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </body>
+
 </html>
