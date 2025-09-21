@@ -2,7 +2,6 @@
         /* Mobile Navigation Styles */
         .mobile-nav {
             position: fixed;
-            top: 0;
             right: -100%;
             width: 280px;
             height: 100vh;
@@ -18,7 +17,6 @@
 
         .mobile-nav-overlay {
             position: fixed;
-            top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;

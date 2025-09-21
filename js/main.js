@@ -1,126 +1,308 @@
-// Mobile menu toggle
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.querySelector('.hamburger');
-  if (hamburger) {
-    hamburger.addEventListener('click', function() {
-      const navMenu = document.querySelector('.nav-menu');
-      if (navMenu) {
-        navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
-      }
-    });
-  }
+        // Mobile Navigation functionality
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+        const closeMobileNav = document.getElementById('closeMobileNav');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-  // Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      if (href && href.startsWith('#')) {
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-      }
-    });
-  });
+        function openMobileNav() {
+            mobileNav.classList.add('open');
+            mobileNavOverlay.classList.add('show');
+            hamburgerBtn.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
 
-  // Simple 3D carousel logic with autoplay
-  (function() {
-    const track = document.querySelector('.carousel-track');
-    if (!track) return;
-    const cards = Array.from(track.children);
-    const left = document.querySelector('.carousel-arrow.left');
-    const right = document.querySelector('.carousel-arrow.right');
-    const nameEl = document.querySelector('.carousel-meta .person-name');
-    const roleEl = document.querySelector('.carousel-meta .person-role');
-    const dotsWrap = document.querySelector('.carousel-dots');
+        function closeMobileNavFunc() {
+            mobileNav.classList.remove('open');
+            mobileNavOverlay.classList.remove('show');
+            hamburgerBtn.classList.remove('active');
+            document.body.style.overflow = '';
+        }
 
-    let index = 0;
-    let autoplayId = null;
-    const AUTOPLAY_MS = 3500;
+        hamburgerBtn.addEventListener('click', openMobileNav);
+        closeMobileNav.addEventListener('click', closeMobileNavFunc);
+        mobileNavOverlay.addEventListener('click', closeMobileNavFunc);
 
-    function layout() {
-      cards.forEach((card, i) => {
-        const offset = ((i - index + cards.length) % cards.length);
-        let position = offset;
-        if (offset > cards.length / 2) position = offset - cards.length; // wrap left
+        // Close mobile nav when clicking on a link
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileNavFunc);
+        });
 
-        const distance = Math.abs(position);
-        const scale = Math.max(0.7, 1 - distance * 0.12);
-        const translateX = position * 180;
-        const translateZ = -Math.min(0, distance - 1) * 120;
-        const rotateY = position * -10;
-        const opacity = distance === 0 ? 1 : 0.55 - Math.min(0.35, (distance - 1) * 0.15);
+        // Leadership Carousel functionality
+        const carouselTrack = document.querySelector('.carousel-track');
+        const carouselCards = document.querySelectorAll('.carousel-card');
+        const leftArrow = document.querySelector('.carousel-arrow.left');
+        const rightArrow = document.querySelector('.carousel-arrow.right');
+        const personName = document.querySelector('.person-name');
+        const personRole = document.querySelector('.person-role');
+        const carouselDots = document.querySelector('.carousel-dots');
 
-        card.style.zIndex = String(100 - distance);
-        card.style.transform = `translateX(-50%) translateX(${translateX}px) translateZ(${translateZ}px) scale(${scale}) rotateY(${rotateY}deg)`;
-        card.style.filter = distance === 0 ? 'grayscale(0)' : 'grayscale(100%)';
-        card.style.opacity = String(Math.max(0.25, opacity));
-      });
+        let currentIndex = 0;
 
-      const active = cards[index];
-      if (nameEl) nameEl.textContent = active.getAttribute('data-name') || '';
-      if (roleEl) roleEl.textContent = active.getAttribute('data-role') || '';
-      updateDots();
-    }
+        // Create dots
+        carouselCards.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('carousel-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            carouselDots.appendChild(dot);
+        });
 
-    function prev() { index = (index - 1 + cards.length) % cards.length; layout(); }
-    function next() { index = (index + 1) % cards.length; layout(); }
+        const dots = document.querySelectorAll('.carousel-dot');
 
-    if (left) left.addEventListener('click', () => { stopAutoplay(); prev(); startAutoplay(); });
-    if (right) right.addEventListener('click', () => { stopAutoplay(); next(); startAutoplay(); });
+        function updateCarousel() {
+            // Update active card
+            carouselCards.forEach((card, index) => {
+                if (index === currentIndex) {
+                    card.style.transform = 'scale(1.1)';
+                    card.style.filter = 'brightness(1)';
+                } else {
+                    card.style.transform = 'scale(0.9)';
+                    card.style.filter = 'brightness(0.7)';
+                }
+            });
 
-    // dots
-    if (dotsWrap) {
-      cards.forEach((_, i) => {
-        const b = document.createElement('button');
-        b.setAttribute('aria-label', `Go to ${i+1}`);
-        b.addEventListener('click', () => { stopAutoplay(); index = i; layout(); startAutoplay(); });
-        dotsWrap.appendChild(b);
-      });
-    }
+            // Update person info
+            const activeCard = carouselCards[currentIndex];
+            personName.textContent = activeCard.dataset.name;
+            personRole.textContent = activeCard.dataset.role;
 
-    function updateDots() {
-      if (!dotsWrap) return;
-      Array.from(dotsWrap.children).forEach((dot, i) => {
-        if (i === index) { dot.setAttribute('aria-current', 'true'); }
-        else { dot.removeAttribute('aria-current'); }
-      });
-    }
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
 
-    function startAutoplay() {
-      stopAutoplay();
-      autoplayId = window.setInterval(next, AUTOPLAY_MS);
-    }
+            // Scroll to active card (for mobile)
+            const cardWidth = carouselCards[0].offsetWidth + 16; // width + gap
+            carouselTrack.scrollTo({
+                left: currentIndex * cardWidth - carouselTrack.offsetWidth / 2 + cardWidth / 2,
+                behavior: 'smooth'
+            });
+        }
 
-    function stopAutoplay() {
-      if (autoplayId) { window.clearInterval(autoplayId); autoplayId = null; }
-    }
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
 
-    const carousel = document.querySelector('.team-carousel');
-    if (carousel) {
-      carousel.addEventListener('mouseenter', stopAutoplay);
-      carousel.addEventListener('mouseleave', startAutoplay);
-      carousel.addEventListener('touchstart', stopAutoplay, { passive: true });
-      carousel.addEventListener('touchend', startAutoplay, { passive: true });
-    }
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % carouselCards.length;
+            updateCarousel();
+        }
 
-    layout();
-    startAutoplay();
-  })();
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + carouselCards.length) % carouselCards.length;
+            updateCarousel();
+        }
 
-  // File upload simulation
-  const uploadTarget = document.querySelector('textarea[placeholder="Choose file or drop here."]');
-  if (uploadTarget) {
-    uploadTarget.addEventListener('click', function() {
-      const input = document.createElement('input');
-      input.type = 'file';
-      input.accept = '.pdf,.doc,.docx,.txt';
-      input.onchange = function(e) {
-        const file = e.target.files[0];
-        if (file) { uploadTarget.value = file.name; }
-      };
-      input.click();
-    });
-  }
-});
+        leftArrow.addEventListener('click', prevSlide);
+        rightArrow.addEventListener('click', nextSlide);
 
+        // Click on cards to select them
+        carouselCards.forEach((card, index) => {
+            card.addEventListener('click', () => goToSlide(index));
+        });
 
+        // Initialize carousel
+        updateCarousel();
+
+        // Auto-advance carousel every 5 seconds
+        setInterval(nextSlide, 5000);
+
+        // Form validation and submission
+        const contactForm = document.querySelector('.contact-form');
+        const submitButton = document.querySelector('.submit-button');
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Simple form validation
+            const formData = new FormData(contactForm);
+            const name = contactForm.querySelector('input[type="text"]').value;
+            const email = contactForm.querySelector('input[type="email"]').value;
+            const message = contactForm.querySelector('textarea').value;
+
+            if (!name || !email || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Simulate form submission
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+
+            setTimeout(() => {
+                alert('Thank you for your message! We\'ll get back to you soon.');
+                contactForm.reset();
+                submitButton.innerHTML = 'Send Message <span class="ml-1">✈</span>';
+                submitButton.disabled = false;
+            }, 2000);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for fade-in animation
+        document.querySelectorAll('.solution-card, .contact-info-item, .carousel-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Add loading state for images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('load', function () {
+                this.style.opacity = '1';
+            });
+            img.style.opacity = '0';
+            img.style.transition = 'opacity 0.3s ease';
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                closeMobileNavFunc();
+            }
+            updateCarousel();
+        });
+
+        // Add scroll-based navbar background
+        const header = document.querySelector('.header');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > 100) {
+                header.style.background = 'rgba(20, 57, 77, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+                header.style.padding = '0.75rem 0';
+            } else {
+                header.style.background = 'transparent';
+                header.style.backdropFilter = 'none';
+                header.style.padding = '0';
+            }
+
+            lastScrollY = currentScrollY;
+        });
+
+        // Keyboard navigation for carousel
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+            }
+        });
+
+        // Touch/swipe support for mobile carousel
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carouselTrack.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carouselTrack.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+        }
+
+        // Enhanced form interactions
+        const formInputs = document.querySelectorAll('.form-input, .form-textarea');
+
+        formInputs.forEach(input => {
+            input.addEventListener('focus', function () {
+                this.parentNode.classList.add('focused');
+            });
+
+            input.addEventListener('blur', function () {
+                this.parentNode.classList.remove('focused');
+                if (this.value) {
+                    this.parentNode.classList.add('filled');
+                } else {
+                    this.parentNode.classList.remove('filled');
+                }
+            });
+        });
+
+        // Add some CSS for enhanced form states
+        const style = document.createElement('style');
+        style.textContent = `
+            .form-group.focused .form-label {
+                color: #cc9955;
+            }
+            
+            .form-group.filled .form-input,
+            .form-group.filled .form-textarea {
+                border-color: #cc9955;
+            }
+            
+            @media (max-width: 768px) {
+                .carousel-track {
+                    scroll-snap-type: x mandatory;
+                }
+                
+                .carousel-card {
+                    scroll-snap-align: center;
+                }
+            }
+            
+            /* Loading animation for submit button */
+            .submit-button:disabled {
+                opacity: 0.7;
+                cursor: not-allowed;
+            }
+            
+            /* Enhanced hover effects for desktop */
+            @media (min-width: 1024px) {
+                .solution-card:hover .solution-image {
+                    transform: scale(1.1);
+                }
+                
+                .footer-social-icon:hover {
+                    transform: translateY(-2px) scale(1.1);
+                }
+            }
+        `;
+        document.head.appendChild(style);
