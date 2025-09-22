@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Africa Division - Lim-Kawano & Company Inc.</title>
+    <meta name="description"
+        content="Your trusted gateway to Africa. With over 10 years of experience and a network spanning all 54 countries, we coordinate everything from business market entry to unforgettable travel adventures." />
+    <meta name="keywords"
+        content="Africa business, Africa travel, market entry Africa, African business consulting, Africa concierge, African partnerships" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Africa Division - Lim-Kawano & Company Inc." />
+    <meta property="og:description"
+        content="Your trusted gateway to Africa. With over 10 years of experience and a network spanning all 54 countries." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/main.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#14394d',
+                        'primary-tan': '#cc9955',
+                        'light-blue': '#7da3b7',
+                        'light-tan': '#dcaa66',
+                        'off-white': '#fefff8',
+                        'cream': '#faf4eb',
+                        'dark-gray': '#2a2a2a',
+                        'medium-gray': '#586972',
+                    },
+                    fontFamily: {
+                        'notable': ['Notable', 'serif'],
+                        'questrial': ['Questrial', 'sans-serif'],
+                        'outfit': ['Outfit', 'sans-serif'],
+                    },
+                    screens: {
+                        'xs': '375px',
+                        'sm': '640px',
+                        'md': '768px',
+                        'lg': '1024px',
+                        'xl': '1280px',
+                        '2xl': '1536px',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans bg-off-white text-gray-800">
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-white font-bold text-lg">Menu</h2>
+                <button class="text-white text-2xl" id="closeMobileNav">&times;</button>
+            </div>
+
+            <ul class="space-y-6">
+                <li><a href="../index.html#home"
+                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan">Home</a>
+                </li>
+                <li><a href="../index.html#team"
+                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan">Team</a>
+                </li>
+                <li><a href="../index.html#expertise"
+                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan">Expertise</a>
+                </li>
+                <li><a href="../index.html#services"
+                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan">Services</a>
+                </li>
+                <li><a href="#contact"
+                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan">Contact</a>
+                </li>
+            </ul>
+
+            <div class="mt-8 pt-6 border-t border-gray-600">
+                <div class="flex items-center gap-3">
+                    <img src="../assets/images/img_language_icon.png" alt="Language" class="w-6 h-6" />
+                    <span class="text-white font-semibold">EN</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section
+            class="hero-section bg-cover bg-center bg-no-repeat min-h-screen flex items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 relative"
+            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/images/img_rectangle_1.png');"
+            id="home">
+            <div class="hero-content relative z-10 w-full max-w-7xl mx-auto">
+                <header
+                    class="header flex justify-between items-center w-full mb-12 xs:mb-16 sm:mb-20 md:mb-24 lg:mb-32">
+                    <h1 class="logo font-notable text-white text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl">
+                        Lim-Kawano & Company Inc.
+                    </h1>
+
+                    <!-- Mobile Hamburger -->
+                    <button class="hamburger md:hidden" id="hamburgerBtn" aria-label="Toggle navigation menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <!-- Desktop Navigation -->
+                    <nav class="nav-menu hidden md:block" role="navigation">
+                        <ul class="flex list-none gap-4 lg:gap-6 xl:gap-8 items-center">
+                            <li><a href="../index.html#home"
+                                    class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
+                                    role="menuitem">Home</a></li>
+                            <li><a href="../index.html#team"
+                                    class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
+                                    role="menuitem">Team</a></li>
+                            <li><a href="../index.html#expertise"
+                                    class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
+                                    role="menuitem">Expertise</a></li>
+                            <li><a href="../index.html#services"
+                                    class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
+                                    role="menuitem">Services</a></li>
+                            <li><a href="#contact"
+                                    class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
+                                    role="menuitem">Contact</a></li>
+                            <li class="language-selector flex items-center gap-1.5 ml-4 lg:ml-6 xl:ml-8">
+                                <img src="../assets/images/img_language_icon.png" alt="Language selector"
+                                    class="language-icon w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6" />
+                                <span
+                                    class="language-text text-white font-semibold text-sm lg:text-base xl:text-lg">EN</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+
+                <div class="px-6 lg:px-12 mt-16 lg:mt-24 max-w-4xl">
+                    <h2 class="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">Your trusted gateway to Africa.</h2>
+                    <p class="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl leading-relaxed">With over 10 years of experience and a network spanning all 54 countries, we coordinate everything — from business market entry to unforgettable travel adventures.</p>
+                    <a href="#contact"
+                        class="cta-button bg-light-blue text-primary-blue font-outfit font-semibold text-xs xs:text-sm sm:text-base uppercase py-3 px-6 sm:py-4 sm:px-8 rounded-lg inline-block hover:bg-[#6b8fa3] hover:scale-105 transition-all duration-300 shadow-lg">Get
+                        in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-20 lg:py-32 bg-white" id="services">
+            <div class="container mx-auto px-6 lg:px-12">
+                <h2 class="section-title">Our Services</h2>
+                
+                <!-- Market Entry & Growth Support -->
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
+                    <div class="order-2 lg:order-1">
+                        <img src="../assets/images/img_rectangle_138.png" alt="Africa market entry support"
+                            class="w-full rounded-2xl shadow-2xl" />
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="inline-block bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                            Africa Market Entry Support</div>
+                        <h3 class="text-3xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">Expand with Confidence</h3>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">We guide businesses entering Africa with deep local knowledge, trusted partnerships, and hands-on coordination across 54 countries.</p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Strategic entry support tailored to local markets</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Reliable on-the-ground coordination and partner matching</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Growth opportunities across Africa's emerging economies</span>
+                            </li>
+                        </ul>
+                        <a href="#contact"
+                            class="inline-block bg-primary-tan hover:bg-[#b8884a] text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105">GET
+                            IN TOUCH</a>
+                    </div>
+                </div>
+
+                <!-- Concierge for Travel & Business -->
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
+                    <div>
+                        <img src="../assets/images/img_rectangle_138_1.png"
+                            alt="Africa concierge travel and business services" class="w-full rounded-2xl shadow-2xl" />
+                    </div>
+                    <div>
+                        <div class="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                            Africa Concierge Services</div>
+                        <h3 class="text-3xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">Travel & Business, Seamlessly Coordinated</h3>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">From tailor-made leisure trips to business travel, we provide safe, authentic, and seamless African experiences.</p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Customized itineraries for unforgettable journeys</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Professional support for business trips and corporate delegations</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Local expertise ensuring safety and comfort</span>
+                            </li>
+                        </ul>
+                        <div class="flex gap-4">
+                            <a href="#contact"
+                                class="inline-block bg-gray-900 hover:bg-gray-800 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105">GET
+                                IN TOUCH</a>
+                            <a href="https://africa-travel.info/" target="_blank"
+                                class="inline-block bg-primary-blue hover:bg-[#0f2a3a] text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105">VISIT SERVICE SITE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fitness -->
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
+                    <div class="order-2 lg:order-1">
+                        <img src="../assets/images/img_rectangle_138_2.png" alt="Fitness for Africa programs"
+                            class="w-full rounded-2xl shadow-2xl" />
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                            Fitness for Africa</div>
+                        <h3 class="text-3xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">Building Healthy Habits, Improving Quality of Life</h3>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">We provide fitness programs designed for African communities, helping people build regular exercise habits, improve their health, and enhance their quality of life.</p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Accessible fitness programs tailored to local lifestyles</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Guidance to establish sustainable exercise habits</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Promoting better health and higher QOL through regular activity</span>
+                            </li>
+                        </ul>
+                        <a href="#contact"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105">GET
+                            IN TOUCH</a>
+                    </div>
+                </div>
+
+                <!-- Social Impact Projects -->
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    <div>
+                        <img src="../assets/images/img_rectangle_138_288x222.png" alt="Social impact projects in Africa"
+                            class="w-full rounded-2xl shadow-2xl" />
+                    </div>
+                    <div>
+                        <div class="inline-block bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                            Social Impact & Innovation</div>
+                        <h3 class="text-3xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">Solving Challenges with Japanese Technology</h3>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">We collaborate with local communities to address Africa's pressing issues, applying Japanese innovation to create sustainable solutions.</p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Projects leveraging Japanese technology for social good</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Collaborative initiatives with local stakeholders</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-green-500 text-xl font-bold mt-1">✓</span>
+                                <span class="text-gray-700">Sustainable models for long-term community impact</span>
+                            </li>
+                        </ul>
+                        <a href="#contact"
+                            class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105">GET
+                            IN TOUCH</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories Section -->
+        <section class="py-20 lg:py-32 bg-gradient-to-br from-orange-50 to-amber-50">
+            <div class="container mx-auto px-6 lg:px-12">
+                <h2 class="text-3xl lg:text-5xl font-bold text-center text-gray-900 mb-16">Success Stories</h2>
+                <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-t-4 border-primary-tan">
+                        <p class="text-lg text-gray-700 mb-6 italic leading-relaxed">"In the Democratic Republic of Congo, Lim-Kawano's Africa Division is not only advising but actively driving our smart city project. Their coordination with Japanese experts and local stakeholders is helping us turn vision into implementation."</p>
+                        <div class="border-t pt-4">
+                            <div class="font-semibold text-gray-900">Local Government Partner</div>
+                            <div class="text-gray-600 text-sm">Democratic Republic of Congo</div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-t-4 border-green-500">
+                        <p class="text-lg text-gray-700 mb-6 italic leading-relaxed">"Thanks to Lim-Kawano, we were able to export baobab powder from Senegal to Japan. They didn't just connect us—they managed negotiations, compliance, and logistics, ensuring our product reached the Japanese market successfully."</p>
+                        <div class="border-t pt-4">
+                            <div class="font-semibold text-gray-900">Agribusiness Entrepreneur</div>
+                            <div class="text-gray-600 text-sm">Senegal</div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-t-4 border-blue-500">
+                        <p class="text-lg text-gray-700 mb-6 italic leading-relaxed">"Lim-Kawano supported our IT company in Nigeria not only by introducing Japanese clients, but also by managing projects and ensuring delivery. Their involvement helped us establish long-term partnerships and expand our business."</p>
+                        <div class="border-t pt-4">
+                            <div class="font-semibold text-gray-900">IT Entrepreneur</div>
+                            <div class="text-gray-600 text-sm">Nigeria</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section bg-dark-gray py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 md:px-8 text-white"
+            id="contact">
+            <div class="contact-container max-w-7xl mx-auto">
+                <div class="contact-header text-center mb-12 sm:mb-16 md:mb-20">
+                    <h2
+                        class="contact-main-title text-white font-extrabold text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6">
+                        Get in Touch</h2>
+                    <p
+                        class="contact-main-subtitle text-gray-300 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+                        Ready to explore Africa? Let's discuss how we can help you achieve your business and travel goals.</p>
+                </div>
+
+                <div
+                    class="contact-content grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-20 items-start">
+                    <div class="contact-info-section">
+                        <h3 class="text-white font-bold text-xl sm:text-2xl md:text-3xl mb-6 sm:mb-8">Contact
+                            Information</h3>
+
+                        <div class="contact-info-item flex items-start gap-4 sm:gap-6 mb-6 sm:mb-8">
+                            <div
+                                class="contact-info-icon w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-tan rounded-lg flex items-center justify-center text-white text-lg sm:text-xl flex-shrink-0">
+                                ✉</div>
+                            <div class="contact-info-text">
+                                <div
+                                    class="contact-info-label text-gray-300 text-sm sm:text-base font-semibold mb-1 sm:mb-2">
+                                    Email</div>
+                                <div class="contact-info-value text-white font-medium text-base sm:text-lg">
+                                    info+africa@lim-kawano.com</div>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item flex items-start gap-4 sm:gap-6 mb-6 sm:mb-8">
+                            <div
+                                class="contact-info-icon w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-tan rounded-lg flex items-center justify-center text-white text-lg sm:text-xl flex-shrink-0">
+                                📞</div>
+                            <div class="contact-info-text">
+                                <div
+                                    class="contact-info-label text-gray-300 text-sm sm:text-base font-semibold mb-1 sm:mb-2">
+                                    WhatsApp</div>
+                                <div class="contact-info-value text-white font-medium text-base sm:text-lg">+81 90 6773 1502</div>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item flex items-start gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12">
+                            <div
+                                class="contact-info-icon w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-tan rounded-lg flex items-center justify-center text-white text-lg sm:text-xl flex-shrink-0">
+                                📍</div>
+                            <div class="contact-info-text">
+                                <div
+                                    class="contact-info-label text-gray-300 text-sm sm:text-base font-semibold mb-1 sm:mb-2">
+                                    Office</div>
+                                <div class="contact-info-value text-white font-medium text-base sm:text-lg">Djibouti</div>
+                            </div>
+                        </div>
+
+                        <div class="global-offices">
+                            <h4 class="text-white font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4">Global Offices
+                            </h4>
+                            <p class="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
+                                With offices in Tokyo, Manila, and Djibouti, we're always within reach to
+                                serve your needs across multiple time zones.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-section bg-[#333] rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10">
+                        <form class="contact-form flex flex-col gap-4 sm:gap-6" action="#" method="POST">
+                            <div class="form-group flex flex-col">
+                                <label class="form-label text-white text-sm sm:text-base font-semibold mb-2">Name <span
+                                        class="required text-red-400">*</span></label>
+                                <input type="text"
+                                    class="form-input w-full p-3 sm:p-4 border-2 border-[#444] bg-dark-gray text-white rounded-lg text-sm sm:text-base transition-all duration-300 focus:border-primary-tan focus:ring-2 focus:ring-primary-tan/20"
+                                    placeholder="John Doe" required />
+                            </div>
+
+                            <div class="form-group flex flex-col">
+                                <label class="form-label text-white text-sm sm:text-base font-semibold mb-2">Email <span
+                                        class="required text-red-400">*</span></label>
+                                <input type="email"
+                                    class="form-input w-full p-3 sm:p-4 border-2 border-[#444] bg-dark-gray text-white rounded-lg text-sm sm:text-base transition-all duration-300 focus:border-primary-tan focus:ring-2 focus:ring-primary-tan/20"
+                                    placeholder="john@example.com" required />
+                            </div>
+
+                            <div class="form-group flex flex-col">
+                                <label
+                                    class="form-label text-white text-sm sm:text-base font-semibold mb-2">Company</label>
+                                <input type="text"
+                                    class="form-input w-full p-3 sm:p-4 border-2 border-[#444] bg-dark-gray text-white rounded-lg text-sm sm:text-base transition-all duration-300 focus:border-primary-tan focus:ring-2 focus:ring-primary-tan/20"
+                                    placeholder="Your Company" />
+                            </div>
+
+                            <div class="form-group flex flex-col">
+                                <label class="form-label text-white text-sm sm:text-base font-semibold mb-2">Message
+                                    <span class="required text-red-400">*</span></label>
+                                <textarea
+                                    class="form-textarea w-full p-3 sm:p-4 border-2 border-[#444] bg-dark-gray text-white rounded-lg min-h-32 sm:min-h-36 text-sm sm:text-base transition-all duration-300 focus:border-primary-tan focus:ring-2 focus:ring-primary-tan/20 resize-y"
+                                    placeholder="Tell us about your project and how we can help you..."
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="submit-button bg-primary-tan text-white border-none py-3 sm:py-4 px-6 sm:px-8 rounded-lg font-semibold cursor-pointer transition-all duration-300 hover:bg-[#b8884a] hover:scale-105 flex items-center justify-center gap-2 self-start text-sm sm:text-base shadow-lg">
+                                Send Message <span class="ml-1">✈</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-[#1a1a1a] pt-12 sm:pt-16 md:pt-20 pb-6 sm:pb-8 px-4 sm:px-6 md:px-8 text-white">
+        <div class="footer-content max-w-7xl mx-auto">
+            <div class="footer-divider h-px bg-[#333] mb-8 sm:mb-12"></div>
+
+            <div
+                class="footer-main grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12 mb-8 sm:mb-12">
+                <div class="footer-brand sm:col-span-2 lg:col-span-1">
+                    <div
+                        class="footer-logo flex items-center gap-3 text-lg sm:text-xl md:text-2xl font-bold mb-4 sm:mb-6">
+                        🌐 <span>Lim-Kawano & Company Inc.</span>
+                    </div>
+                    <p class="footer-tagline text-gray-300 text-sm sm:text-base leading-relaxed max-w-xs">
+                        Connecting businesses worldwide through innovation and excellence.</p>
+                </div>
+
+                <div class="footer-links-section">
+                    <h4 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6">Services</h4>
+                    <nav class="footer-links flex flex-col gap-3">
+                        <a href="AfricaDivision.html"
+                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">Africa
+                            Division</a>
+                        <a href="PhilippinesDivision.html"
+                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">Philippines
+                            Division</a>
+                        <a href="LanguageServicesDivision.html"
+                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">Language
+                            Services</a>
+                        <a href="ITServicesDivision.html"
+                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">IT
+                            Solutions</a>
+                    </nav>
+                </div>
+
+                <div class="footer-links-section">
+                    <h4 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6">Company</h4>
+                    <nav class="footer-links flex flex-col gap-3">
+                        <a href="../index.html#team"
+                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">About
+                            Us</a>
+                        <a href="#"
+                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">Careers</a>
+                        <a href="#"
+                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">Partners</a>
+                        <a href="#"
+                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">News</a>
+                    </nav>
+                </div>
+
+                <div class="footer-links-section">
+                    <h4 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6">Connect</h4>
+                    <div class="footer-social">
+                        <div class="footer-social-icons flex gap-3 sm:gap-4 mb-4 sm:mb-6">
+                            <a href="#"
+                                class="footer-social-icon w-10 h-10 sm:w-12 sm:h-12 bg-[#333] rounded-lg flex items-center justify-center text-gray-300 no-underline transition-all duration-300 hover:bg-primary-tan hover:text-white hover:scale-110"
+                                aria-label="LinkedIn">💼</a>
+                            <a href="#"
+                                class="footer-social-icon w-10 h-10 sm:w-12 sm:h-12 bg-[#333] rounded-lg flex items-center justify-center text-gray-300 no-underline transition-all duration-300 hover:bg-primary-tan hover:text-white hover:scale-110"
+                                aria-label="Instagram">📷</a>
+                            <a href="#"
+                                class="footer-social-icon w-10 h-10 sm:w-12 sm:h-12 bg-[#333] rounded-lg flex items-center justify-center text-gray-300 no-underline transition-all duration-300 hover:bg-primary-tan hover:text-white hover:scale-110"
+                                aria-label="Twitter">🐦</a>
+                            <a href="#"
+                                class="footer-social-icon w-10 h-10 sm:w-12 sm:h-12 bg-[#333] rounded-lg flex items-center justify-center text-gray-300 no-underline transition-colors duration-300 hover:bg-primary-tan hover:text-white hover:scale-110"
+                                aria-label="Facebook">📘</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="footer-bottom border-t border-[#333] pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div class="footer-copyright text-gray-400 text-xs sm:text-sm text-center sm:text-left">
+                    © 2025 Lim-Kawano & Company Inc. All rights reserved.
+                </div>
+                <div class="footer-legal flex gap-4 sm:gap-6">
+                    <a href="#"
+                        class="text-gray-400 text-xs sm:text-sm no-underline transition-colors duration-300 hover:text-primary-tan">Privacy
+                        Policy</a>
+                    <a href="#"
+                        class="text-gray-400 text-xs sm:text-sm no-underline transition-colors duration-300 hover:text-primary-tan">Terms
+                        of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+
+    <style>
+        .animate-fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</body>
+
+</html>
