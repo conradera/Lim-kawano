@@ -1,4 +1,27 @@
 
+        /* Fixed Header Styles */
+        .fixed-header {
+            background: transparent;
+            -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .fixed-header.scrolled {
+            background: rgba(20, 57, 77, 0.95);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .fixed-header .header {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .fixed-header.scrolled .header {
+            padding: 0.5rem 0;
+        }
+
         /* Mobile Navigation Styles */
         .mobile-nav {
             position: fixed;
@@ -126,6 +149,7 @@
             padding: 1rem 0;
             scrollbar-width: none;
             -ms-overflow-style: none;
+            -webkit-overflow-scrolling: touch;
         }
 
         .carousel-track::-webkit-scrollbar {

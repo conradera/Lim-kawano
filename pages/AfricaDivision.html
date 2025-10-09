@@ -15,6 +15,7 @@
         content="Your trusted gateway to Africa. With over 10 years of experience and a network spanning all 54 countries." />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/enhancements.css" />
     <script>
         tailwind.config = {
             theme: {
@@ -53,90 +54,99 @@
     <nav class="mobile-nav" id="mobileNav">
         <div class="p-6">
             <div class="flex justify-between items-center mb-8">
-                <h2 class="text-white font-bold text-lg">Menu</h2>
+                <h2 class="text-white font-bold text-lg" data-i18n="nav.menu">Menu</h2>
                 <button class="text-white text-2xl" id="closeMobileNav">&times;</button>
             </div>
 
             <ul class="space-y-6">
                 <li><a href="../index.html#home"
-                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan">Home</a>
+                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan" data-i18n="nav.home">Home</a>
                 </li>
                 <li><a href="../index.html#team"
-                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan">Team</a>
+                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan" data-i18n="nav.team">Team</a>
                 </li>
                 <li><a href="../index.html#expertise"
-                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan">Expertise</a>
+                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan" data-i18n="nav.expertise">Expertise</a>
                 </li>
                 <li><a href="../index.html#services"
-                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan">Services</a>
+                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan" data-i18n="nav.services">Services</a>
                 </li>
                 <li><a href="#contact"
-                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan">Contact</a>
+                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan" data-i18n="nav.contact">Contact</a>
                 </li>
             </ul>
 
             <div class="mt-8 pt-6 border-t border-gray-600">
-                <div class="flex items-center gap-3">
-                    <img src="../assets/images/img_language_icon.png" alt="Language" class="w-6 h-6" />
-                    <span class="text-white font-semibold">EN</span>
-                </div>
+                <button class="language-toggle flex items-center gap-3 w-full">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K"
+                        alt="Language" class="w-6 h-6" />
+                    <span class="text-white font-semibold language-text">EN</span>
+                </button>
             </div>
         </div>
     </nav>
 
+    <!-- Fixed Navigation Header -->
+    <header class="fixed-header fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out">
+        <div class="header-container max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+            <div class="header flex justify-between items-center py-4">
+                <h1 class="logo font-notable text-white text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl">
+                    <a href="../index.html#home" class="hover:text-light-blue transition-colors duration-300">
+                        Lim-Kawano & Company Inc.
+                    </a>
+                </h1>
+
+                <!-- Mobile Hamburger -->
+                <button class="hamburger md:hidden" id="hamburgerBtn" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-menu hidden md:block" role="navigation">
+                    <ul class="flex list-none gap-4 lg:gap-6 xl:gap-8 items-center">
+                        <li><a href="../index.html#home"
+                                class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
+                                role="menuitem" data-i18n="nav.home">Home</a></li>
+                        <li><a href="../index.html#team"
+                                class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
+                                role="menuitem" data-i18n="nav.team">Team</a></li>
+                        <li><a href="../index.html#expertise"
+                                class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
+                                role="menuitem" data-i18n="nav.expertise">Expertise</a></li>
+                        <li><a href="../index.html#services"
+                                class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
+                                role="menuitem" data-i18n="nav.services">Services</a></li>
+                        <li><a href="#contact"
+                                class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
+                                role="menuitem" data-i18n="nav.contact">Contact</a></li>
+                        <li class="language-selector ml-4 lg:ml-6 xl:ml-8">
+                            <button class="language-toggle flex items-center gap-1.5 hover:scale-105 transition-transform duration-300">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K"
+                                    alt="Language selector" class="language-icon w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6" />
+                                <span class="language-text text-white font-semibold text-sm lg:text-base xl:text-lg">EN</span>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
     <main>
         <!-- Hero Section -->
         <section
-            class="hero-section bg-cover bg-center bg-no-repeat min-h-screen flex items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 relative"
+            class="hero-section bg-cover bg-center bg-no-repeat min-h-screen flex items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 relative pt-20"
             style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/images/img_rectangle_1.png');"
             id="home">
             <div class="hero-content relative z-10 w-full max-w-7xl mx-auto">
-                <header
-                    class="header flex justify-between items-center w-full mb-12 xs:mb-16 sm:mb-20 md:mb-24 lg:mb-32">
-                    <h1 class="logo font-notable text-white text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl">
-                        Lim-Kawano & Company Inc.
-                    </h1>
-
-                    <!-- Mobile Hamburger -->
-                    <button class="hamburger md:hidden" id="hamburgerBtn" aria-label="Toggle navigation menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-
-                    <!-- Desktop Navigation -->
-                    <nav class="nav-menu hidden md:block" role="navigation">
-                        <ul class="flex list-none gap-4 lg:gap-6 xl:gap-8 items-center">
-                            <li><a href="../index.html#home"
-                                    class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
-                                    role="menuitem">Home</a></li>
-                            <li><a href="../index.html#team"
-                                    class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
-                                    role="menuitem">Team</a></li>
-                            <li><a href="../index.html#expertise"
-                                    class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
-                                    role="menuitem">Expertise</a></li>
-                            <li><a href="../index.html#services"
-                                    class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
-                                    role="menuitem">Services</a></li>
-                            <li><a href="#contact"
-                                    class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
-                                    role="menuitem">Contact</a></li>
-                            <li class="language-selector flex items-center gap-1.5 ml-4 lg:ml-6 xl:ml-8">
-                                <img src="../assets/images/img_language_icon.png" alt="Language selector"
-                                    class="language-icon w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6" />
-                                <span
-                                    class="language-text text-white font-semibold text-sm lg:text-base xl:text-lg">EN</span>
-                            </li>
-                        </ul>
-                    </nav>
-                </header>
 
                 <div class="px-6 lg:px-12 mt-16 lg:mt-24 max-w-4xl">
-                    <h2 class="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">Your trusted gateway to Africa.</h2>
-                    <p class="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl leading-relaxed">With over 10 years of experience and a network spanning all 54 countries, we coordinate everything — from business market entry to unforgettable travel adventures.</p>
+                    <h2 class="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-i18n="africaDivision.hero.title">Your trusted gateway to Africa.</h2>
+                    <p class="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl leading-relaxed" data-i18n="africaDivision.hero.description">With over 10 years of experience and a network spanning all 54 countries, we coordinate everything — from business market entry to unforgettable travel adventures.</p>
                     <a href="#contact"
-                        class="cta-button bg-light-blue text-primary-blue font-outfit font-semibold text-xs xs:text-sm sm:text-base uppercase py-3 px-6 sm:py-4 sm:px-8 rounded-lg inline-block hover:bg-[#6b8fa3] hover:scale-105 transition-all duration-300 shadow-lg">Get
+                        class="cta-button bg-light-blue text-primary-blue font-outfit font-semibold text-xs xs:text-sm sm:text-base uppercase py-3 px-6 sm:py-4 sm:px-8 rounded-lg inline-block hover:bg-[#6b8fa3] hover:scale-105 transition-all duration-300 shadow-lg" data-i18n="africaDivision.hero.cta">Get
                         in Touch</a>
                 </div>
             </div>
@@ -523,6 +533,14 @@
             }
         }
     </style>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <!-- Load Scripts -->
+    <script src="../js/translations.js"></script>
+    <script src="../js/enhancements.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

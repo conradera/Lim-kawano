@@ -109,6 +109,41 @@ const translations = {
             copyright: "© 2025 Lim-Kawano & Company Inc. All rights reserved.",
             privacy: "Privacy Policy",
             terms: "Terms of Service"
+        },
+
+        // Africa Division Page
+        africaDivision: {
+            title: "Africa Division - Lim-Kawano & Company Inc.",
+            hero: {
+                title: "Your trusted gateway to Africa.",
+                description: "With over 10 years of experience and a network spanning all 54 countries, we coordinate everything — from business market entry to unforgettable travel adventures.",
+                cta: "Get in Touch"
+            },
+            services: {
+                title: "Our Services",
+                marketEntry: {
+                    badge: "Africa Market Entry Support",
+                    title: "Expand with Confidence",
+                    description: "We guide businesses entering Africa with deep local knowledge, trusted partnerships, and hands-on coordination across 54 countries.",
+                    benefits: [
+                        "Strategic entry support tailored to local markets",
+                        "Reliable on-the-ground coordination and partner matching",
+                        "Growth opportunities across Africa's emerging economies"
+                    ],
+                    cta: "GET IN TOUCH"
+                },
+                concierge: {
+                    badge: "Africa Concierge Services",
+                    title: "Travel & Business, Seamlessly Coordinated",
+                    description: "From tailor-made leisure trips to business travel, we provide safe, authentic, and seamless African experiences.",
+                    benefits: [
+                        "Customized itineraries for unforgettable journeys",
+                        "Professional support for business trips and corporate delegations",
+                        "Deep cultural expertise and safety protocols across all destinations"
+                    ],
+                    cta: "GET IN TOUCH"
+                }
+            }
         }
     },
 
@@ -221,6 +256,41 @@ const translations = {
             copyright: "© 2025 Lim-Kawano & Company Inc. All rights reserved.",
             privacy: "プライバシーポリシー",
             terms: "利用規約"
+        },
+
+        // アフリカ部門ページ
+        africaDivision: {
+            title: "アフリカ部門 - Lim-Kawano & Company Inc.",
+            hero: {
+                title: "アフリカへの信頼できるゲートウェイ。",
+                description: "10年以上の経験と54カ国全てにわたるネットワークにより、ビジネス市場参入から忘れられない旅行アドベンチャーまで、すべてをコーディネートします。",
+                cta: "お問い合わせ"
+            },
+            services: {
+                title: "私たちのサービス",
+                marketEntry: {
+                    badge: "アフリカ市場参入サポート",
+                    title: "自信を持って展開",
+                    description: "深い地域知識、信頼できるパートナーシップ、54カ国での実践的なコーディネーションでアフリカに参入する企業をガイドします。",
+                    benefits: [
+                        "現地市場に特化した戦略的参入サポート",
+                        "信頼できる現地でのコーディネーションとパートナーマッチング",
+                        "アフリカの新興経済における成長機会"
+                    ],
+                    cta: "お問い合わせ"
+                },
+                concierge: {
+                    badge: "アフリカコンシェルジュサービス",
+                    title: "旅行とビジネス、シームレスにコーディネート",
+                    description: "オーダーメイドのレジャー旅行からビジネス旅行まで、安全で本格的、そしてシームレスなアフリカ体験を提供します。",
+                    benefits: [
+                        "忘れられない旅のためのカスタマイズされた旅程",
+                        "出張や企業代表団への専門的サポート",
+                        "全ての目的地における深い文化的専門知識と安全プロトコル"
+                    ],
+                    cta: "お問い合わせ"
+                }
+            }
         }
     }
 };

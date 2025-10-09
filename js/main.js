@@ -113,20 +113,16 @@
         });
 
         // Add scroll-based navbar background
-        const header = document.querySelector('.header');
+        const fixedHeader = document.querySelector('.fixed-header');
         let lastScrollY = window.scrollY;
 
         window.addEventListener('scroll', () => {
             const currentScrollY = window.scrollY;
 
-            if (currentScrollY > 100) {
-                header.style.background = 'rgba(20, 57, 77, 0.95)';
-                header.style.backdropFilter = 'blur(10px)';
-                header.style.padding = '0.75rem 0';
+            if (currentScrollY > 50) {
+                fixedHeader.classList.add('scrolled');
             } else {
-                header.style.background = 'transparent';
-                header.style.backdropFilter = 'none';
-                header.style.padding = '0';
+                fixedHeader.classList.remove('scrolled');
             }
 
             lastScrollY = currentScrollY;
