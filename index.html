@@ -17,6 +17,7 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/enhancements.css" />
 
     <script>
         tailwind.config = {
@@ -31,6 +32,11 @@
                         'cream': '#faf4eb',
                         'dark-gray': '#2a2a2a',
                         'medium-gray': '#586972',
+                        'navy': '#1e3a5f',
+                        'gold': '#d4af37',
+                        'teal': '#2c7a7b',
+                        'coral': '#ff6b6b',
+                        'slate': '#334155',
                     },
                     fontFamily: {
                         'notable': ['Notable', 'serif'],
@@ -57,34 +63,34 @@
     <nav class="mobile-nav" id="mobileNav">
         <div class="p-6">
             <div class="flex justify-between items-center mb-8">
-                <h2 class="text-white font-bold text-lg">Menu</h2>
+                <h2 class="text-white font-bold text-lg" data-i18n="nav.menu">Menu</h2>
                 <button class="text-white text-2xl" id="closeMobileNav">&times;</button>
             </div>
 
             <ul class="space-y-6">
                 <li><a href="#home"
-                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan">Home</a>
+                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan" data-i18n="nav.home">Home</a>
                 </li>
                 <li><a href="#team"
-                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan">Team</a>
+                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan" data-i18n="nav.team">Team</a>
                 </li>
                 <li><a href="#expertise"
-                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan">Expertise</a>
+                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan" data-i18n="nav.expertise">Expertise</a>
                 </li>
                 <li><a href="#services"
-                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan">Services</a>
+                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan" data-i18n="nav.services">Services</a>
                 </li>
                 <li><a href="#contact"
-                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan">Contact</a>
+                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan" data-i18n="nav.contact">Contact</a>
                 </li>
             </ul>
 
             <div class="mt-8 pt-6 border-t border-gray-600">
-                <div class="flex items-center gap-3">
+                <button class="language-toggle flex items-center gap-3 w-full">
                     <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K"
                         alt="Language" class="w-6 h-6" />
-                    <span class="text-white font-semibold">EN</span>
-                </div>
+                    <span class="text-white font-semibold language-text">EN</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -114,24 +120,25 @@
                         <ul class="flex list-none gap-4 lg:gap-6 xl:gap-8 items-center">
                             <li><a href="#home"
                                     class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
-                                    role="menuitem">Home</a></li>
+                                    role="menuitem" data-i18n="nav.home">Home</a></li>
                             <li><a href="#team"
                                     class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
-                                    role="menuitem">Team</a></li>
+                                    role="menuitem" data-i18n="nav.team">Team</a></li>
                             <li><a href="#expertise"
                                     class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
-                                    role="menuitem">Expertise</a></li>
+                                    role="menuitem" data-i18n="nav.expertise">Expertise</a></li>
                             <li><a href="#services"
                                     class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
-                                    role="menuitem">Services</a></li>
+                                    role="menuitem" data-i18n="nav.services">Services</a></li>
                             <li><a href="#contact"
                                     class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
-                                    role="menuitem">Contact</a></li>
-                            <li class="language-selector flex items-center gap-1.5 ml-4 lg:ml-6 xl:ml-8">
-                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K"
-                                    alt="Language selector" class="language-icon w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6" />
-                                <span
-                                    class="language-text text-white font-semibold text-sm lg:text-base xl:text-lg">EN</span>
+                                    role="menuitem" data-i18n="nav.contact">Contact</a></li>
+                            <li class="language-selector ml-4 lg:ml-6 xl:ml-8">
+                                <button class="language-toggle flex items-center gap-1.5">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K"
+                                        alt="Language selector" class="language-icon w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6" />
+                                    <span class="language-text text-white font-semibold text-sm lg:text-base xl:text-lg">EN</span>
+                                </button>
                             </li>
                         </ul>
                     </nav>
@@ -140,14 +147,14 @@
                 <div
                     class="hero-text-content w-full max-w-sm xs:max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl">
                     <h2
-                        class="hero-title text-white font-extrabold text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-3 xs:mb-4 sm:mb-5 md:mb-6">
+                        class="hero-title text-white font-extrabold text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-3 xs:mb-4 sm:mb-5 md:mb-6" data-i18n="hero.title">
                         Empowering Global Connections, Enhancing Business Growth</h2>
                     <p
-                        class="hero-description text-white font-questrial text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl mb-6 xs:mb-7 sm:mb-8 md:mb-10 opacity-90 leading-relaxed">
+                        class="hero-description text-white font-questrial text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl mb-6 xs:mb-7 sm:mb-8 md:mb-10 opacity-90 leading-relaxed" data-i18n="hero.description">
                         From innovative IT solutions to personalized services, we bridge Japan and the world, supporting
                         SMEs and individuals in achieving their goals.</p>
                     <a href="#contact"
-                        class="cta-button bg-light-blue text-primary-blue font-outfit font-semibold text-xs xs:text-sm sm:text-base uppercase py-3 px-6 sm:py-4 sm:px-8 rounded-lg inline-block hover:bg-[#6b8fa3] hover:scale-105 transition-all duration-300 shadow-lg">Get
+                        class="cta-button bg-light-blue text-primary-blue font-outfit font-semibold text-xs xs:text-sm sm:text-base uppercase py-3 px-6 sm:py-4 sm:px-8 rounded-lg inline-block hover:bg-[#6b8fa3] hover:scale-105 transition-all duration-300 shadow-lg" data-i18n="hero.cta">Get
                         in Touch</a>
                 </div>
             </div>
@@ -155,7 +162,7 @@
 
         <!-- Leadership Section -->
         <section class="leadership-section py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 md:px-8 lg:px-12" id="team">
-            <h2 class="section-title">Our Leadership Team</h2>
+            <h2 class="section-title" data-i18n="team.title">Our Leadership Team</h2>
             <div class="team-carousel max-w-6xl mx-auto" aria-label="Leadership carousel">
                 <button class="carousel-arrow left" aria-label="Previous">‹</button>
                 <div class="carousel-track">
@@ -189,15 +196,15 @@
             <div
                 class="expertise-content relative z-10 max-w-sm xs:max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl ml-auto w-full">
                 <h2
-                    class="expertise-title text-white font-extrabold text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-5 md:mb-6 leading-tight">
+                    class="expertise-title text-white font-extrabold text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-5 md:mb-6 leading-tight" data-i18n="expertise.title">
                     Our unique approach combines deep local insights with global expertise.</h2>
                 <p
-                    class="expertise-description text-white font-questrial text-sm xs:text-base sm:text-lg md:text-xl mb-6 sm:mb-7 md:mb-8 opacity-90 leading-relaxed">
+                    class="expertise-description text-white font-questrial text-sm xs:text-base sm:text-lg md:text-xl mb-6 sm:mb-7 md:mb-8 opacity-90 leading-relaxed" data-i18n="expertise.description">
                     We leverage our extensive network and cultural understanding to deliver solutions that resonate in
                     local markets while maintaining global standards. Our team's diverse background enables us to
                     navigate complex international business landscapes with confidence and precision.</p>
                 <a href="#contact"
-                    class="expertise-cta bg-light-tan text-primary-blue font-outfit font-semibold text-xs xs:text-sm sm:text-base uppercase py-3 px-6 sm:py-4 sm:px-8 rounded-lg inline-block hover:bg-[#c89952] hover:scale-105 transition-all duration-300 shadow-lg">Get
+                    class="expertise-cta bg-light-tan text-primary-blue font-outfit font-semibold text-xs xs:text-sm sm:text-base uppercase py-3 px-6 sm:py-4 sm:px-8 rounded-lg inline-block hover:bg-[#c89952] hover:scale-105 transition-all duration-300 shadow-lg" data-i18n="expertise.cta">Get
                     in Touch</a>
             </div>
         </section>
@@ -205,7 +212,7 @@
         <!-- Service Overview Section -->
         <section
             class="service-overview-section bg-white py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 md:px-8 lg:px-12">
-            <h2 class="section-title">Service Overview</h2>
+            <h2 class="section-title" data-i18n="serviceOverview.title">Service Overview</h2>
             <div class="service-overview-container max-w-7xl mx-auto">
                 <div
                     class="service-overview-content grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-20 items-center">
@@ -218,11 +225,11 @@
                     <!-- Text Content Section -->
                     <div class="service-overview-text order-1 lg:order-2">
                         <h3
-                            class="service-overview-subtitle text-dark-gray font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-4 sm:mb-6">
+                            class="service-overview-subtitle text-dark-gray font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-4 sm:mb-6" data-i18n="serviceOverview.subtitle">
                             Bridging Japan with Emerging Markets
                         </h3>
                         <p
-                            class="service-overview-description text-medium-gray font-questrial text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed">
+                            class="service-overview-description text-medium-gray font-questrial text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed" data-i18n="serviceOverview.description">
                             Our strength lies in bridging Japan with Asia and Africa, empowering clients with trusted
                             partnerships and globally recognized quality.
                         </p>
@@ -234,7 +241,7 @@
         <!-- Solutions Section -->
         <section class="solutions-section bg-cream py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 md:px-8 lg:px-12"
             id="services">
-            <h2 class="section-title">Solutions We Provide</h2>
+            <h2 class="section-title" data-i18n="solutions.title">Solutions We Provide</h2>
             <div
                 class="solutions-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 sm:gap-8 md:gap-10 max-w-7xl mx-auto">
                 <a href="pages/AfricaDivision.html"
@@ -244,11 +251,11 @@
                             class="solution-image w-full h-44 sm:h-48 md:h-52 lg:h-56 object-cover transition-transform duration-300 group-hover:scale-110" />
                     </div>
                     <div class="solution-content p-6 sm:p-8 md:p-10 bg-[#fffdfb] flex-1">
-                        <h3 class="solution-title text-[#224c62] font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4">
+                        <h3 class="solution-title text-[#224c62] font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4" data-i18n="solutions.africa.title">
                             Africa Division</h3>
                         <p
-                            class="solution-description text-medium-gray font-questrial text-sm sm:text-base md:text-lg leading-relaxed">
-                            Trusted concierge and business support for travelers and companies exploring Africa
+                            class="solution-description text-medium-gray font-questrial text-sm sm:text-base md:text-lg leading-relaxed" data-i18n="solutions.africa.description">
+                            Trusted concierge and business support for travelers and companies exploring Africa</p>
                     </div>
                 </a>
 
@@ -259,10 +266,10 @@
                             class="solution-image w-full h-44 sm:h-48 md:h-52 lg:h-56 object-cover transition-transform duration-300 group-hover:scale-110" />
                     </div>
                     <div class="solution-content p-6 sm:p-8 md:p-10 bg-[#fffdfb] flex-1">
-                        <h3 class="solution-title text-[#224c62] font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4">
+                        <h3 class="solution-title text-[#224c62] font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4" data-i18n="solutions.philippines.title">
                             Philippines Division</h3>
                         <p
-                            class="solution-description text-medium-gray font-questrial text-sm sm:text-base md:text-lg leading-relaxed">
+                            class="solution-description text-medium-gray font-questrial text-sm sm:text-base md:text-lg leading-relaxed" data-i18n="solutions.philippines.description">
                             Shopping agent services and cross-border business support between Japan and the Philippines.
                         </p>
                     </div>
@@ -275,10 +282,10 @@
                             class="solution-image w-full h-44 sm:h-48 md:h-52 lg:h-56 object-cover transition-transform duration-300 group-hover:scale-110" />
                     </div>
                     <div class="solution-content p-6 sm:p-8 md:p-10 bg-[#fffdfb] flex-1">
-                        <h3 class="solution-title text-[#224c62] font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4">
+                        <h3 class="solution-title text-[#224c62] font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4" data-i18n="solutions.language.title">
                             Language Services</h3>
                         <p
-                            class="solution-description text-medium-gray font-questrial text-sm sm:text-base md:text-lg leading-relaxed">
+                            class="solution-description text-medium-gray font-questrial text-sm sm:text-base md:text-lg leading-relaxed" data-i18n="solutions.language.description">
                             English & French coaching, professional translation and interpretation, and intensive
                             pre-departure training for assignments or study abroad.</p>
                     </div>
@@ -291,10 +298,10 @@
                             class="solution-image w-full h-44 sm:h-48 md:h-52 lg:h-56 object-cover transition-transform duration-300 group-hover:scale-110" />
                     </div>
                     <div class="solution-content p-6 sm:p-8 md:p-10 bg-[#fffdfb] flex-1">
-                        <h3 class="solution-title text-[#224c62] font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4">
+                        <h3 class="solution-title text-[#224c62] font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4" data-i18n="solutions.it.title">
                             IT Services</h3>
                         <p
-                            class="solution-description text-medium-gray font-questrial text-sm sm:text-base md:text-lg leading-relaxed">
+                            class="solution-description text-medium-gray font-questrial text-sm sm:text-base md:text-lg leading-relaxed" data-i18n="solutions.it.description">
                             Matching clients with trusted development partners and managing projects for successful
                             delivery.</p>
                     </div>
@@ -308,10 +315,10 @@
             <div class="contact-container max-w-7xl mx-auto">
                 <div class="contact-header text-center mb-12 sm:mb-16 md:mb-20">
                     <h2
-                        class="contact-main-title text-white font-extrabold text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6">
+                        class="contact-main-title text-white font-extrabold text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6" data-i18n="contact.title">
                         Get in Touch</h2>
                     <p
-                        class="contact-main-subtitle text-gray-300 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+                        class="contact-main-subtitle text-gray-300 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed" data-i18n="contact.subtitle">
                         Ready to take your business global? Let's discuss how we can help you achieve your international
                         expansion goals.</p>
                 </div>
@@ -319,7 +326,7 @@
                 <div
                     class="contact-content grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-20 items-start">
                     <div class="contact-info-section">
-                        <h3 class="text-white font-bold text-xl sm:text-2xl md:text-3xl mb-6 sm:mb-8">Contact
+                        <h3 class="text-white font-bold text-xl sm:text-2xl md:text-3xl mb-6 sm:mb-8" data-i18n="contact.info.title">Contact
                             Information</h3>
 
                         <div class="contact-info-item flex items-start gap-4 sm:gap-6 mb-6 sm:mb-8">
@@ -328,7 +335,7 @@
                                 ✉</div>
                             <div class="contact-info-text">
                                 <div
-                                    class="contact-info-label text-gray-300 text-sm sm:text-base font-semibold mb-1 sm:mb-2">
+                                    class="contact-info-label text-gray-300 text-sm sm:text-base font-semibold mb-1 sm:mb-2" data-i18n="contact.info.email">
                                     Email</div>
                                 <div class="contact-info-value text-white font-medium text-base sm:text-lg">
                                     contact@limkawano.com</div>
@@ -341,7 +348,7 @@
                                 📞</div>
                             <div class="contact-info-text">
                                 <div
-                                    class="contact-info-label text-gray-300 text-sm sm:text-base font-semibold mb-1 sm:mb-2">
+                                    class="contact-info-label text-gray-300 text-sm sm:text-base font-semibold mb-1 sm:mb-2" data-i18n="contact.info.phone">
                                     Phone</div>
                                 <div class="contact-info-value text-white font-medium text-base sm:text-lg">+81 (3)
                                     1234-5678</div>
@@ -354,17 +361,17 @@
                                 📍</div>
                             <div class="contact-info-text">
                                 <div
-                                    class="contact-info-label text-gray-300 text-sm sm:text-base font-semibold mb-1 sm:mb-2">
+                                    class="contact-info-label text-gray-300 text-sm sm:text-base font-semibold mb-1 sm:mb-2" data-i18n="contact.info.headquarters">
                                     Headquarters</div>
-                                <div class="contact-info-value text-white font-medium text-base sm:text-lg">Tokyo, Japan
+                                <div class="contact-info-value text-white font-medium text-base sm:text-lg" data-i18n="contact.info.location">Tokyo, Japan
                                 </div>
                             </div>
                         </div>
 
                         <div class="global-offices">
-                            <h4 class="text-white font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4">Global Offices
+                            <h4 class="text-white font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4" data-i18n="contact.info.globalOffices">Global Offices
                             </h4>
-                            <p class="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
+                            <p class="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed" data-i18n="contact.info.globalDescription">
                                 With Global offices in Tokyo, Manila, Djibouti, we're always within reach to
                                 serve your needs across multiple time zones.</p>
                         </div>
@@ -373,41 +380,41 @@
                     <div class="contact-form-section bg-[#333] rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10">
                         <form class="contact-form flex flex-col gap-4 sm:gap-6" action="#" method="POST">
                             <div class="form-group flex flex-col">
-                                <label class="form-label text-white text-sm sm:text-base font-semibold mb-2">Name <span
+                                <label class="form-label text-white text-sm sm:text-base font-semibold mb-2"><span data-i18n="contact.form.name">Name</span> <span
                                         class="required text-red-400">*</span></label>
                                 <input type="text"
                                     class="form-input w-full p-3 sm:p-4 border-2 border-[#444] bg-dark-gray text-white rounded-lg text-sm sm:text-base transition-all duration-300 focus:border-primary-tan focus:ring-2 focus:ring-primary-tan/20"
-                                    placeholder="John Doe" required />
+                                    data-i18n="contact.form.placeholder.name" placeholder="John Doe" required />
                             </div>
 
                             <div class="form-group flex flex-col">
-                                <label class="form-label text-white text-sm sm:text-base font-semibold mb-2">Email <span
+                                <label class="form-label text-white text-sm sm:text-base font-semibold mb-2"><span data-i18n="contact.form.email">Email</span> <span
                                         class="required text-red-400">*</span></label>
                                 <input type="email"
                                     class="form-input w-full p-3 sm:p-4 border-2 border-[#444] bg-dark-gray text-white rounded-lg text-sm sm:text-base transition-all duration-300 focus:border-primary-tan focus:ring-2 focus:ring-primary-tan/20"
-                                    placeholder="john@example.com" required />
+                                    data-i18n="contact.form.placeholder.email" placeholder="john@example.com" required />
                             </div>
 
                             <div class="form-group flex flex-col">
                                 <label
-                                    class="form-label text-white text-sm sm:text-base font-semibold mb-2">Company</label>
+                                    class="form-label text-white text-sm sm:text-base font-semibold mb-2" data-i18n="contact.form.company">Company</label>
                                 <input type="text"
                                     class="form-input w-full p-3 sm:p-4 border-2 border-[#444] bg-dark-gray text-white rounded-lg text-sm sm:text-base transition-all duration-300 focus:border-primary-tan focus:ring-2 focus:ring-primary-tan/20"
-                                    placeholder="Your Company" />
+                                    data-i18n="contact.form.placeholder.company" placeholder="Your Company" />
                             </div>
 
                             <div class="form-group flex flex-col">
-                                <label class="form-label text-white text-sm sm:text-base font-semibold mb-2">Message
+                                <label class="form-label text-white text-sm sm:text-base font-semibold mb-2"><span data-i18n="contact.form.message">Message</span>
                                     <span class="required text-red-400">*</span></label>
                                 <textarea
                                     class="form-textarea w-full p-3 sm:p-4 border-2 border-[#444] bg-dark-gray text-white rounded-lg min-h-32 sm:min-h-36 text-sm sm:text-base transition-all duration-300 focus:border-primary-tan focus:ring-2 focus:ring-primary-tan/20 resize-y"
-                                    placeholder="Tell us about your project and how we can help you..."
+                                    data-i18n="contact.form.placeholder.message" placeholder="Tell us about your project and how we can help you..."
                                     required></textarea>
                             </div>
 
                             <button type="submit"
                                 class="submit-button bg-primary-tan text-white border-none py-3 sm:py-4 px-6 sm:px-8 rounded-lg font-semibold cursor-pointer transition-all duration-300 hover:bg-[#b8884a] hover:scale-105 flex items-center justify-center gap-2 self-start text-sm sm:text-base shadow-lg">
-                                Send Message <span class="ml-1">✈</span>
+                                <span data-i18n="contact.form.submit">Send Message</span> <span class="ml-1">✈</span>
                             </button>
                         </form>
                     </div>
@@ -428,45 +435,45 @@
                         class="footer-logo flex items-center gap-3 text-lg sm:text-xl md:text-2xl font-bold mb-4 sm:mb-6">
                         🌐 <span>Lim-Kawano & Company Inc.</span>
                     </div>
-                    <p class="footer-tagline text-gray-300 text-sm sm:text-base leading-relaxed max-w-xs">
+                    <p class="footer-tagline text-gray-300 text-sm sm:text-base leading-relaxed max-w-xs" data-i18n="footer.tagline">
                         Connecting businesses worldwide through innovation and excellence.</p>
                 </div>
 
                 <div class="footer-links-section">
-                    <h4 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6">Services</h4>
+                    <h4 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6" data-i18n="footer.services">Services</h4>
                     <nav class="footer-links flex flex-col gap-3">
                         <a href="pages/AfricaDivision.html"
-                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">Africa
+                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan" data-i18n="solutions.africa.title">Africa
                             Division</a>
                         <a href="pages/PhilippinesDivision.html"
-                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">Philippines
+                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan" data-i18n="solutions.philippines.title">Philippines
                             Division</a>
                         <a href="pages/LanguageServicesDivision.html"
-                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">Language
+                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan" data-i18n="solutions.language.title">Language
                             Services</a>
                         <a href="pages/ITServicesDivision.html"
-                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">IT
+                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan" data-i18n="solutions.it.title">IT
                             Solutions</a>
                     </nav>
                 </div>
 
                 <div class="footer-links-section">
-                    <h4 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6">Company</h4>
+                    <h4 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6" data-i18n="footer.company">Company</h4>
                     <nav class="footer-links flex flex-col gap-3">
                         <a href="#team"
-                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">About
+                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan" data-i18n="footer.links.about">About
                             Us</a>
                         <a href="#"
-                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">Careers</a>
+                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan" data-i18n="footer.links.careers">Careers</a>
                         <a href="#"
-                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">Partners</a>
+                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan" data-i18n="footer.links.partners">Partners</a>
                         <a href="#"
-                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">News</a>
+                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan" data-i18n="footer.links.news">News</a>
                     </nav>
                 </div>
 
                 <div class="footer-links-section">
-                    <h4 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6">Connect</h4>
+                    <h4 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6" data-i18n="footer.connect">Connect</h4>
                     <div class="footer-social">
                         <div class="footer-social-icons flex gap-3 sm:gap-4 mb-4 sm:mb-6">
                             <a href="#"
@@ -489,21 +496,27 @@
 
             <div
                 class="footer-bottom border-t border-[#333] pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <div class="footer-copyright text-gray-400 text-xs sm:text-sm text-center sm:text-left">
+                <div class="footer-copyright text-gray-400 text-xs sm:text-sm text-center sm:text-left" data-i18n="footer.copyright">
                     © 2025 Lim-Kawano & Company Inc. All rights reserved.
                 </div>
                 <div class="footer-legal flex gap-4 sm:gap-6">
                     <a href="#"
-                        class="text-gray-400 text-xs sm:text-sm no-underline transition-colors duration-300 hover:text-primary-tan">Privacy
+                        class="text-gray-400 text-xs sm:text-sm no-underline transition-colors duration-300 hover:text-primary-tan" data-i18n="footer.privacy">Privacy
                         Policy</a>
                     <a href="#"
-                        class="text-gray-400 text-xs sm:text-sm no-underline transition-colors duration-300 hover:text-primary-tan">Terms
+                        class="text-gray-400 text-xs sm:text-sm no-underline transition-colors duration-300 hover:text-primary-tan" data-i18n="footer.terms">Terms
                         of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <!-- Load Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/enhancements.js"></script>
     <script src="js/main.js"></script>
     <script>
         // Leadership Carousel functionality
