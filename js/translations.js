@@ -303,13 +303,14 @@ class LanguageManager {
     }
 
     init() {
-        // Set initial language
         this.applyLanguage(this.currentLang);
         this.updateToggleUI();
 
-        // Add event listeners to all language toggles
-        document.querySelectorAll('.language-toggle').forEach(toggle => {
-            toggle.addEventListener('click', () => this.toggleLanguage());
+        // Use event delegation for the language toggle
+        document.body.addEventListener('click', (e) => {
+            if (e.target.closest('.language-toggle')) {
+                this.toggleLanguage();
+            }
         });
     }
 
@@ -319,7 +320,6 @@ class LanguageManager {
         this.applyLanguage(this.currentLang);
         this.updateToggleUI();
 
-        // Animate the transition
         document.body.style.opacity = '0.9';
         setTimeout(() => {
             document.body.style.opacity = '1';
@@ -330,41 +330,31 @@ class LanguageManager {
         document.documentElement.lang = lang;
         const t = translations[lang];
 
-        // Update all translatable elements
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const keys = element.getAttribute('data-i18n').split('.');
             let value = t;
 
             for (const key of keys) {
-                value = value[key];
+                if (value) {
+                    value = value[key];
+                }
             }
 
             if (value) {
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    if (element.hasAttribute('placeholder')) {
-                        element.placeholder = value;
-                    }
+                if (element.hasAttribute('placeholder')) {
+                    element.placeholder = value;
                 } else {
-                    element.textContent = value;
+                    element.innerHTML = value;
                 }
             }
         });
 
-        // Update form alert messages
         window.currentTranslations = t;
     }
 
     updateToggleUI() {
         document.querySelectorAll('.language-text').forEach(element => {
             element.textContent = this.currentLang.toUpperCase();
-        });
-
-        // Update toggle button style with animation
-        document.querySelectorAll('.language-toggle').forEach(toggle => {
-            toggle.style.transform = 'scale(1.1)';
-            setTimeout(() => {
-                toggle.style.transform = 'scale(1)';
-            }, 200);
         });
     }
 

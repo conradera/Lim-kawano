@@ -20,14 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     const parallaxSections = document.querySelectorAll('.hero-section, .expertise-section');
 
-    window.addEventListener('scroll', () => {
+    function parallax() {
         const scrolled = window.pageYOffset;
-
         parallaxSections.forEach(section => {
-            const speed = 0.5;
-            section.style.backgroundPositionY = -(scrolled * speed) + 'px';
+            const speed = 0.4;
+            const offset = section.offsetTop;
+            const yPos = -(scrolled - offset) * speed;
+            section.style.backgroundPositionY = yPos + 'px';
         });
-    });
+        requestAnimationFrame(parallax);
+    }
+
+    requestAnimationFrame(parallax);
 
     // ========================================
     // Enhanced Header with Glassmorphism

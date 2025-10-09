@@ -108,40 +108,37 @@ body {
     animation: gradientShift 5s ease infinite;
 }
 
-/* Card Hover Effects with 3D Transform & Glassmorphism */
+/* Card Hover Effects with 3D Transform & Shine */
 .solution-card {
     transform-style: preserve-3d;
     perspective: 1000px;
-    background: rgba(255, 255, 255, 0.7) !important;
-    backdrop-filter: blur(10px) saturate(150%);
-    -webkit-backdrop-filter: blur(10px) saturate(150%);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .solution-card:hover {
-    transform: translateY(-12px) rotateX(2deg);
-    box-shadow: 0 20px 40px rgba(20, 57, 77, 0.25);
-    background: rgba(255, 255, 255, 0.85) !important;
-    border: 1px solid rgba(204, 153, 85, 0.3);
+    transform: translateY(-10px) rotateX(10deg) rotateY(5deg) scale(1.05);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
-.solution-card::after {
+.solution-card .solution-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.solution-card .solution-image-container::after {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: -150%;
+    width: 75%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(204, 153, 85, 0.1) 0%, rgba(20, 57, 77, 0.1) 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    border-radius: inherit;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-25deg);
+    transition: left 0.75s ease-in-out;
 }
 
-.solution-card:hover::after {
-    opacity: 1;
+.solution-card:hover .solution-image-container::after {
+    left: 150%;
 }
 
 /* Glassmorphism for solution card content */

@@ -14,8 +14,8 @@
     <meta property="og:description"
         content="Your trusted gateway to Africa. With over 10 years of experience and a network spanning all 54 countries." />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/enhancements.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/enhancements.css" />
     <script>
         tailwind.config = {
             theme: {
@@ -50,95 +50,13 @@
 </head>
 
 <body class="font-sans bg-off-white text-gray-800">
-    <!-- Mobile Navigation -->
-    <nav class="mobile-nav" id="mobileNav">
-        <div class="p-6">
-            <div class="flex justify-between items-center mb-8">
-                <h2 class="text-white font-bold text-lg" data-i18n="nav.menu">Menu</h2>
-                <button class="text-white text-2xl" id="closeMobileNav">&times;</button>
-            </div>
-
-            <ul class="space-y-6">
-                <li><a href="../index.html#home"
-                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan" data-i18n="nav.home">Home</a>
-                </li>
-                <li><a href="../index.html#team"
-                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan" data-i18n="nav.team">Team</a>
-                </li>
-                <li><a href="../index.html#expertise"
-                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan" data-i18n="nav.expertise">Expertise</a>
-                </li>
-                <li><a href="../index.html#services"
-                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan" data-i18n="nav.services">Services</a>
-                </li>
-                <li><a href="#contact"
-                        class="mobile-nav-link text-white text-lg font-medium block py-3 border-b border-gray-600 transition-colors hover:text-primary-tan" data-i18n="nav.contact">Contact</a>
-                </li>
-            </ul>
-
-            <div class="mt-8 pt-6 border-t border-gray-600">
-                <button class="language-toggle flex items-center gap-3 w-full">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K"
-                        alt="Language" class="w-6 h-6" />
-                    <span class="text-white font-semibold language-text">EN</span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Fixed Navigation Header -->
-    <header class="fixed-header fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out">
-        <div class="header-container max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
-            <div class="header flex justify-between items-center py-4">
-                <h1 class="logo font-notable text-white text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl">
-                    <a href="../index.html#home" class="hover:text-light-blue transition-colors duration-300">
-                        Lim-Kawano & Company Inc.
-                    </a>
-                </h1>
-
-                <!-- Mobile Hamburger -->
-                <button class="hamburger md:hidden" id="hamburgerBtn" aria-label="Toggle navigation menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-                <!-- Desktop Navigation -->
-                <nav class="nav-menu hidden md:block" role="navigation">
-                    <ul class="flex list-none gap-4 lg:gap-6 xl:gap-8 items-center">
-                        <li><a href="../index.html#home"
-                                class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
-                                role="menuitem" data-i18n="nav.home">Home</a></li>
-                        <li><a href="../index.html#team"
-                                class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
-                                role="menuitem" data-i18n="nav.team">Team</a></li>
-                        <li><a href="../index.html#expertise"
-                                class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
-                                role="menuitem" data-i18n="nav.expertise">Expertise</a></li>
-                        <li><a href="../index.html#services"
-                                class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
-                                role="menuitem" data-i18n="nav.services">Services</a></li>
-                        <li><a href="#contact"
-                                class="text-white font-medium text-sm lg:text-base xl:text-lg hover:text-light-blue transition-colors duration-300"
-                                role="menuitem" data-i18n="nav.contact">Contact</a></li>
-                        <li class="language-selector ml-4 lg:ml-6 xl:ml-8">
-                            <button class="language-toggle flex items-center gap-1.5 hover:scale-105 transition-transform duration-300">
-                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDQgOUwxMC45MSA4LjI2TDEyIDJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K"
-                                    alt="Language selector" class="language-icon w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6" />
-                                <span class="language-text text-white font-semibold text-sm lg:text-base xl:text-lg">EN</span>
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main>
         <!-- Hero Section -->
         <section
             class="hero-section bg-cover bg-center bg-no-repeat min-h-screen flex items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 relative pt-20"
-            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/images/img_rectangle_1.png');"
+            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/assets/images/img_rectangle_1.png');"
             id="home">
             <div class="hero-content relative z-10 w-full max-w-7xl mx-auto">
 
@@ -160,7 +78,7 @@
                 <!-- Market Entry & Growth Support -->
                 <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
                     <div class="order-2 lg:order-1">
-                        <img src="../assets/images/img_rectangle_138.png" alt="Africa market entry support"
+                        <img src="/assets/images/img_rectangle_138.png" alt="Africa market entry support"
                             class="w-full rounded-2xl shadow-2xl" />
                     </div>
                     <div class="order-1 lg:order-2">
@@ -191,7 +109,7 @@
                 <!-- Concierge for Travel & Business -->
                 <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
                     <div>
-                        <img src="../assets/images/img_rectangle_138_1.png"
+                        <img src="/assets/images/img_rectangle_138_1.png"
                             alt="Africa concierge travel and business services" class="w-full rounded-2xl shadow-2xl" />
                     </div>
                     <div>
@@ -226,7 +144,7 @@
                 <!-- Fitness -->
                 <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
                     <div class="order-2 lg:order-1">
-                        <img src="../assets/images/img_rectangle_138_2.png" alt="Fitness for Africa programs"
+                        <img src="/assets/images/img_rectangle_138_2.png" alt="Fitness for Africa programs"
                             class="w-full rounded-2xl shadow-2xl" />
                     </div>
                     <div class="order-1 lg:order-2">
@@ -257,7 +175,7 @@
                 <!-- Social Impact Projects -->
                 <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     <div>
-                        <img src="../assets/images/img_rectangle_138_288x222.png" alt="Social impact projects in Africa"
+                        <img src="/assets/images/img_rectangle_138_288x222.png" alt="Social impact projects in Africa"
                             class="w-full rounded-2xl shadow-2xl" />
                     </div>
                     <div>
@@ -428,93 +346,7 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer bg-[#1a1a1a] pt-12 sm:pt-16 md:pt-20 pb-6 sm:pb-8 px-4 sm:px-6 md:px-8 text-white">
-        <div class="footer-content max-w-7xl mx-auto">
-            <div class="footer-divider h-px bg-[#333] mb-8 sm:mb-12"></div>
-
-            <div
-                class="footer-main grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12 mb-8 sm:mb-12">
-                <div class="footer-brand sm:col-span-2 lg:col-span-1">
-                    <div
-                        class="footer-logo flex items-center gap-3 text-lg sm:text-xl md:text-2xl font-bold mb-4 sm:mb-6">
-                        🌐 <span>Lim-Kawano & Company Inc.</span>
-                    </div>
-                    <p class="footer-tagline text-gray-300 text-sm sm:text-base leading-relaxed max-w-xs">
-                        Connecting businesses worldwide through innovation and excellence.</p>
-                </div>
-
-                <div class="footer-links-section">
-                    <h4 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6">Services</h4>
-                    <nav class="footer-links flex flex-col gap-3">
-                        <a href="AfricaDivision.html"
-                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">Africa
-                            Division</a>
-                        <a href="PhilippinesDivision.html"
-                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">Philippines
-                            Division</a>
-                        <a href="LanguageServicesDivision.html"
-                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">Language
-                            Services</a>
-                        <a href="ITServicesDivision.html"
-                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">IT
-                            Solutions</a>
-                    </nav>
-                </div>
-
-                <div class="footer-links-section">
-                    <h4 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6">Company</h4>
-                    <nav class="footer-links flex flex-col gap-3">
-                        <a href="../index.html#team"
-                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">About
-                            Us</a>
-                        <a href="#"
-                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">Careers</a>
-                        <a href="#"
-                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">Partners</a>
-                        <a href="#"
-                            class="text-gray-300 text-sm sm:text-base no-underline transition-colors duration-300 hover:text-primary-tan">News</a>
-                    </nav>
-                </div>
-
-                <div class="footer-links-section">
-                    <h4 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6">Connect</h4>
-                    <div class="footer-social">
-                        <div class="footer-social-icons flex gap-3 sm:gap-4 mb-4 sm:mb-6">
-                            <a href="#"
-                                class="footer-social-icon w-10 h-10 sm:w-12 sm:h-12 bg-[#333] rounded-lg flex items-center justify-center text-gray-300 no-underline transition-all duration-300 hover:bg-primary-tan hover:text-white hover:scale-110"
-                                aria-label="LinkedIn">💼</a>
-                            <a href="#"
-                                class="footer-social-icon w-10 h-10 sm:w-12 sm:h-12 bg-[#333] rounded-lg flex items-center justify-center text-gray-300 no-underline transition-all duration-300 hover:bg-primary-tan hover:text-white hover:scale-110"
-                                aria-label="Instagram">📷</a>
-                            <a href="#"
-                                class="footer-social-icon w-10 h-10 sm:w-12 sm:h-12 bg-[#333] rounded-lg flex items-center justify-center text-gray-300 no-underline transition-all duration-300 hover:bg-primary-tan hover:text-white hover:scale-110"
-                                aria-label="Twitter">🐦</a>
-                            <a href="#"
-                                class="footer-social-icon w-10 h-10 sm:w-12 sm:h-12 bg-[#333] rounded-lg flex items-center justify-center text-gray-300 no-underline transition-colors duration-300 hover:bg-primary-tan hover:text-white hover:scale-110"
-                                aria-label="Facebook">📘</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                class="footer-bottom border-t border-[#333] pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <div class="footer-copyright text-gray-400 text-xs sm:text-sm text-center sm:text-left">
-                    © 2025 Lim-Kawano & Company Inc. All rights reserved.
-                </div>
-                <div class="footer-legal flex gap-4 sm:gap-6">
-                    <a href="#"
-                        class="text-gray-400 text-xs sm:text-sm no-underline transition-colors duration-300 hover:text-primary-tan">Privacy
-                        Policy</a>
-                    <a href="#"
-                        class="text-gray-400 text-xs sm:text-sm no-underline transition-colors duration-300 hover:text-primary-tan">Terms
-                        of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="../js/main.js"></script>
+    <div id="footer-placeholder"></div>
 
     <style>
         .animate-fade-in {
@@ -538,9 +370,10 @@
     <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
 
     <!-- Load Scripts -->
-    <script src="../js/translations.js"></script>
-    <script src="../js/enhancements.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="/js/templating.js"></script>
+    <script src="/js/translations.js"></script>
+    <script src="/js/enhancements.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>
