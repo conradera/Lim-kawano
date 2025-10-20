@@ -34,24 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
     requestAnimationFrame(parallax);
 
     // ========================================
-    // Enhanced Header with Glassmorphism
+    // Static Header - no scroll effects needed
     // ========================================
-    const header = document.querySelector('.header');
-    let lastScrollY = window.scrollY;
-
-    window.addEventListener('scroll', () => {
-        const currentScrollY = window.scrollY;
-
-        if (header) {
-            if (currentScrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        }
-
-        lastScrollY = currentScrollY;
-    });
 
     // ========================================
     // Animated Counter for Stats (if needed)
@@ -357,12 +341,12 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(showCookieConsent, 2000);
 
     // ========================================
-    // Performance Monitoring
+    // Performance Monitoring (Development only)
     // ========================================
-    if ('PerformanceObserver' in window) {
+    if ('PerformanceObserver' in window && window.location.hostname === 'localhost') {
         const perfObserver = new PerformanceObserver((list) => {
             for (const entry of list.getEntries()) {
-                if (entry.duration > 100) {
+                if (entry.duration > 500) { // Only warn for tasks over 500ms
                     console.warn('Slow task detected:', entry.name, entry.duration + 'ms');
                 }
             }
