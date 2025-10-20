@@ -323,3 +323,29 @@
             }
         `;
         document.head.appendChild(style);
+
+        // Smooth scrolling for anchor links
+        function initializeSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerHeight = document.querySelector('.hero-nav-header')?.offsetHeight || 0;
+                        const targetPosition = target.offsetTop - headerHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Initialize smooth scrolling when DOM is loaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeSmoothScrolling);
+        } else {
+            initializeSmoothScrolling();
+        }
