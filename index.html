@@ -383,18 +383,22 @@
         const readLessBtn = document.querySelector('.read-less-btn');
         const bioTabs = document.querySelectorAll('.bio-tab');
 
-        let currentIndex = 0;
-        let currentLanguage = 'en';
+        // Check if carousel elements exist
+        if (!carouselCards.length || !carouselDots) {
+            console.error('Carousel elements not found');
+        } else {
+            let currentIndex = 0;
+            let currentLanguage = 'en';
 
 
-        // Create dots
-        carouselCards.forEach((_, index) => {
-            const dot = document.createElement('div');
-            dot.classList.add('carousel-dot');
-            if (index === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => goToSlide(index));
-            carouselDots.appendChild(dot);
-        });
+            // Create dots
+            carouselCards.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('carousel-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(index));
+                carouselDots.appendChild(dot);
+            });
 
         const dots = document.querySelectorAll('.carousel-dot');
 
@@ -491,59 +495,60 @@
             hideBio(); // Hide bio when navigating with arrows
         }
 
-        leftArrow.addEventListener('click', prevSlide);
-        rightArrow.addEventListener('click', nextSlide);
+            if (leftArrow) leftArrow.addEventListener('click', prevSlide);
+            if (rightArrow) rightArrow.addEventListener('click', nextSlide);
 
-        // Click on cards to select them and show bio
-        carouselCards.forEach((card, index) => {
-            card.addEventListener('click', () => {
-                console.log('Card clicked:', index);
-                goToSlide(index);
-                showBio();
+            // Click on cards to select them and show bio
+            carouselCards.forEach((card, index) => {
+                card.addEventListener('click', () => {
+                    console.log('Card clicked:', index);
+                    goToSlide(index);
+                    showBio();
+                });
             });
-        });
 
-        // Read more/less functionality
-        if (readMoreBtn) {
-            readMoreBtn.addEventListener('click', () => {
-                console.log('Read More button clicked');
-                showBio();
-            });
-        } else {
-            console.log('Read More button not found');
-        }
-        
-        if (readLessBtn) {
-            readLessBtn.addEventListener('click', () => {
-                console.log('Read Less button clicked');
-                hideBio();
-            });
-        } else {
-            console.log('Read Less button not found');
-        }
-
-        // Language switching
-        bioTabs.forEach(tab => {
-            tab.addEventListener('click', () => switchLanguage(tab.dataset.lang));
-        });
-
-        // Initialize carousel
-        updateCarousel();
-        updateBioText(); // Initialize bio text
-
-        // Auto-advance carousel every 8 seconds (reduced frequency for better performance)
-        let carouselInterval = setInterval(nextSlide, 8000);
-        
-        // Pause auto-advance when user interacts
-        const carouselContainer = document.querySelector('.team-carousel');
-        if (carouselContainer) {
-            carouselContainer.addEventListener('mouseenter', () => {
-                clearInterval(carouselInterval);
-            });
+            // Read more/less functionality
+            if (readMoreBtn) {
+                readMoreBtn.addEventListener('click', () => {
+                    console.log('Read More button clicked');
+                    showBio();
+                });
+            } else {
+                console.log('Read More button not found');
+            }
             
-            carouselContainer.addEventListener('mouseleave', () => {
-                carouselInterval = setInterval(nextSlide, 8000);
+            if (readLessBtn) {
+                readLessBtn.addEventListener('click', () => {
+                    console.log('Read Less button clicked');
+                    hideBio();
+                });
+            } else {
+                console.log('Read Less button not found');
+            }
+
+            // Language switching
+            bioTabs.forEach(tab => {
+                tab.addEventListener('click', () => switchLanguage(tab.dataset.lang));
             });
+
+            // Initialize carousel
+            updateCarousel();
+            updateBioText(); // Initialize bio text
+
+            // Auto-advance carousel every 8 seconds (reduced frequency for better performance)
+            let carouselInterval = setInterval(nextSlide, 8000);
+            
+            // Pause auto-advance when user interacts
+            const carouselContainer = document.querySelector('.team-carousel');
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mouseenter', () => {
+                    clearInterval(carouselInterval);
+                });
+                
+                carouselContainer.addEventListener('mouseleave', () => {
+                    carouselInterval = setInterval(nextSlide, 8000);
+                });
+            }
         }
     </script>
 </body>

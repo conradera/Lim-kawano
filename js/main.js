@@ -252,27 +252,35 @@
                 const name = contactForm.querySelector('input[type="text"]')?.value;
                 const email = contactForm.querySelector('input[type="email"]')?.value;
                 const message = contactForm.querySelector('textarea')?.value;
+                
+                const currentLang = window.languageManager ? window.languageManager.getCurrentLanguage() : 'en';
+                const errorText = currentLang === 'ja' ? 'すべての必須項目を入力してください。' : 'Please fill in all required fields.';
+                const emailErrorText = currentLang === 'ja' ? '有効なメールアドレスを入力してください。' : 'Please enter a valid email address.';
 
                 if (!name || !email || !message) {
-                    alert('Please fill in all required fields.');
+                    alert(errorText);
                     return;
                 }
 
                 // Email validation
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailRegex.test(email)) {
-                    alert('Please enter a valid email address.');
+                    alert(emailErrorText);
                     return;
                 }
 
                 // Simulate form submission
-                submitButton.textContent = 'Sending...';
+                const originalButtonText = submitButton.innerHTML;
+                const sendingText = currentLang === 'ja' ? '送信中...' : 'Sending...';
+                const successText = currentLang === 'ja' ? 'お問い合わせありがとうございます！まもなくご連絡いたします。' : 'Thank you for your message! We\'ll get back to you soon.';
+                
+                submitButton.textContent = sendingText;
                 submitButton.disabled = true;
 
                 setTimeout(() => {
-                    alert('Thank you for your message! We\'ll get back to you soon.');
+                    alert(successText);
                     contactForm.reset();
-                    submitButton.innerHTML = 'Send Message <span class="ml-1">✈</span>';
+                    submitButton.innerHTML = originalButtonText;
                     submitButton.disabled = false;
                 }, 2000);
             });
