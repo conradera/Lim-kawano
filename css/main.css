@@ -163,15 +163,17 @@
             max-width: 85vw;
             height: 100vh;
             background: linear-gradient(135deg, #14394d 0%, #2a4a5d 100%);
-            z-index: 1000;
+            z-index: 9999;
             transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
+            pointer-events: auto;
         }
 
         .mobile-nav.open {
             right: 0;
+            transform: translateX(0);
         }
 
         .mobile-nav-overlay {
@@ -181,21 +183,23 @@
             width: 100vw;
             height: 100vh;
             background: rgba(0, 0, 0, 0.5);
-            z-index: 999;
+            z-index: 9998;
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
             -webkit-tap-highlight-color: transparent;
             touch-action: manipulation;
+            pointer-events: none;
         }
 
         .mobile-nav-overlay.show {
             opacity: 1;
             visibility: visible;
+            pointer-events: auto;
         }
 
         .hamburger {
-            display: flex;
+            display: none;
             flex-direction: column;
             cursor: pointer;
             padding: 8px;
@@ -205,17 +209,19 @@
             outline: none;
             z-index: 1001;
             position: relative;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
 
         @media (max-width: 767px) {
             .hamburger {
-                display: flex;
+                display: flex !important;
             }
         }
 
         @media (min-width: 768px) {
             .hamburger {
-                display: none;
+                display: none !important;
             }
         }
 
@@ -243,6 +249,13 @@
 
         .hamburger.active span:nth-child(3) {
             transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        /* Mobile menu body lock */
+        body.mobile-menu-open {
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
         }
 
         /* Dropdown Menu Styles */
@@ -360,14 +373,6 @@
             }
         }
 
-        /* Ensure mobile menu is above everything */
-        .mobile-nav {
-            z-index: 9999;
-        }
-
-        .mobile-nav-overlay {
-            z-index: 9998;
-        }
 
         /* Bio Section Styles */
         .person-bio {

@@ -53,22 +53,6 @@
 
 <body class="font-sans bg-off-white text-gray-800">
     <div id="header-placeholder"></div>
-    <script>
-        // Load header
-        fetch('/pages/_header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-                // Re-initialize mobile menu after loading
-                setTimeout(() => {
-                    if (typeof initializeMobileMenu === 'function') {
-                        initializeMobileMenu();
-                    } else if (typeof retryMobileMenuInit === 'function') {
-                        retryMobileMenuInit();
-                    }
-                }, 100);
-            });
-    </script>
 
     <main>
         <!-- Hero Section -->
@@ -360,18 +344,6 @@
     <script src="/js/translations.js" defer></script>
     <script src="/js/enhancements.js" defer></script>
     <script src="/js/main.js" defer></script>
-    <script>
-        // Ensure mobile menu is initialized after all scripts are loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(() => {
-                if (typeof initializeMobileMenu === 'function') {
-                    initializeMobileMenu();
-                } else if (typeof retryMobileMenuInit === 'function') {
-                    retryMobileMenuInit();
-                }
-            }, 200);
-        });
-    </script>
 </body>
 
 </html>
