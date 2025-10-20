@@ -57,18 +57,27 @@
 
         /* Hero Images */
         .hero-section {
-            background-attachment: scroll;
+            background-attachment: fixed;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             min-height: 100vh;
         }
 
+        /* Expertise Section */
+        .expertise-section {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
         /* Mobile hero section adjustments */
         @media (max-width: 767px) {
-            .hero-section {
+            .hero-section,
+            .expertise-section {
                 min-height: 100vh;
-                background-attachment: scroll !important;
+                background-attachment: fixed !important;
                 background-position: center center;
                 background-size: cover;
                 display: flex;
