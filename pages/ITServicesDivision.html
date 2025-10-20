@@ -14,8 +14,11 @@
     <meta property="og:description"
         content="Empowering the world through IT. By connecting African engineers with Japanese businesses, we create jobs in Africa while solving Japan's talent shortage." />
 
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/enhancements.css" />
+
     <script>
         tailwind.config = {
             theme: {
@@ -73,13 +76,13 @@
             class="hero-section bg-cover bg-center bg-no-repeat min-h-screen flex items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 relative"
             style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/assets/images/IT Hero 1.jpg');"
             id="home">
-            <div class="hero-content relative z-10 w-full max-w-7xl mx-auto">
+            <div class="hero-content relative z-10 w-full max-w-7xl mx-auto pt-20">
 
                 <div class="px-6 lg:px-12 mt-16 lg:mt-24 max-w-4xl text-center mx-auto">
-                    <h2 class="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">Empowering the world through IT.</h2>
-                    <p class="text-2xl lg:text-3xl text-gray-300 mb-8 max-w-3xl leading-relaxed mx-auto">By connecting African engineers with Japanese businesses, we create jobs in Africa while solving Japan's talent shortage. With our project management and trusted partnerships, we deliver IT solutions that drive sustainable growth on both sides.</p>
+                    <h2 class="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight" data-i18n="itDivision.hero.title">Empowering the world through IT.</h2>
+                    <p class="text-2xl lg:text-3xl text-gray-300 mb-8 max-w-3xl leading-relaxed mx-auto" data-i18n="itDivision.hero.description">By connecting African engineers with Japanese businesses, we create jobs in Africa while solving Japan's talent shortage. With our project management and trusted partnerships, we deliver IT solutions that drive sustainable growth on both sides.</p>
                     <a href="#contact"
-                        class="cta-button bg-light-blue text-primary-blue font-outfit font-semibold text-sm xs:text-base sm:text-lg uppercase py-3 px-6 sm:py-4 sm:px-8 rounded-lg inline-block hover:bg-[#6b8fa3] hover:scale-105 transition-all duration-300 shadow-lg">Get
+                        class="cta-button bg-light-blue text-primary-blue font-outfit font-semibold text-sm xs:text-base sm:text-lg uppercase py-3 px-6 sm:py-4 sm:px-8 rounded-lg inline-block hover:bg-[#6b8fa3] hover:scale-105 transition-all duration-300 shadow-lg" data-i18n="itDivision.hero.cta">Get
                         in Touch</a>
                 </div>
             </div>
@@ -243,22 +246,10 @@
                                     class="contact-info-label text-gray-300 text-sm sm:text-base font-semibold mb-1 sm:mb-2">
                                     Email</div>
                                 <div class="contact-info-value text-white font-medium text-base sm:text-lg">
-                                    contact@limkawano.com</div>
+                                    info@lim-kawano.com</div>
                             </div>
                         </div>
 
-                        <div class="contact-info-item flex items-start gap-4 sm:gap-6 mb-6 sm:mb-8">
-                            <div
-                                class="contact-info-icon w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-tan rounded-lg flex items-center justify-center text-white text-lg sm:text-xl flex-shrink-0">
-                                📞</div>
-                            <div class="contact-info-text">
-                                <div
-                                    class="contact-info-label text-gray-300 text-sm sm:text-base font-semibold mb-1 sm:mb-2">
-                                    Phone</div>
-                                <div class="contact-info-value text-white font-medium text-base sm:text-lg">+81 (3)
-                                    1234-5678</div>
-                            </div>
-                        </div>
 
                         <div class="contact-info-item flex items-start gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12">
                             <div
@@ -330,8 +321,11 @@
 
     <div id="footer-placeholder"></div>
 
-    <script src="/js/templating.js"></script>
-    <script src="/js/main.js"></script>
+    <!-- Load Scripts -->
+    <script src="/js/templating.js" defer></script>
+    <script src="/js/translations.js" defer></script>
+    <script src="/js/enhancements.js" defer></script>
+    <script src="/js/main.js" defer></script>
     <script>
         // Ensure mobile menu is initialized after all scripts are loaded
         document.addEventListener('DOMContentLoaded', function() {

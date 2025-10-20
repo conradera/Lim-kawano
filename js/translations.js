@@ -70,11 +70,10 @@ const translations = {
             info: {
                 title: "Contact Information",
                 email: "Email",
-                phone: "Phone",
                 headquarters: "Headquarters",
                 location: "Tokyo, Japan",
                 globalOffices: "Global Offices",
-                globalDescription: "With Global offices in Tokyo, Manila, Djibouti, we're always within reach to serve your needs across multiple time zones."
+                globalDescription: "With offices in Tokyo, Manila, and Djibouti, we're always within reach to serve your needs across multiple time zones."
             },
             form: {
                 name: "Name",
@@ -143,6 +142,76 @@ const translations = {
                     ],
                     cta: "GET IN TOUCH"
                 }
+            }
+        },
+
+        // Language Services Division Page
+        languageDivision: {
+            title: "Language Services Division - Lim-Kawano & Company Inc.",
+            hero: {
+                title: "Break language barriers and unlock new opportunities in business, education, and self-expression.",
+                description: "From professional coaching in English and French to translation, interpretation, and pre-departure training, we provide world-class support for global success.",
+                cta: "Get in Touch"
+            },
+            services: {
+                title: "Our Services",
+                coaching: {
+                    badge: "Language Coaching",
+                    title: "Professional English & French Coaching",
+                    description: "Personalized language coaching tailored to business, study, and everyday communication needs. Build confidence and fluency with experienced coaches.",
+                    benefits: [
+                        "One-on-one or group coaching sessions",
+                        "Focused programs for business or academic use",
+                        "Native-level guidance for practical communication"
+                    ],
+                    cta: "GET IN TOUCH"
+                },
+                translation: {
+                    badge: "Translation & Interpretation",
+                    title: "Multilingual Communication Support",
+                    description: "Professional translation and interpretation services for meetings, documents, and events, bridging Japanese, English, and French.",
+                    benefits: [
+                        "Accurate and context-aware document translation",
+                        "Consecutive interpretation for business and academic settings",
+                        "Support for conferences, training, and cultural exchange"
+                    ],
+                    cta: "GET IN TOUCH"
+                },
+                training: {
+                    badge: "Pre-departure Training",
+                    title: "Intensive Language Programs for Global Assignments",
+                    description: "Specialized short-term training for study abroad, overseas assignments, and relocations. Gain essential communication skills before departure.",
+                    benefits: [
+                        "Short-term intensive language programs",
+                        "Customized curriculum for study or work abroad",
+                        "Practical training for real-life scenarios"
+                    ],
+                    cta: "GET IN TOUCH"
+                }
+            },
+            contact: {
+                title: "Get in Touch",
+                subtitle: "Ready to break language barriers? Let's discuss how we can help you achieve your global communication goals."
+            }
+        },
+
+        // Philippines Division Page
+        philippinesDivision: {
+            title: "Philippines Division - Lim-Kawano & Company Inc.",
+            hero: {
+                title: "Connect with the Philippines' vibrant market",
+                description: "From seamless product sourcing to market entry and property investment, we open doors to new opportunities in the Philippines.",
+                cta: "Get in Touch"
+            }
+        },
+
+        // IT Services Division Page
+        itDivision: {
+            title: "IT Services Division - Lim-Kawano & Company Inc.",
+            hero: {
+                title: "Empowering the world through IT.",
+                description: "By connecting African engineers with Japanese businesses, we create jobs in Africa while solving Japan's talent shortage. With our project management and trusted partnerships, we deliver IT solutions that drive sustainable growth on both sides.",
+                cta: "Get in Touch"
             }
         }
     },
@@ -217,11 +286,10 @@ const translations = {
             info: {
                 title: "連絡先情報",
                 email: "メール",
-                phone: "電話",
                 headquarters: "本社",
                 location: "東京、日本",
                 globalOffices: "グローバルオフィス",
-                globalDescription: "東京、マニラ、ジブチにグローバルオフィスがあり、複数のタイムゾーンでお客様のニーズにお応えします。"
+                globalDescription: "東京、マニラ、ジブチにオフィスがあり、複数のタイムゾーンでお客様のニーズにお応えします。"
             },
             form: {
                 name: "お名前",
@@ -290,6 +358,76 @@ const translations = {
                     ],
                     cta: "お問い合わせ"
                 }
+            }
+        },
+
+        // 語学サービス部門ページ
+        languageDivision: {
+            title: "語学サービス部門 - Lim-Kawano & Company Inc.",
+            hero: {
+                title: "言語の壁を破り、ビジネス、教育、自己表現における新しい機会を解き放つ。",
+                description: "英語・フランス語のプロフェッショナルコーチングから翻訳、通訳、海外赴任前トレーニングまで、グローバルな成功のための世界クラスのサポートを提供します。",
+                cta: "お問い合わせ"
+            },
+            services: {
+                title: "私たちのサービス",
+                coaching: {
+                    badge: "語学コーチング",
+                    title: "プロフェッショナル英語・フランス語コーチング",
+                    description: "ビジネス、学習、日常コミュニケーションのニーズに合わせた個別化された語学コーチング。経験豊富なコーチと共に自信と流暢さを身につけましょう。",
+                    benefits: [
+                        "マンツーマンまたはグループコーチングセッション",
+                        "ビジネスまたは学術用途のための集中プログラム",
+                        "実践的なコミュニケーションのためのネイティブレベルの指導"
+                    ],
+                    cta: "お問い合わせ"
+                },
+                translation: {
+                    badge: "翻訳・通訳",
+                    title: "多言語コミュニケーションサポート",
+                    description: "会議、文書、イベントのためのプロフェッショナル翻訳・通訳サービス、日本語、英語、フランス語を橋渡しします。",
+                    benefits: [
+                        "正確で文脈を理解した文書翻訳",
+                        "ビジネス・学術環境での逐次通訳",
+                        "会議、トレーニング、文化交流のサポート"
+                    ],
+                    cta: "お問い合わせ"
+                },
+                training: {
+                    badge: "海外赴任前トレーニング",
+                    title: "グローバル赴任のための集中語学プログラム",
+                    description: "留学、海外赴任、移住のための専門短期トレーニング。赴任前に必要なコミュニケーションスキルを身につけましょう。",
+                    benefits: [
+                        "短期集中語学プログラム",
+                        "留学・海外勤務のためのカスタマイズされたカリキュラム",
+                        "実生活シナリオのための実践的トレーニング"
+                    ],
+                    cta: "お問い合わせ"
+                }
+            },
+            contact: {
+                title: "お問い合わせ",
+                subtitle: "言語の壁を破る準備はできましたか？グローバルコミュニケーション目標の達成をどのようにサポートできるかご相談ください。"
+            }
+        },
+
+        // フィリピン部門ページ
+        philippinesDivision: {
+            title: "フィリピン部門 - Lim-Kawano & Company Inc.",
+            hero: {
+                title: "フィリピンの活気ある市場とつながる",
+                description: "シームレスな商品調達から市場参入、不動産投資まで、フィリピンでの新しい機会への扉を開きます。",
+                cta: "お問い合わせ"
+            }
+        },
+
+        // ITサービス部門ページ
+        itDivision: {
+            title: "ITサービス部門 - Lim-Kawano & Company Inc.",
+            hero: {
+                title: "ITを通じて世界を力づける。",
+                description: "アフリカのエンジニアと日本の企業を結びつけることで、アフリカに雇用を創出しながら日本の人材不足を解決します。プロジェクト管理と信頼できるパートナーシップにより、両側で持続可能な成長を促進するITソリューションを提供します。",
+                cta: "お問い合わせ"
             }
         }
     }
