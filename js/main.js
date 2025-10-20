@@ -15,7 +15,7 @@
                 if (mobileNav) mobileNav.classList.add('open');
                 if (mobileNavOverlay) mobileNavOverlay.classList.add('show');
                 if (hamburgerBtn) hamburgerBtn.classList.add('active');
-                document.body.style.overflow = 'hidden';
+                document.body.classList.add('mobile-menu-open');
                 isMenuOpen = true;
             }
 
@@ -28,7 +28,7 @@
                 if (mobileNav) mobileNav.classList.remove('open');
                 if (mobileNavOverlay) mobileNavOverlay.classList.remove('show');
                 if (hamburgerBtn) hamburgerBtn.classList.remove('active');
-                document.body.style.overflow = '';
+                document.body.classList.remove('mobile-menu-open');
                 isMenuOpen = false;
             }
 
@@ -44,6 +44,15 @@
                 if (window.innerWidth >= 768 && isMenuOpen) {
                     closeMobileNavFunc();
                 }
+            }
+
+            // Handle orientation change
+            function handleOrientationChange() {
+                setTimeout(() => {
+                    if (window.innerWidth >= 768 && isMenuOpen) {
+                        closeMobileNavFunc();
+                    }
+                }, 100);
             }
 
             if (hamburgerBtn) {
@@ -75,16 +84,29 @@
                     e.stopPropagation();
                     
                     const dropdown = toggle.closest('.mobile-dropdown');
+                    const dropdownMenu = dropdown.querySelector('.mobile-dropdown-menu');
                     const isActive = dropdown.classList.contains('active');
                     
                     // Close all other dropdowns
                     document.querySelectorAll('.mobile-dropdown').forEach(dd => {
                         dd.classList.remove('active');
+                        const menu = dd.querySelector('.mobile-dropdown-menu');
+                        if (menu) {
+                            menu.classList.add('hidden');
+                        }
                     });
                     
                     // Toggle current dropdown
                     if (!isActive) {
                         dropdown.classList.add('active');
+                        if (dropdownMenu) {
+                            dropdownMenu.classList.remove('hidden');
+                        }
+                    } else {
+                        dropdown.classList.remove('active');
+                        if (dropdownMenu) {
+                            dropdownMenu.classList.add('hidden');
+                        }
                     }
                 });
             });
@@ -92,6 +114,7 @@
             // Add global event listeners
             document.addEventListener('keydown', handleEscapeKey);
             window.addEventListener('resize', handleResize);
+            window.addEventListener('orientationchange', handleOrientationChange);
         }
 
         // Initialize mobile menu when DOM is loaded
@@ -122,31 +145,39 @@
         const contactForm = document.querySelector('.contact-form');
         const submitButton = document.querySelector('.submit-button');
 
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
+        if (contactForm && submitButton) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
 
-            // Simple form validation
-            const formData = new FormData(contactForm);
-            const name = contactForm.querySelector('input[type="text"]').value;
-            const email = contactForm.querySelector('input[type="email"]').value;
-            const message = contactForm.querySelector('textarea').value;
+                // Simple form validation
+                const name = contactForm.querySelector('input[type="text"]')?.value;
+                const email = contactForm.querySelector('input[type="email"]')?.value;
+                const message = contactForm.querySelector('textarea')?.value;
 
-            if (!name || !email || !message) {
-                alert('Please fill in all required fields.');
-                return;
-            }
+                if (!name || !email || !message) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
 
-            // Simulate form submission
-            submitButton.textContent = 'Sending...';
-            submitButton.disabled = true;
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
 
-            setTimeout(() => {
-                alert('Thank you for your message! We\'ll get back to you soon.');
-                contactForm.reset();
-                submitButton.innerHTML = 'Send Message <span class="ml-1">✈</span>';
-                submitButton.disabled = false;
-            }, 2000);
-        });
+                // Simulate form submission
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+
+                setTimeout(() => {
+                    alert('Thank you for your message! We\'ll get back to you soon.');
+                    contactForm.reset();
+                    submitButton.innerHTML = 'Send Message <span class="ml-1">✈</span>';
+                    submitButton.disabled = false;
+                }, 2000);
+            });
+        }
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -200,6 +231,9 @@
                 closeMobileNavFunc();
             }
         });
+
+        // Make closeMobileNavFunc globally accessible
+        window.closeMobileNavFunc = closeMobileNavFunc;
 
         // Fixed navbar - always visible, no scroll effects needed
 

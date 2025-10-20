@@ -59,6 +59,8 @@
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
 
         .mobile-nav-overlay.show {
@@ -129,6 +131,8 @@
         /* Mobile Menu Improvements */
         .mobile-nav {
             overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
         }
 
         .mobile-nav::-webkit-scrollbar {
@@ -184,7 +188,7 @@
         .mobile-dropdown-menu {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
             opacity: 0;
         }
 
@@ -193,9 +197,41 @@
             opacity: 1;
         }
 
+        .mobile-dropdown-menu.hidden {
+            display: none;
+        }
+
+        .mobile-dropdown.active .mobile-dropdown-menu.hidden {
+            display: block;
+        }
+
         .mobile-dropdown-menu li {
             border-left: 2px solid rgba(255, 255, 255, 0.2);
             margin-left: 8px;
+        }
+
+        /* Prevent body scroll when mobile menu is open */
+        body.mobile-menu-open {
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+        }
+
+        /* Improve touch targets for mobile */
+        @media (max-width: 768px) {
+            .mobile-nav-link,
+            .mobile-dropdown-toggle {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        /* Fix for iOS Safari viewport issues */
+        @supports (-webkit-touch-callout: none) {
+            .mobile-nav {
+                height: -webkit-fill-available;
+            }
         }
 
         /* Ensure mobile menu is above everything */
