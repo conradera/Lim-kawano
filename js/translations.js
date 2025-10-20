@@ -124,24 +124,61 @@ const translations = {
                     badge: "Africa Market Entry Support",
                     title: "Expand with Confidence",
                     description: "We guide businesses entering Africa with deep local knowledge, trusted partnerships, and hands-on coordination across 54 countries.",
-                    benefits: [
-                        "Strategic entry support tailored to local markets",
-                        "Reliable on-the-ground coordination and partner matching",
-                        "Growth opportunities across Africa's emerging economies"
-                    ],
+                    benefit1: "Strategic entry support tailored to local markets",
+                    benefit2: "Reliable on-the-ground coordination and partner matching",
+                    benefit3: "Growth opportunities across Africa's emerging economies",
                     cta: "GET IN TOUCH"
                 },
                 concierge: {
                     badge: "Africa Concierge Services",
                     title: "Travel & Business, Seamlessly Coordinated",
                     description: "From tailor-made leisure trips to business travel, we provide safe, authentic, and seamless African experiences.",
-                    benefits: [
-                        "Customized itineraries for unforgettable journeys",
-                        "Professional support for business trips and corporate delegations",
-                        "Deep cultural expertise and safety protocols across all destinations"
-                    ],
+                    benefit1: "Customized itineraries for unforgettable journeys",
+                    benefit2: "Professional support for business trips and corporate delegations",
+                    benefit3: "Local expertise ensuring safety and comfort",
+                    cta: "GET IN TOUCH",
+                    visitSite: "VISIT SERVICE SITE"
+                },
+                fitness: {
+                    badge: "Fitness for Africa",
+                    title: "Building Healthy Habits, Improving Quality of Life",
+                    description: "We provide fitness programs designed for African communities, helping people build regular exercise habits, improve their health, and enhance their quality of life.",
+                    benefit1: "Accessible fitness programs tailored to local lifestyles",
+                    benefit2: "Guidance to establish sustainable exercise habits",
+                    benefit3: "Promoting better health and higher QOL through regular activity",
+                    cta: "GET IN TOUCH"
+                },
+                social: {
+                    badge: "Social Impact & Innovation",
+                    title: "Solving Challenges with Japanese Technology",
+                    description: "We collaborate with local communities to address Africa's pressing issues, applying Japanese innovation to create sustainable solutions.",
+                    benefit1: "Projects leveraging Japanese technology for social good",
+                    benefit2: "Collaborative initiatives with local stakeholders",
+                    benefit3: "Sustainable models for long-term community impact",
                     cta: "GET IN TOUCH"
                 }
+            },
+            stories: {
+                title: "Success Stories",
+                story1: {
+                    quote: "In the Democratic Republic of Congo, Lim-Kawano's Africa Division is not only advising but actively driving our smart city project. Their coordination with Japanese experts and local stakeholders is helping us turn vision into implementation.",
+                    name: "Local Government Partner",
+                    location: "Democratic Republic of Congo"
+                },
+                story2: {
+                    quote: "Thanks to Lim-Kawano, we were able to export baobab powder from Senegal to Japan. They didn't just connect us—they managed negotiations, compliance, and logistics, ensuring our product reached the Japanese market successfully.",
+                    name: "Agribusiness Entrepreneur",
+                    location: "Senegal"
+                },
+                story3: {
+                    quote: "Lim-Kawano supported our IT company in Nigeria not only by introducing Japanese clients, but also by managing projects and ensuring delivery. Their involvement helped us establish long-term partnerships and expand our business.",
+                    name: "IT Entrepreneur",
+                    location: "Nigeria"
+                }
+            },
+            contact: {
+                title: "Get in Touch",
+                subtitle: "Ready to explore Africa? Let's discuss how we can support your business or travel goals."
             }
         },
 
@@ -340,24 +377,61 @@ const translations = {
                     badge: "アフリカ市場参入サポート",
                     title: "自信を持って展開",
                     description: "深い地域知識、信頼できるパートナーシップ、54カ国での実践的なコーディネーションでアフリカに参入する企業をガイドします。",
-                    benefits: [
-                        "現地市場に特化した戦略的参入サポート",
-                        "信頼できる現地でのコーディネーションとパートナーマッチング",
-                        "アフリカの新興経済における成長機会"
-                    ],
+                    benefit1: "現地市場に特化した戦略的参入サポート",
+                    benefit2: "信頼できる現地でのコーディネーションとパートナーマッチング",
+                    benefit3: "アフリカの新興経済における成長機会",
                     cta: "お問い合わせ"
                 },
                 concierge: {
                     badge: "アフリカコンシェルジュサービス",
                     title: "旅行とビジネス、シームレスにコーディネート",
                     description: "オーダーメイドのレジャー旅行からビジネス旅行まで、安全で本格的、そしてシームレスなアフリカ体験を提供します。",
-                    benefits: [
-                        "忘れられない旅のためのカスタマイズされた旅程",
-                        "出張や企業代表団への専門的サポート",
-                        "全ての目的地における深い文化的専門知識と安全プロトコル"
-                    ],
+                    benefit1: "忘れられない旅のためのカスタマイズされた旅程",
+                    benefit2: "出張や企業代表団への専門的サポート",
+                    benefit3: "全ての目的地における安全と快適さを確保する現地の専門知識",
+                    cta: "お問い合わせ",
+                    visitSite: "サービスサイトへ"
+                },
+                fitness: {
+                    badge: "アフリカのためのフィットネス",
+                    title: "健康な習慣を築き、生活の質を向上させる",
+                    description: "アフリカのコミュニティのために設計されたフィットネスプログラムを提供し、定期的な運動習慣を築き、健康を改善し、生活の質を向上させる支援をします。",
+                    benefit1: "現地のライフスタイルに合わせたアクセスしやすいフィットネスプログラム",
+                    benefit2: "持続可能な運動習慣を確立するためのガイダンス",
+                    benefit3: "定期的な活動を通じて健康とQOLを向上",
+                    cta: "お問い合わせ"
+                },
+                social: {
+                    badge: "社会的影響とイノベーション",
+                    title: "日本の技術で課題を解決",
+                    description: "現地コミュニティと協力してアフリカの緊急の問題に取り組み、日本のイノベーションを適用して持続可能な解決策を創出します。",
+                    benefit1: "社会的善のために日本の技術を活用したプロジェクト",
+                    benefit2: "現地のステークホルダーとの協力イニシアチブ",
+                    benefit3: "長期的なコミュニティへの影響のための持続可能なモデル",
                     cta: "お問い合わせ"
                 }
+            },
+            stories: {
+                title: "成功事例",
+                story1: {
+                    quote: "コンゴ民主共和国では、Lim-Kawanoのアフリカ部門は助言するだけでなく、スマートシティプロジェクトを積極的に推進しています。日本の専門家と現地のステークホルダーとのコーディネーションにより、ビジョンを実装に転換する支援をしています。",
+                    name: "地方自治体パートナー",
+                    location: "コンゴ民主共和国"
+                },
+                story2: {
+                    quote: "Lim-Kawanoのおかげで、セネガルからバオバブパウダーを日本に輸出することができました。彼らは単に私たちを繋ぐだけでなく、交渉、コンプライアンス、ロジスティクスを管理し、製品が日本市場に成功裏に届くようにしました。",
+                    name: "農業ビジネス起業家",
+                    location: "セネガル"
+                },
+                story3: {
+                    quote: "Lim-Kawanoは、ナイジェリアの私たちのIT企業を、日本のクライアントを紹介するだけでなく、プロジェクトを管理し、納品を確実にすることでサポートしました。彼らの関与により、長期的なパートナーシップを確立し、ビジネスを拡大することができました。",
+                    name: "IT起業家",
+                    location: "ナイジェリア"
+                }
+            },
+            contact: {
+                title: "お問い合わせ",
+                subtitle: "アフリカを探索する準備はできましたか？ビジネスまたは旅行の目標をどのようにサポートできるかご相談ください。"
             }
         },
 
