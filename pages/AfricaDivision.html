@@ -58,9 +58,13 @@
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
                 // Re-initialize mobile menu after loading
-                if (typeof initializeMobileMenu === 'function') {
-                    initializeMobileMenu();
-                }
+                setTimeout(() => {
+                    if (typeof initializeMobileMenu === 'function') {
+                        initializeMobileMenu();
+                    } else if (typeof retryMobileMenuInit === 'function') {
+                        retryMobileMenuInit();
+                    }
+                }, 100);
             });
     </script>
 
@@ -386,6 +390,18 @@
     <script src="/js/translations.js"></script>
     <script src="/js/enhancements.js"></script>
     <script src="/js/main.js"></script>
+    <script>
+        // Ensure mobile menu is initialized after all scripts are loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                if (typeof initializeMobileMenu === 'function') {
+                    initializeMobileMenu();
+                } else if (typeof retryMobileMenuInit === 'function') {
+                    retryMobileMenuInit();
+                }
+            }, 200);
+        });
+    </script>
 </body>
 
 </html>

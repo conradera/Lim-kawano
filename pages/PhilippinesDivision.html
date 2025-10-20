@@ -58,9 +58,13 @@
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
                 // Re-initialize mobile menu after loading
-                if (typeof initializeMobileMenu === 'function') {
-                    initializeMobileMenu();
-                }
+                setTimeout(() => {
+                    if (typeof initializeMobileMenu === 'function') {
+                        initializeMobileMenu();
+                    } else if (typeof retryMobileMenuInit === 'function') {
+                        retryMobileMenuInit();
+                    }
+                }, 100);
             });
     </script>
     <main>
@@ -328,6 +332,18 @@
     <div id="footer-placeholder"></div>
     <script src="/js/templating.js"></script>
     <script src="/js/main.js"></script>
+    <script>
+        // Ensure mobile menu is initialized after all scripts are loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                if (typeof initializeMobileMenu === 'function') {
+                    initializeMobileMenu();
+                } else if (typeof retryMobileMenuInit === 'function') {
+                    retryMobileMenuInit();
+                }
+            }, 200);
+        });
+    </script>
 
 
     <style>

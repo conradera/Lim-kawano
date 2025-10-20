@@ -6,6 +6,12 @@
             const closeMobileNav = document.getElementById('closeMobileNav');
             const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
+            // Check if mobile menu elements exist
+            if (!hamburgerBtn || !mobileNav || !mobileNavOverlay) {
+                console.log('Mobile menu elements not found, retrying...');
+                return;
+            }
+
             let isMenuOpen = false;
 
             function openMobileNav(e) {
@@ -118,11 +124,42 @@
         }
 
         // Initialize mobile menu when DOM is loaded
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initializeMobileMenu);
-        } else {
-            initializeMobileMenu();
+        function initMobileMenuWhenReady() {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initializeMobileMenu);
+            } else {
+                initializeMobileMenu();
+            }
         }
+
+        // Initialize immediately
+        initMobileMenuWhenReady();
+
+        // Also initialize on window load as backup
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                if (typeof initializeMobileMenu === 'function') {
+                    initializeMobileMenu();
+                }
+            }, 100);
+        });
+
+        // Retry mechanism for dynamically loaded content
+        let retryCount = 0;
+        const maxRetries = 5;
+        function retryMobileMenuInit() {
+            if (retryCount < maxRetries) {
+                retryCount++;
+                setTimeout(() => {
+                    if (typeof initializeMobileMenu === 'function') {
+                        initializeMobileMenu();
+                    }
+                }, 500 * retryCount);
+            }
+        }
+
+        // Expose retry function globally
+        window.retryMobileMenuInit = retryMobileMenuInit;
 
         // Handle dropdown menu hover
         const servicesDropdown = document.querySelector('.nav-menu .group');
