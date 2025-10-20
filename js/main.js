@@ -67,6 +67,28 @@
                 link.addEventListener('touchstart', closeMobileNavFunc, { passive: false });
             });
 
+            // Mobile dropdown functionality
+            const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+            mobileDropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const dropdown = toggle.closest('.mobile-dropdown');
+                    const isActive = dropdown.classList.contains('active');
+                    
+                    // Close all other dropdowns
+                    document.querySelectorAll('.mobile-dropdown').forEach(dd => {
+                        dd.classList.remove('active');
+                    });
+                    
+                    // Toggle current dropdown
+                    if (!isActive) {
+                        dropdown.classList.add('active');
+                    }
+                });
+            });
+
             // Add global event listeners
             document.addEventListener('keydown', handleEscapeKey);
             window.addEventListener('resize', handleResize);
@@ -179,7 +201,7 @@
             }
         });
 
-        // Static header - no scroll effects needed
+        // Fixed navbar - always visible, no scroll effects needed
 
         // Enhanced form interactions
         const formInputs = document.querySelectorAll('.form-input, .form-textarea');

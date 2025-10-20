@@ -1,0 +1,22 @@
+
+/* Basic CSS without Tailwind - for development */
+@import url('https://fonts.googleapis.com/css2?family=Notable:wght@400&display=swap');
+
+:root {
+  --primary-blue: #14394d;
+  --light-blue: #7da3b7;
+  --primary-tan: #cc9955;
+  --light-tan: #dcaa66;
+  --off-white: #fefff8;
+  --cream: #faf4eb;
+  --dark-gray: #2a2a2a;
+  --medium-gray: #586972;
+  --navy: #1e3a5f;
+  --gold: #d4af37;
+  --teal: #2c7a7b;
+  --coral: #ff6b6b;
+  --slate: #334155;
+}
+
+/* You can continue using the CDN for now */
+/* For production, replace the CDN with this file */

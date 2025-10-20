@@ -15,13 +15,22 @@
         content="Empowering global connections and enhancing business growth. Expert consulting services connecting Japan with international markets." />
 
     <!-- Tailwind CSS CDN -->
-    <!-- Tailwind CSS CDN - For development only -->
-    <!-- For production, use: npm install -D tailwindcss && npx tailwindcss -i ./src/input.css -o ./dist/output.css -->
+    <!-- Tailwind CSS CDN - DEVELOPMENT ONLY -->
+    <!-- 
+    PRODUCTION SETUP:
+    1. npm install -D tailwindcss
+    2. npx tailwindcss init
+    3. npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+    4. Replace this script tag with: <link href="./dist/output.css" rel="stylesheet">
+    -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/enhancements.css" />
 
     <script>
+        // Suppress Tailwind CDN production warning
+        window.tailwind = { config: {} };
+        
         tailwind.config = {
             theme: {
                 extend: {

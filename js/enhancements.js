@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     requestAnimationFrame(parallax);
 
     // ========================================
-    // Static Header - no scroll effects needed
+    // Fixed Header - always visible, no scroll effects needed
     // ========================================
 
     // ========================================
@@ -384,7 +384,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     // Initialize all enhancements
     // ========================================
-    console.log('✨ Enhanced interactivity loaded successfully!');
+    // Only show success message in development
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        console.log('✨ Enhanced interactivity loaded successfully!');
+    }
 });
 
 // ========================================
