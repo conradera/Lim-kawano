@@ -51,19 +51,31 @@
 
 <body class="font-sans bg-off-white text-gray-800">
     <div id="header-placeholder"></div>
+    <script>
+        // Load header
+        fetch('/pages/_header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                // Re-initialize mobile menu after loading
+                if (typeof initializeMobileMenu === 'function') {
+                    initializeMobileMenu();
+                }
+            });
+    </script>
     <main>
         <!-- Hero Section -->
         <section
             class="hero-section bg-cover bg-center bg-no-repeat min-h-screen flex items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 relative"
-            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/assets/images/img_rectangle_1.png');"
+            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/assets/images/Phili hero.jpg');"
             id="home">
             <div class="hero-content relative z-10 w-full max-w-7xl mx-auto">
 
-                <div class="px-6 lg:px-12 mt-16 lg:mt-24 max-w-4xl">
-                    <h2 class="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">Connect with the Philippines' vibrant market</h2>
-                    <p class="text-xl lg:text-2xl text-gray-200 mb-8 max-w-3xl leading-relaxed">From seamless product sourcing to market entry and property investment, we open doors to new opportunities in the Philippines.</p>
+                <div class="px-6 lg:px-12 mt-16 lg:mt-24 max-w-4xl text-center mx-auto">
+                    <h2 class="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">Connect with the Philippines' vibrant market</h2>
+                    <p class="text-2xl lg:text-3xl text-gray-200 mb-8 max-w-3xl leading-relaxed mx-auto">From seamless product sourcing to market entry and property investment, we open doors to new opportunities in the Philippines.</p>
                     <a href="#contact"
-                        class="cta-button bg-light-blue text-primary-blue font-outfit font-semibold text-xs xs:text-sm sm:text-base uppercase py-3 px-6 sm:py-4 sm:px-8 rounded-lg inline-block hover:bg-[#6b8fa3] hover:scale-105 transition-all duration-300 shadow-lg">Get
+                        class="cta-button bg-light-blue text-primary-blue font-outfit font-semibold text-sm xs:text-base sm:text-lg uppercase py-3 px-6 sm:py-4 sm:px-8 rounded-lg inline-block hover:bg-[#6b8fa3] hover:scale-105 transition-all duration-300 shadow-lg">Get
                         in Touch</a>
                 </div>
             </div>
@@ -77,7 +89,7 @@
                 <!-- Shopping Agent Services -->
                 <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
                     <div class="order-2 lg:order-1">
-                        <img src="/assets/images/img_rectangle_138_288x222.png"
+                        <img src="/assets/images/Shopping Agent Services.png"
                             alt="Product sourcing from Japan"
                             class="w-full rounded-2xl shadow-2xl" />
                     </div>
@@ -109,7 +121,7 @@
                 <!-- Business Support -->
                 <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
                     <div>
-                        <img src="/assets/images/img_rectangle_138_2.png"
+                        <img src="/assets/images/Business Support – Japan ↔ Philippines.png"
                             alt="Business support between Japan and Philippines" class="w-full rounded-2xl shadow-2xl" />
                     </div>
                     <div>
@@ -140,7 +152,7 @@
                 <!-- Real Estate Concierge -->
                 <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     <div class="order-2 lg:order-1">
-                        <img src="/assets/images/img_rectangle_138_1.png" alt="Real estate renovation and lifestyle support"
+                        <img src="/assets/images/Real Estate Concierge.png" alt="Real estate renovation and lifestyle support"
                             class="w-full rounded-2xl shadow-2xl" />
                     </div>
                     <div class="order-1 lg:order-2">

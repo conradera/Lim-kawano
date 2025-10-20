@@ -42,10 +42,12 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', () => {
         const currentScrollY = window.scrollY;
 
-        if (currentScrollY > 100) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+        if (header) {
+            if (currentScrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         }
 
         lastScrollY = currentScrollY;

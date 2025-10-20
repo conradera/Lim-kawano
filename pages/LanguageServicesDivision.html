@@ -51,6 +51,18 @@
 
 <body class="font-sans bg-off-white text-gray-800">
     <div id="header-placeholder"></div>
+    <script>
+        // Load header
+        fetch('/pages/_header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                // Re-initialize mobile menu after loading
+                if (typeof initializeMobileMenu === 'function') {
+                    initializeMobileMenu();
+                }
+            });
+    </script>
 
     <main>
         <!-- Hero Section -->
@@ -60,11 +72,11 @@
             id="home">
             <div class="hero-content relative z-10 w-full max-w-7xl mx-auto">
 
-                <div class="px-6 lg:px-12 mt-16 lg:mt-24 max-w-4xl">
-                    <h2 class="text-3xl lg:text-5xl font-bold text-white mb-6 leading-tight">Break language barriers and unlock new opportunities in business, education, and self-expression.</h2>
-                    <p class="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl leading-relaxed">From professional coaching in English and French to translation, interpretation, and pre-departure training, we provide world-class support for global success.</p>
+                <div class="px-6 lg:px-12 mt-16 lg:mt-24 max-w-4xl text-center mx-auto">
+                    <h2 class="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">Break language barriers and unlock new opportunities in business, education, and self-expression.</h2>
+                    <p class="text-2xl lg:text-3xl text-gray-300 mb-8 max-w-3xl leading-relaxed mx-auto">From professional coaching in English and French to translation, interpretation, and pre-departure training, we provide world-class support for global success.</p>
                     <a href="#contact"
-                        class="cta-button bg-light-blue text-primary-blue font-outfit font-semibold text-xs xs:text-sm sm:text-base uppercase py-3 px-6 sm:py-4 sm:px-8 rounded-lg inline-block hover:bg-[#6b8fa3] hover:scale-105 transition-all duration-300 shadow-lg">Get
+                        class="cta-button bg-light-blue text-primary-blue font-outfit font-semibold text-sm xs:text-base sm:text-lg uppercase py-3 px-6 sm:py-4 sm:px-8 rounded-lg inline-block hover:bg-[#6b8fa3] hover:scale-105 transition-all duration-300 shadow-lg">Get
                         in Touch</a>
                 </div>
             </div>

@@ -51,20 +51,32 @@
 
 <body class="font-sans bg-off-white text-gray-800">
     <div id="header-placeholder"></div>
+    <script>
+        // Load header
+        fetch('/pages/_header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                // Re-initialize mobile menu after loading
+                if (typeof initializeMobileMenu === 'function') {
+                    initializeMobileMenu();
+                }
+            });
+    </script>
 
     <main>
         <!-- Hero Section -->
         <section
             class="hero-section bg-cover bg-center bg-no-repeat min-h-screen flex items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 relative pt-20"
-            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/assets/images/img_rectangle_1.png');"
+            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/assets/images/africa hero 1.jpg');"
             id="home">
             <div class="hero-content relative z-10 w-full max-w-7xl mx-auto">
 
-                <div class="px-6 lg:px-12 mt-16 lg:mt-24 max-w-4xl">
-                    <h2 class="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-i18n="africaDivision.hero.title">Your trusted gateway to Africa.</h2>
-                    <p class="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl leading-relaxed" data-i18n="africaDivision.hero.description">With over 10 years of experience and a network spanning all 54 countries, we coordinate everything — from business market entry to unforgettable travel adventures.</p>
+                <div class="px-6 lg:px-12 mt-16 lg:mt-24 max-w-4xl text-center mx-auto">
+                    <h2 class="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight" data-i18n="africaDivision.hero.title">Your trusted gateway to Africa.</h2>
+                    <p class="text-2xl lg:text-3xl text-gray-300 mb-8 max-w-3xl leading-relaxed mx-auto" data-i18n="africaDivision.hero.description">With over 10 years of experience and a network spanning all 54 countries, we coordinate everything — from business market entry to unforgettable travel adventures.</p>
                     <a href="#contact"
-                        class="cta-button bg-light-blue text-primary-blue font-outfit font-semibold text-xs xs:text-sm sm:text-base uppercase py-3 px-6 sm:py-4 sm:px-8 rounded-lg inline-block hover:bg-[#6b8fa3] hover:scale-105 transition-all duration-300 shadow-lg" data-i18n="africaDivision.hero.cta">Get
+                        class="cta-button bg-light-blue text-primary-blue font-outfit font-semibold text-sm xs:text-base sm:text-lg uppercase py-3 px-6 sm:py-4 sm:px-8 rounded-lg inline-block hover:bg-[#6b8fa3] hover:scale-105 transition-all duration-300 shadow-lg" data-i18n="africaDivision.hero.cta">Get
                         in Touch</a>
                 </div>
             </div>
@@ -78,7 +90,7 @@
                 <!-- Market Entry & Growth Support -->
                 <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
                     <div class="order-2 lg:order-1">
-                        <img src="/assets/images/img_rectangle_138.png" alt="Africa market entry support"
+                        <img src="/assets/images/Market entry.png" alt="Africa market entry support"
                             class="w-full rounded-2xl shadow-2xl" />
                     </div>
                     <div class="order-1 lg:order-2">
@@ -109,7 +121,7 @@
                 <!-- Concierge for Travel & Business -->
                 <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
                     <div>
-                        <img src="/assets/images/img_rectangle_138_1.png"
+                        <img src="/assets/images/Concierge for Travel & Business.png"
                             alt="Africa concierge travel and business services" class="w-full rounded-2xl shadow-2xl" />
                     </div>
                     <div>
@@ -144,7 +156,7 @@
                 <!-- Fitness -->
                 <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
                     <div class="order-2 lg:order-1">
-                        <img src="/assets/images/img_rectangle_138_2.png" alt="Fitness for Africa programs"
+                        <img src="/assets/images/Fitness for Africa.png" alt="Fitness for Africa programs"
                             class="w-full rounded-2xl shadow-2xl" />
                     </div>
                     <div class="order-1 lg:order-2">
@@ -175,7 +187,7 @@
                 <!-- Social Impact Projects -->
                 <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     <div>
-                        <img src="/assets/images/img_rectangle_138_288x222.png" alt="Social impact projects in Africa"
+                        <img src="/assets/images/Social Impact Projects.png" alt="Social impact projects in Africa"
                             class="w-full rounded-2xl shadow-2xl" />
                     </div>
                     <div>

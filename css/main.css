@@ -84,6 +84,64 @@
             transform: rotate(-45deg) translate(7px, -6px);
         }
 
+        /* Dropdown Menu Styles */
+        .nav-menu .group:hover .group-hover\:opacity-100 {
+            opacity: 1;
+        }
+
+        .nav-menu .group:hover .group-hover\:visible {
+            visibility: visible;
+        }
+
+        /* Mobile Menu Improvements */
+        .mobile-nav {
+            overflow-y: auto;
+        }
+
+        .mobile-nav::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .mobile-nav::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-nav::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+        }
+
+        /* Bio Section Styles */
+        .person-bio {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 1px solid #e9ecef;
+        }
+
+        .bio-text {
+            font-size: 16px;
+            line-height: 1.6;
+            min-height: 100px;
+        }
+
+        .bio-tab.active {
+            background-color: #d4af37 !important;
+            color: white !important;
+        }
+
+        /* Mobile Carousel Styles */
+        @media (max-width: 768px) {
+            .carousel-track {
+                scroll-snap-type: x mandatory;
+            }
+            
+            .carousel-card {
+                scroll-snap-align: center;
+            }
+        }
+
         /* Carousel Styles */
         .carousel-card {
             transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.6s, filter 0.6s;
