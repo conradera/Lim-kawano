@@ -11,6 +11,23 @@ const translations = {
             menu: "Menu"
         },
 
+        // Contact Form (common across all pages)
+        contactForm: {
+            contactInfo: "Contact Information",
+            emailLabel: "Email",
+            headquartersLabel: "Headquarters",
+            headquartersValue: "Tokyo, Japan",
+            globalOffices: "Global Offices",
+            officesDescription: "With offices in Tokyo, Manila, and Djibouti, we're always within reach to serve your needs across multiple time zones.",
+            nameLabel: "Name",
+            nameRequired: "(required)",
+            emailFieldLabel: "Email",
+            emailRequired: "(required)",
+            messageLabel: "Message",
+            messageRequired: "(required)",
+            submit: "SEND MESSAGE"
+        },
+
         // Hero Section
         hero: {
             title: "Empowering Global Connections, Enhancing Business Growth",
@@ -196,34 +213,46 @@ const translations = {
                     badge: "Language Coaching",
                     title: "Professional English & French Coaching",
                     description: "Personalized language coaching tailored to business, study, and everyday communication needs. Build confidence and fluency with experienced coaches.",
-                    benefits: [
-                        "One-on-one or group coaching sessions",
-                        "Focused programs for business or academic use",
-                        "Native-level guidance for practical communication"
-                    ],
+                    benefit1: "One-on-one or group coaching sessions",
+                    benefit2: "Focused programs for business or academic use",
+                    benefit3: "Native-level guidance for practical communication",
                     cta: "GET IN TOUCH"
                 },
                 translation: {
                     badge: "Translation & Interpretation",
                     title: "Multilingual Communication Support",
                     description: "Professional translation and interpretation services for meetings, documents, and events, bridging Japanese, English, and French.",
-                    benefits: [
-                        "Accurate and context-aware document translation",
-                        "Consecutive interpretation for business and academic settings",
-                        "Support for conferences, training, and cultural exchange"
-                    ],
+                    benefit1: "Accurate and context-aware document translation",
+                    benefit2: "Consecutive interpretation for business and academic settings",
+                    benefit3: "Support for conferences, training, and cultural exchange",
                     cta: "GET IN TOUCH"
                 },
                 training: {
                     badge: "Pre-departure Training",
                     title: "Intensive Language Programs for Global Assignments",
                     description: "Specialized short-term training for study abroad, overseas assignments, and relocations. Gain essential communication skills before departure.",
-                    benefits: [
-                        "Short-term intensive language programs",
-                        "Customized curriculum for study or work abroad",
-                        "Practical training for real-life scenarios"
-                    ],
+                    benefit1: "Short-term intensive language programs",
+                    benefit2: "Customized curriculum for study or work abroad",
+                    benefit3: "Practical training for real-life scenarios",
                     cta: "GET IN TOUCH"
+                }
+            },
+            stories: {
+                title: "Success Stories",
+                story1: {
+                    quote: "Through Lim-Kawano's language coaching, I gained confidence speaking English in international meetings. The tailored approach helped me focus on exactly what I needed for my role.",
+                    name: "Business Professional",
+                    location: "Japan"
+                },
+                story2: {
+                    quote: "The translation service was impeccable. Lim-Kawano bridged our communication with French partners, ensuring every detail was accurately conveyed during negotiations.",
+                    name: "Executive",
+                    location: "Japan"
+                },
+                story3: {
+                    quote: "Before my overseas assignment, I took Lim-Kawano's intensive training program. It prepared me not just with language skills, but with cultural understanding that made my transition smooth.",
+                    name: "Expatriate Manager",
+                    location: "Japan"
                 }
             },
             contact: {
@@ -239,6 +268,58 @@ const translations = {
                 title: "Connect with the Philippines' vibrant market",
                 description: "From seamless product sourcing to market entry and property investment, we open doors to new opportunities in the Philippines.",
                 cta: "Get in Touch"
+            },
+            services: {
+                title: "Our Services",
+                shopping: {
+                    badge: "Shopping Agent",
+                    title: "Product Sourcing from Japan",
+                    description: "We help clients in the Philippines source high-quality products from Japan, offering reliable supplier coordination and smooth logistics.",
+                    benefit1: "Tailored product sourcing from Japan",
+                    benefit2: "Quality checks and trusted suppliers",
+                    benefit3: "End-to-end logistics support",
+                    cta: "GET IN TOUCH"
+                },
+                business: {
+                    badge: "Business Expansion",
+                    title: "Market Entry Support in Both Directions",
+                    description: "We assist Japanese companies entering the Philippines and Filipino companies expanding into Japan, offering end-to-end coordination and advisory.",
+                    benefit1: "Regulatory and compliance guidance",
+                    benefit2: "Partner and client introductions",
+                    benefit3: "Practical support for market entry",
+                    cta: "GET IN TOUCH"
+                },
+                realEstate: {
+                    badge: "Real Estate Concierge",
+                    title: "Renovation and Lifestyle Support",
+                    description: "We provide concierge services for real estate renovation in the Philippines, helping clients transform properties into better living and business spaces.",
+                    benefit1: "Advisory on renovation planning and budgeting",
+                    benefit2: "Coordination with trusted local contractors",
+                    benefit3: "Support for design and lifestyle upgrades",
+                    cta: "GET IN TOUCH"
+                }
+            },
+            stories: {
+                title: "Success Stories",
+                story1: {
+                    quote: "Through Lim-Kawano's shopping agent service, we were able to source high-quality products directly from Japan. Their coordination with suppliers and logistics partners made the process smooth and trustworthy.",
+                    name: "Retailer",
+                    location: "Philippines"
+                },
+                story2: {
+                    quote: "Lim-Kawano helped us export Philippine-made products to Japan. They managed quality checks, communication, and shipping, allowing us to reach Japanese consumers with confidence.",
+                    name: "Agribusiness Entrepreneur",
+                    location: "Philippines"
+                },
+                story3: {
+                    quote: "With Lim-Kawano's support, our company successfully entered the Japanese market. Their cultural understanding and introductions to trusted partners opened doors that would have been difficult on our own.",
+                    name: "Entrepreneur",
+                    location: "Philippines"
+                }
+            },
+            contact: {
+                title: "Get in Touch",
+                subtitle: "Ready to explore the Philippines? Let's discuss how we can help you achieve your business and investment goals."
             }
         },
 
@@ -249,6 +330,58 @@ const translations = {
                 title: "Empowering the world through IT.",
                 description: "By connecting African engineers with Japanese businesses, we create jobs in Africa while solving Japan's talent shortage. With our project management and trusted partnerships, we deliver IT solutions that drive sustainable growth on both sides.",
                 cta: "Get in Touch"
+            },
+            services: {
+                title: "Our Services",
+                consulting: {
+                    badge: "IT Consulting",
+                    title: "Strategy & Digital Transformation Advisory",
+                    description: "We support SMEs with tailored IT consulting, from strategy planning to implementation, helping businesses stay competitive in the digital age.",
+                    benefit1: "IT strategy planning aligned with business goals",
+                    benefit2: "Guidance on digital transformation (DX)",
+                    benefit3: "Practical roadmaps for implementation",
+                    cta: "GET IN TOUCH"
+                },
+                matching: {
+                    badge: "Partner Matching",
+                    title: "Connecting with Africa's Top IT Talent",
+                    description: "We connect Japanese companies with reliable African IT firms and freelance engineers, creating win-win opportunities for both sides.",
+                    benefit1: "Access to skilled engineers across Africa",
+                    benefit2: "Matching with trusted IT companies and freelancers",
+                    benefit3: "Cost-effective and high-quality development resources",
+                    cta: "GET IN TOUCH"
+                },
+                management: {
+                    badge: "Project Management",
+                    title: "Ensuring Project Success from Start to Finish",
+                    description: "We manage development projects end-to-end, bridging cultural and technical gaps to ensure quality, timelines, and success.",
+                    benefit1: "End-to-end project management",
+                    benefit2: "Communication bridge between Japan and Africa",
+                    benefit3: "Quality assurance and on-time delivery",
+                    cta: "GET IN TOUCH"
+                }
+            },
+            stories: {
+                title: "Success Stories",
+                story1: {
+                    quote: "We wanted to improve efficiency in our factory operations but lacked a clear digitalization roadmap. With Lim-Kawano's IT consulting, we developed a plan using Salesforce and AWS for production management. After implementation, inventory accuracy improved and monthly workload was reduced by about 25%.",
+                    name: "Manufacturing Company",
+                    location: "Japan"
+                },
+                story2: {
+                    quote: "In developing a new service, balancing cost and quality was our biggest challenge. Through Lim-Kawano's model, development was carried out by engineers in Africa, QA was conducted in the Philippines, and delivery was made to Japan. As a result, we completed the project at about one-fifth the usual cost and released it faster than expected.",
+                    name: "IT Startup",
+                    location: "Japan"
+                },
+                story3: {
+                    quote: "While developing a new e-commerce site, we faced a shortage of domestic IT resources and increasing risk of delays. Lim-Kawano assembled a development team in Africa and a QA team in the Philippines, managing the project end-to-end. As a result, the site was released on schedule, and stable operations boosted our online order ratio by 20% within just three months.",
+                    name: "Travel Company",
+                    location: "Japan"
+                }
+            },
+            contact: {
+                title: "Get in Touch",
+                subtitle: "Ready to transform your business with IT? Let's discuss how we can help you achieve your technology goals."
             }
         }
     },
@@ -262,6 +395,23 @@ const translations = {
             services: "サービス",
             contact: "お問い合わせ",
             menu: "メニュー"
+        },
+
+        // お問い合わせフォーム（全ページ共通）
+        contactForm: {
+            contactInfo: "お問い合わせ先",
+            emailLabel: "メールアドレス",
+            headquartersLabel: "本社",
+            headquartersValue: "東京、日本",
+            globalOffices: "グローバルオフィス",
+            officesDescription: "東京、マニラ、ジブチにオフィスを構え、複数のタイムゾーンでお客様のニーズにお応えします。",
+            nameLabel: "お名前",
+            nameRequired: "（必須）",
+            emailFieldLabel: "メールアドレス",
+            emailRequired: "（必須）",
+            messageLabel: "メッセージ",
+            messageRequired: "（必須）",
+            submit: "送信する"
         },
 
         // ヒーローセクション
@@ -483,8 +633,8 @@ const translations = {
         philippinesDivision: {
             title: "フィリピン部門 - Lim-Kawano & Company Inc.",
             hero: {
-                title: "フィリピンの活気ある市場とつながる",
-                description: "勢い凄まじいフィリピン市場への展開 - ショッピングエージェントサービス、進出支援、不動産運営の専門知識を通じて、商品調達から市場参入、投資機会の創出まで、フィリピンでの新たなチャンスを広げます。",
+                title: "勢い凄まじいフィリピン市場への展開",
+                description: "ショッピングエージェントサービス、進出支援、不動産運営の専門知識を通じて、商品調達から市場参入、投資機会の創出まで、フィリピンでの新たなチャンスを広げます。",
                 cta: "お問い合わせ"
             },
             services: {
@@ -534,6 +684,10 @@ const translations = {
                     name: "日本のIT企業",
                     location: ""
                 }
+            },
+            contact: {
+                title: "お問い合わせ",
+                subtitle: "フィリピンを探索する準備はできましたか？ビジネスおよび投資目標の達成をどのようにサポートできるかご相談ください。"
             }
         },
 
@@ -565,7 +719,7 @@ const translations = {
                     benefit3: "コスト効率と品質を両立した開発リソース",
                     cta: "お問い合わせ"
                 },
-                projectMgmt: {
+                management: {
                     badge: "Project Management",
                     title: "プロジェクト成功を支えるマネジメント",
                     description: "開発プロジェクトを最初から最後まで管理し、文化や技術のギャップを埋めながら品質・納期・成果を保証します。",
@@ -592,6 +746,72 @@ const translations = {
                     name: "日本の旅行会社",
                     location: ""
                 }
+            },
+            contact: {
+                title: "お問い合わせ",
+                subtitle: "ITでビジネス変革を実現しませんか？テクノロジー目標の達成をどのようにサポートできるかご相談ください。"
+            }
+        },
+
+        // 言語サービス部門ページ
+        languageDivision: {
+            title: "言語サービス部門 - Lim-Kawano & Company Inc.",
+            hero: {
+                title: "言語の壁を越えて、新たなチャンスを広げる。",
+                description: "英語・フランス語のプロフェッショナルコーチングから翻訳・通訳、海外渡航前の集中研修まで、グローバル成功のための世界水準のサポートを提供します。",
+                cta: "お問い合わせ"
+            },
+            services: {
+                title: "私たちのサービス",
+                coaching: {
+                    badge: "Language Coaching",
+                    title: "英語・フランス語コーチング",
+                    description: "ビジネス、学習、日常会話など目的に応じた個別コーチングを提供。経験豊富なコーチが自信と流暢さを育てます。",
+                    benefit1: "個別またはグループでの柔軟な指導",
+                    benefit2: "ビジネス・学習用途に特化したプログラム",
+                    benefit3: "実践的なコミュニケーションを支える指導",
+                    cta: "お問い合わせ"
+                },
+                translation: {
+                    badge: "Translation & Interpretation",
+                    title: "翻訳・通訳サービス",
+                    description: "日本語・英語・フランス語の橋渡しを行う翻訳・通訳サービス。会議、文書、イベントに対応します。",
+                    benefit1: "文脈を理解した正確な文書翻訳",
+                    benefit2: "ビジネス・学術分野に対応した逐次通訳",
+                    benefit3: "会議・研修・文化交流イベントを支援",
+                    cta: "お問い合わせ"
+                },
+                training: {
+                    badge: "Pre-departure Training",
+                    title: "海外渡航前集中研修",
+                    description: "留学・赴任・移住に備える短期集中プログラム。渡航前に必要なコミュニケーション力を効率的に身につけます。",
+                    benefit1: "短期集中型の語学プログラム",
+                    benefit2: "留学・赴任目的に合わせたカリキュラム",
+                    benefit3: "実際の生活シーンを想定した実践的研修",
+                    cta: "お問い合わせ"
+                }
+            },
+            stories: {
+                title: "成功事例",
+                story1: {
+                    quote: "「Lim-Kawanoの語学コーチングを通じて、国際会議で英語で話すことへの自信がつきました。自分の職務に必要なポイントに絞った指導で、効率的にスキルアップできました。」",
+                    name: "ビジネスプロフェッショナル",
+                    location: "日本"
+                },
+                story2: {
+                    quote: "「フランスのパートナー企業との交渉で、Lim-Kawanoの翻訳サービスを活用しました。細部まで正確に伝えられ、スムーズに契約を進めることができました。」",
+                    name: "経営幹部",
+                    location: "日本"
+                },
+                story3: {
+                    quote: "「海外赴任の前に、Lim-Kawanoの集中研修プログラムを受講しました。単なる語学だけでなく、文化的な理解も深まり、赴任後の生活がとてもスムーズに始まりました。」",
+                    name: "駐在マネージャー",
+                    location: "日本"
+                }
+            },
+            contact: {
+                title: "お問い合わせ",
+                subtitle: "言語の壁を越える準備はできましたか？グローバルコミュニケーション目標の達成をどのようにサポートできるかご相談ください。"
             }
         }
     }
