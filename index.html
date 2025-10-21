@@ -541,8 +541,8 @@
             updateCarousel();
             updateBioText(); // Initialize bio text
 
-            // Auto-advance carousel every 8 seconds (reduced frequency for better performance)
-            let carouselInterval = setInterval(nextSlide, 8000);
+            // Auto-advance carousel every 15 seconds
+            let carouselInterval = setInterval(nextSlide, 15000);
             
             // Pause auto-advance when user interacts
             const carouselContainer = document.querySelector('.team-carousel');
@@ -552,7 +552,7 @@
                 });
                 
                 carouselContainer.addEventListener('mouseleave', () => {
-                    carouselInterval = setInterval(nextSlide, 8000);
+                    carouselInterval = setInterval(nextSlide, 15000);
                 });
             }
         }
