@@ -27,6 +27,10 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/enhancements.css" />
 
+    <!-- Preload Critical Images -->
+    <link rel="preload" as="image" href="assets/images/hero1.jpg" />
+    <link rel="preload" as="image" href="assets/images/netwok.jpg" />
+
     <script>
         // Suppress Tailwind CDN production warning
         window.tailwind = { config: {} };
@@ -105,17 +109,17 @@
                     <div class="carousel-card" data-name="Yuta Kawano" data-role="Co-founder & CEO" 
                          data-bio-en="Having gained experience as a systems engineer at an IT vendor, I spent two and a half years in Cameroon as a JICA overseas cooperation volunteer. After returning to Japan, I worked as an Africa Coordinator for the Tokyo 2020 Organizing Committee for four years. In 2017, I started an Africa-related business, offering a wide range of services from tourism to business advisory."
                          data-bio-jp="ITベンダーでシステムエンジニアとしての経験を積んだ後、JICA海外協力隊員としてカメルーンに2年半滞在しました。帰国後は東京2020組織委員会で4年間アフリカコーディネーターを務めました。2017年にはアフリカ関連事業を立ち上げ、観光からビジネスアドバイザリーまで幅広いサービスを提供しています。">
-                        <img src="/assets/images/Yuta Kawano.jpg" alt="Yuta Kawano" loading="lazy" />
+                        <img src="/assets/images/Yuta Kawano.jpg" alt="Yuta Kawano" loading="eager" />
                     </div>
                     <div class="carousel-card" data-name="Ai Kawano" data-role="Chief Consultant"
                          data-bio-en="Graduated with a double degree from Keio University and Sciences Po (France). Joined McKinsey & Company as a new graduate, where I proposed numerous strategies to further expand businesses worth hundreds of billions. Strong in customer-oriented business proposals, mainly focused on marketing strategies."
                          data-bio-jp="慶應義塾大学とフランスのパリ政治学院（Sciences Po）のダブルディグリーを取得後、新卒でマッキンゼー・アンド・カンパニーに入社。数千億円規模の事業拡大に向けた数多くの戦略を提案してきました。主にマーケティング戦略を中心に、顧客志向の事業提案を得意としています。">
-                        <img src="/assets/images/Ai Kawano.jpg" alt="Ai Kawano" loading="lazy" />
+                        <img src="/assets/images/Ai Kawano.jpg" alt="Ai Kawano" loading="eager" />
                     </div>
                     <div class="carousel-card" data-name="Jill Aubrey Lim-Kawano" data-role="Language expert"
                          data-bio-en="Originally from the Philippines, I am a multilingual speaker who speaks Tagalog, English, and Chinese at a native level, and I also have proficiency in Japanese. I have 8 years of experience living in China and contributed to the launch of a local language service startup. I have strengths in English and Chinese education."
                          data-bio-jp="フィリピン出身で、タガログ語・英語・中国語をネイティブレベルで話し、日本語にも堪能です。中国で8年間生活し、現地の語学サービス系スタートアップの立ち上げに貢献しました。英語教育および中国語教育に強み。">
-                        <img src="/assets/images/Kawano.jpg" alt="Jill Aubrey" loading="lazy" />
+                        <img src="/assets/images/Kawano.jpg" alt="Jill Aubrey" loading="eager" />
                     </div>
                 </div>
                 <button class="carousel-arrow right" aria-label="Next">›</button>
@@ -169,7 +173,7 @@
                     <!-- Image Section -->
                     <div class="service-overview-image-container order-2 lg:order-1">
                         <img src="/assets/images/team.jpg" alt="Our team bridging Japan with emerging markets"
-                            class="service-overview-image w-full h-auto rounded-xl shadow-2xl shadow-primary-blue/20" loading="lazy" />
+                            class="service-overview-image w-full h-auto rounded-xl shadow-2xl shadow-primary-blue/20" loading="eager" />
                     </div>
 
                     <!-- Text Content Section -->
@@ -198,7 +202,7 @@
                     class="solution-card group flex flex-col border border-[#ffedd0] rounded-xl overflow-hidden bg-white no-underline text-current transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary-blue/10">
                     <div class="solution-image-container overflow-hidden">
                         <img src="assets/images/african div.png" alt="Africa Division services"
-                            class="solution-image w-full h-44 sm:h-48 md:h-52 lg:h-56 object-cover transition-transform duration-300 group-hover:scale-110" loading="lazy" />
+                            class="solution-image w-full h-44 sm:h-48 md:h-52 lg:h-56 object-cover transition-transform duration-300 group-hover:scale-110" loading="eager" />
                     </div>
                     <div class="solution-content p-6 sm:p-8 md:p-10 bg-[#fffdfb] flex-1">
                         <h3 class="solution-title text-[#224c62] font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4" data-i18n="solutions.africa.title">
@@ -213,7 +217,7 @@
                     class="solution-card group flex flex-col border border-[#ffedd0] rounded-xl overflow-hidden bg-white no-underline text-current transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary-blue/10">
                     <div class="solution-image-container overflow-hidden">
                         <img src="assets/images/phillipines div.png" alt="Philippines Division services"
-                            class="solution-image w-full h-44 sm:h-48 md:h-52 lg:h-56 object-cover transition-transform duration-300 group-hover:scale-110" loading="lazy" />
+                            class="solution-image w-full h-44 sm:h-48 md:h-52 lg:h-56 object-cover transition-transform duration-300 group-hover:scale-110" loading="eager" />
                     </div>
                     <div class="solution-content p-6 sm:p-8 md:p-10 bg-[#fffdfb] flex-1">
                         <h3 class="solution-title text-[#224c62] font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4" data-i18n="solutions.philippines.title">
@@ -229,7 +233,7 @@
                     class="solution-card group flex flex-col border border-[#ffedd0] rounded-xl overflow-hidden bg-white no-underline text-current transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary-blue/10">
                     <div class="solution-image-container overflow-hidden">
                         <img src="assets/images/Langauge division.png" alt="Language Service Division services"
-                            class="solution-image w-full h-44 sm:h-48 md:h-52 lg:h-56 object-cover transition-transform duration-300 group-hover:scale-110" loading="lazy" />
+                            class="solution-image w-full h-44 sm:h-48 md:h-52 lg:h-56 object-cover transition-transform duration-300 group-hover:scale-110" loading="eager" />
                     </div>
                     <div class="solution-content p-6 sm:p-8 md:p-10 bg-[#fffdfb] flex-1">
                         <h3 class="solution-title text-[#224c62] font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4" data-i18n="solutions.language.title">
@@ -245,7 +249,7 @@
                     class="solution-card group flex flex-col border border-[#ffedd0] rounded-xl overflow-hidden bg-white no-underline text-current transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary-blue/10">
                     <div class="solution-image-container overflow-hidden">
                         <img src="assets/images/IT division.png" alt="IT Service Division services"
-                            class="solution-image w-full h-44 sm:h-48 md:h-52 lg:h-56 object-cover transition-transform duration-300 group-hover:scale-110" loading="lazy" />
+                            class="solution-image w-full h-44 sm:h-48 md:h-52 lg:h-56 object-cover transition-transform duration-300 group-hover:scale-110" loading="eager" />
                     </div>
                     <div class="solution-content p-6 sm:p-8 md:p-10 bg-[#fffdfb] flex-1">
                         <h3 class="solution-title text-[#224c62] font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4" data-i18n="solutions.it.title">
