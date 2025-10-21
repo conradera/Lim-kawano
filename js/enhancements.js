@@ -16,22 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ========================================
-    // Parallax Scrolling Effect
+    // Parallax Scrolling Effect - DISABLED for image stability
     // ========================================
-    const parallaxSections = document.querySelectorAll('.hero-section, .expertise-section');
-
-    function parallax() {
-        const scrolled = window.pageYOffset;
-        parallaxSections.forEach(section => {
-            const speed = 0.4;
-            const offset = section.offsetTop;
-            const yPos = -(scrolled - offset) * speed;
-            section.style.backgroundPositionY = yPos + 'px';
-        });
-        requestAnimationFrame(parallax);
-    }
-
-    requestAnimationFrame(parallax);
+    // Parallax effect disabled to ensure hero images stay fixed and don't disappear
+    // Hero images are now handled by CSS fixed positioning for better performance
 
     // ========================================
     // Fixed Header - always visible, no scroll effects needed

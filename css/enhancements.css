@@ -34,23 +34,8 @@ body {
     transform: translateY(0);
 }
 
-/* Parallax Effect for Hero Section */
-.hero-section {
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: inherit;
-    transform: translateZ(-1px) scale(1.5);
-    z-index: -1;
-}
+/* Hero Section - Remove parallax effect to prevent image issues */
+/* Parallax effect moved to main.css for better control */
 
 /* Floating Animation for CTA Buttons */
 @keyframes float {
@@ -318,7 +303,7 @@ body {
     padding-top: 0;
 }
 
-/* Particle Effect Background */
+/* Particle Effect Background - Adjusted z-index to work with new structure */
 .hero-section::after {
     content: '';
     position: absolute;
@@ -330,7 +315,7 @@ body {
         radial-gradient(circle at 20% 50%, rgba(204, 153, 85, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(20, 57, 77, 0.1) 0%, transparent 50%);
     pointer-events: none;
-    z-index: 1;
+    z-index: 5; /* Above background, below content */
 }
 
 /* Enhanced Footer Social Icons */
