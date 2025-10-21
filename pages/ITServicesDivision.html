@@ -316,20 +316,9 @@
     <script src="/js/main.js" defer></script>
 
     <style>
-        .animate-fade-out {
-            animation: fadeOutDown 0.8s ease-out forwards;
-        }
-
-        @keyframes fadeOutDown {
-            from {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-            to {
-                opacity: 0.95;
-                transform: translateY(10px);
-            }
+        /* Ensure images stay visible - no fade animations */
+        img {
+            opacity: 1 !important;
         }
     </style>
 </body>

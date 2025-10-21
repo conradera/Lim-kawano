@@ -64,26 +64,23 @@ document.addEventListener('DOMContentLoaded', function() {
         rootMargin: '0px 0px -100px 0px'
     };
 
-    const fadeOutObserver = new IntersectionObserver((entries) => {
+    // Remove fade animations - keep images visible
+    const visibilityObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-out');
-
-                // Add stagger fade-out effect to children
+                // Ensure elements are fully visible
                 const children = entry.target.querySelectorAll('.solution-card, .contact-info-item');
-                children.forEach((child, index) => {
-                    setTimeout(() => {
-                        child.style.opacity = '0.95';
-                        child.style.transform = 'translateY(10px)';
-                    }, index * 100);
+                children.forEach((child) => {
+                    child.style.opacity = '1';
+                    child.style.transform = 'translateY(0)';
                 });
             }
         });
     }, observerOptions);
 
-    // Observe all sections
+    // Observe all sections to ensure visibility
     document.querySelectorAll('section').forEach(section => {
-        fadeOutObserver.observe(section);
+        visibilityObserver.observe(section);
     });
 
     // ========================================
@@ -253,22 +250,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ========================================
-    // Smooth Reveal for Solution Cards - Fade Out Effect
+    // Ensure Solution Cards Stay Visible
     // ========================================
     const cards = document.querySelectorAll('.solution-card');
     const cardObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '0.95';
-                entry.target.style.transform = 'translateY(10px)';
+                // Keep cards fully visible
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
             }
         });
     }, { threshold: 0.1 });
 
     cards.forEach(card => {
+        // Initialize as fully visible
         card.style.opacity = '1';
         card.style.transform = 'translateY(0)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        card.style.transition = 'none'; // Remove transitions that cause disappearing
         cardObserver.observe(card);
     });
 

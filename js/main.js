@@ -315,21 +315,20 @@
             });
         }, observerOptions);
 
-        // Observe elements for fade-in animation
+        // Keep elements visible - NO fade animations
         document.querySelectorAll('.solution-card, .contact-info-item, .carousel-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+            el.style.transition = 'none'; // Remove transitions to prevent disappearing
         });
 
-        // Add loading state for images
+        // Ensure images stay visible
         document.querySelectorAll('img').forEach(img => {
+            img.style.opacity = '1';
+            img.style.transition = 'none'; // Remove transitions to prevent disappearing
             img.addEventListener('load', function () {
                 this.style.opacity = '1';
             });
-            img.style.opacity = '0';
-            img.style.transition = 'opacity 0.3s ease';
         });
 
         // Handle window resize

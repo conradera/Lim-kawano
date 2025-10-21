@@ -242,27 +242,16 @@ body {
     opacity: 1;
 }
 
-/* Stagger Animation for List Items */
-@keyframes fadeOutDown {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    to {
-        opacity: 0.95;
-        transform: translateY(10px);
-    }
-}
-
+/* No fade animations - keep images visible */
 .solution-card {
-    animation: fadeOutDown 0.6s ease forwards;
     opacity: 1;
+    transform: translateY(0);
 }
 
-.solution-card:nth-child(1) { animation-delay: 0.1s; }
-.solution-card:nth-child(2) { animation-delay: 0.2s; }
-.solution-card:nth-child(3) { animation-delay: 0.3s; }
-.solution-card:nth-child(4) { animation-delay: 0.4s; }
+.solution-card:nth-child(1) { animation: none; }
+.solution-card:nth-child(2) { animation: none; }
+.solution-card:nth-child(3) { animation: none; }
+.solution-card:nth-child(4) { animation: none; }
 
 /* Responsive Typography with Fluid Scaling */
 .hero-title {

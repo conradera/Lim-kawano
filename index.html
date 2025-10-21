@@ -373,6 +373,8 @@
     <script src="js/enhancements.js" defer></script>
     <script src="js/main.js" defer></script>
     <script>
+        // Ensure DOM is fully loaded before initializing carousel
+        document.addEventListener('DOMContentLoaded', function() {
         // Leadership Carousel functionality
         const carouselTrack = document.querySelector('.carousel-track');
         const carouselCards = document.querySelectorAll('.carousel-card');
@@ -389,7 +391,7 @@
 
         // Check if carousel elements exist
         if (!carouselCards.length || !carouselDots) {
-            console.error('Carousel elements not found');
+            console.warn('Carousel elements not found - skipping carousel initialization');
         } else {
             let currentIndex = 0;
             let currentLanguage = 'en';
@@ -554,7 +556,20 @@
                 });
             }
         }
+        }); // End DOMContentLoaded
     </script>
+
+    <style>
+        /* Ensure images stay visible - no animations */
+        img {
+            opacity: 1 !important;
+        }
+        
+        /* Carousel stability */
+        .carousel-card {
+            opacity: 1 !important;
+        }
+    </style>
 </body>
 
 </html>
